@@ -1,0 +1,15 @@
+<?php $_product = $this->getProduct() ?>
+
+<?php if ($_product->isSaleable()): ?>
+    <script type="text/javascript">
+        //<![CDATA[
+        <?php if (version_compare(Mage::getVersion(), '1.8', '>=')): ?>
+            taxCalcMethod = "<?php echo Mage::helper('tax')->getConfig()->getAlgorithm($_product->getStore()) ?>";
+            CACL_UNIT_BASE = "<?php echo Mage_Tax_Model_Calculation::CALC_UNIT_BASE ?>";
+            CACL_ROW_BASE = "<?php echo Mage_Tax_Model_Calculation::CALC_ROW_BASE ?>";
+            CACL_TOTAL_BASE = "<?php echo Mage_Tax_Model_Calculation::CALC_TOTAL_BASE ?>";
+        <?php endif ?>
+        bundle = new Product.Bundle(<?php echo $this->getJsonConfig() ?>);
+        //]]>
+    </script>
+<?php endif; ?>

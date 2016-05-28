@@ -1,0 +1,20 @@
+<?php if($this->getProduct()->getShowPreview()): ?>
+  <div id="package-preview">
+    <div id="badge"><span>Preview</span></div>
+    <div id="preview-deck" class="entity<?php if($this->getProduct()->getPreviewType() == Peexl_BundleCreatorPlus_Model_Preview_Type::GRID): ?> grid<?php endif?>">
+      <?php foreach ($this->getItems() as $item): ?> 
+        <?php if($this->getProduct()->getPreviewType() == Peexl_BundleCreatorPlus_Model_Preview_Type::GRID): ?>
+            <?php if ($item->getIsComplete()): ?>
+                <div><div class="pngfix"><img src="<?php echo $this->getPreviewImage($item) ?>"></div></div>
+            <?php endif ?>
+        <?php else: ?>
+            <?php if($item->getPreviewBaseImage()): ?><div class="layer pngfix"><img src="<?php echo Mage::getBaseUrl('media') . $item->getPreviewBaseImage() ?>" height="537"></div><?php endif ?>
+            <?php if ($item->getIsComplete()): ?>
+              <div class="layer pngfix"><img src="<?php echo $this->getPreviewImage($item) ?>" height="400"></div>          
+            <?php endif ?>
+        <?php endif ?>
+      <?php endforeach ?>
+    </div>
+    <p>Note: The above image may display incorrect color and/or scale.</p>	
+  </div>
+<?php endif ?>

@@ -1,0 +1,52 @@
+<?php	
+	$data = $this->getInfo();
+	$data['value'] = unserialize($data['value']);
+?>
+<?php 
+date_default_timezone_set(Mage::app()->getStore()->getConfig('general/locale/timezone'));
+
+if (strpos($data['value']['values'], '-') !== FALSE){
+	$values = explode("#", $data['value']['values']);
+	$session = Mage::getModel('bookmepro/session')->load($values[1]);
+	
+	$from = strtotime($session['date_from'].' '.date('H:i:s', strtotime($session['time_from'])));
+	$to = strtotime($session['date_to'].' '.date('H:i:s', strtotime($session['time_to'])));
+	//$to = date("d-m-Y H:i:s", $values[1]/1000);
+	
+	echo Mage::helper('core')->formatDate(date("d-m-Y H:i:s",$from), 'medium', true).' - '.Mage::helper('core')->formatDate(date("d-m-Y H:i:s",$to), 'medium', true).'<br />';
+}
+if (strpos($data['value']['values'], ',') !== FALSE){
+	$values = explode(",", $data['value']['values']);
+	$from = date("d-m-Y", $values[0]/1000);
+	
+	if(count($values) == 1 || strtotime($from) < $values[0] / 1000){
+		for($i = 0; $i < count($values) - 1; $i++)
+			echo Mage::helper('core')->formatDate(date("d-m-Y H:i:s", $values[$i]/1000), 'medium', true).'<br />';
+	}else{
+		$to = date("d-m-Y", $values[count($values)-2]/1000);
+	
+	echo Mage::helper('core')->formatDate($from, 'medium', false).' - '.Mage::helper('core')->formatDate($to, 'medium', false).'<br />';
+	}
+} 
+if (strpos($data['value']['values'], '#') !== FALSE && strpos($data['value']['values'], '-') == FALSE){
+	$values = explode("#", $data['value']['values']);
+	
+	foreach ($values as $id)
+	{
+		$session = Mage::getModel('bookmepro/session')->load($id);
+		if($session->getId())
+			echo Mage::helper('core')->formatDate($session['date_from'].' '.date('H:i:s', strtotime($session['time_from'])), 'medium', true).'<br />';
+	}
+}
+	
+$helper = Mage::helper('bookmepro');
+foreach ($data['value']['profiles'] as $key => $value)
+	if($value > 0)
+	{
+		$id = explode("#", $key);
+		$profile = Mage::getModel('bookmepro/priceprofile')->load($id[1]);
+		echo $profile['name'].' : '.$value.'<br />';
+	}
+
+	
+?>

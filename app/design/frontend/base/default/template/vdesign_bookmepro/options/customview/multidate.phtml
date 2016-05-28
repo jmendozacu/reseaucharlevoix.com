@@ -1,0 +1,75 @@
+<?php	
+date_default_timezone_set(Mage::app()->getStore()->getConfig('general/locale/timezone'));
+	$data = $this->getInfo();
+	$data['value'] = unserialize($data['value']);
+	$config = Mage::getStoreConfig('bookmepro_sales/sales/order_frontend', Mage::app()->getStore()->getId());
+	$day_notice = Mage::getStoreConfig('bookmepro_sales/sales/day_notice', Mage::app()->getStore()->getId());
+	$session_notice = Mage::getStoreConfig('bookmepro_sales/sales/session_notice', Mage::app()->getStore()->getId());
+	$adv_notice = Mage::getStoreConfig('bookmepro_sales/sales/adv_notice', Mage::app()->getStore()->getId());
+?>
+<?php $helper = Mage::helper('bookmepro'); ?>
+<?php 
+
+if (strpos($data['value']['values'], '-') !== FALSE){
+	$values = explode("#", $data['value']['values']);
+	$session = Mage::getModel('bookmepro/session')->load($values[1]);
+	
+	$from = strtotime($session['date_from'].' '.date('H:i:s', strtotime($session['time_from'])));
+	$to = strtotime($session['date_to'].' '.date('H:i:s', strtotime($session['time_to'])));
+	//$to = date("d-m-Y H:i:s", $values[1]/1000);
+	if($config == 1)
+		echo Mage::helper('bookmepro')->__('1 reserved event.').'<br />';
+	else 
+		echo Mage::helper('core')->formatDate(date("d-m-Y H:i:s",$from), 'medium', true).' - '.Mage::helper('core')->formatDate(date("d-m-Y H:i:s",$to), 'medium', true).'<br />';
+}
+if (strpos($data['value']['values'], ',') !== FALSE){
+	$values = explode(",", $data['value']['values']);
+	$from = date("d-m-Y", $values[0]/1000);
+	
+	if(count($values) == 1 || strtotime($from) < $values[0] / 1000){
+		for($i = 0; $i < count($values) - 1; $i++)
+			echo Mage::helper('core')->formatDate(date("d-m-Y H:i:s", $values[$i]/1000), 'medium', true).'<br />';
+	}else{
+		$to = date("d-m-Y", $values[count($values)-2]/1000);
+	
+		if($config == 1)
+			echo (count($values) - 1).Mage::helper('bookmepro')->__(' reserved days.').'<br />';
+		else
+			echo Mage::helper('core')->formatDate($from, 'medium', false).' - '.Mage::helper('core')->formatDate($to, 'medium', false).'<br />';
+	}
+} 
+if (strpos($data['value']['values'], '#') !== FALSE && strpos($data['value']['values'], '-') == FALSE){
+	$values = explode("#", $data['value']['values']);
+	
+	if($config == 1)
+		echo (count($values) - 1).Mage::helper('bookmepro')->__(' reserved sessions.').'<br />';
+	else
+		foreach ($values as $id)
+		{
+			$session = Mage::getModel('bookmepro/session')->load($id);
+			if($session->getId())
+				echo Mage::helper('core')->formatDate($session['date_from'].' '.date('H:i:s', strtotime($session['time_from'])), 'medium', true).'<br />';
+		}
+}
+foreach ($data['value']['profiles'] as $key => $value)
+		if($value > 0)
+		{
+			$id = explode("#", $key);
+			echo $helper->getProfileTranslation($id[1], Mage::app()->getStore()->getCode()).' : '.$value.'<br />';
+			
+		}
+
+if (strpos($data['value']['values'], '-') !== FALSE){
+	if($adv_notice)
+		echo '<spam style="color: red; float: right; font-style: italic;">'.$adv_notice.'</spam><br />';
+}
+if (strpos($data['value']['values'], ',') !== FALSE){
+	if($day_notice)
+		echo '<spam style="color: red; float: right; font-style: italic;">'.$day_notice.'</spam><br />';
+}
+if (strpos($data['value']['values'], '#') !== FALSE && strpos($data['value']['values'], '-') == FALSE){
+	if($session_notice)
+		echo '<spam style="color: red; float: right; font-style: italic;">'.$session_notice.'</spam><br />';
+}
+	
+?>

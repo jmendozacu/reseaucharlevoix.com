@@ -1,0 +1,18 @@
+<script type="text/javascript">
+//<![CDATA[
+    var loader = '<img alt="<?php echo Mage::helper('peexl_ajaxcart')->__('Loading...'); ?>" src="<?php echo $this->getSkinUrl('peexl_ajaxcart/images/ajax-loader.gif') ?>"/><div><?php echo Mage::helper('peexl_ajaxcart')->__('Please wait...'); ?></div>';
+    var mageVersion = '<?php echo Mage::getVersion() ?>'.split('.');
+    function getConfirm(result) {
+        cf_addedto_text = " <?php echo Mage::helper('peexl_ajaxcart')->__('added to your shopping cart.'); ?> ";
+
+        cf_cart_text = "<?php echo Mage::helper('peexl_ajaxcart')->__('Go to Cart'); ?>";
+        cf_cart_href = "<?php echo Mage::getUrl('checkout/cart/') ?>";
+        cf_action = '<li><button type="button" title="'+cf_cart_text+'" class="button" onclick="setLocation(\''+cf_cart_href+'\')"><span><span>'+cf_cart_text+'</span></span></button></li>';
+
+        cf_head = '<p class="head-cfbox"><span class="product-title">' + result.product_name + '</span>' + cf_addedto_text + '</p>';
+        cf_content = cf_head + ((typeof result.cart_item != "undefined" && result.cart_item != "") ? (result.cart_item) : "") + '<div id="bottom-cfbox"><ul>' + cf_action + '</ul></div>';
+
+        updateAjaxBlock(true, false, cf_content);
+    }
+//]]>
+</script>

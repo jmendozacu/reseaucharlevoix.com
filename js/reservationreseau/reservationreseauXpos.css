@@ -1,0 +1,27 @@
+#salle{
+	width: 690px;
+	 position: relative;
+}
+#salleCanvas{
+	width: 300px;
+	height: 430px;
+}
+.siege{
+	position: absolute;
+	color: white;
+	font-size: 10px;
+	line-height:13px;
+	width: 12px;
+	height:12px;
+	-moz-border-radius: 12px/12px;
+    -webkit-border-radius: 12px 12px;
+    border-radius: 12px/12px;
+    border:none;
+	margin-top: 2px;
+	margin-left: 2px;
+	padding-left: 4px;
+	padding-top: 0px;
+}
+.selectionSiege{
+	cursor: pointer;
+}

@@ -1,0 +1,171 @@
+
+<?php $_option = $this->getOption();
+date_default_timezone_set(Mage::app()->getStore()->getConfig('general/locale/timezone'));
+$productId = $this->getProduct()->getId();
+$mind = str_replace(" ", " ", ($this->getProduct()->getData('bookable_from'))? $this->getProduct()->getData('bookable_from') : (date('Y/m/d')));
+
+$mind = (strtotime(date('Y/m/d')) >  strtotime($mind))? date('Y/m/d') : $mind;
+$mind = date('Y/m/d', strtotime($mind));
+$maxd = ($this->getProduct()->getData('bookable_to'))? date('Y/m/d', strtotime($this->getProduct()->getData('bookable_to'))) : '2100/01/01';
+?>
+<dt><label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?>
+<?php 
+	echo  $this->htmlEscape($_option->getTitle()) ?></label>
+	<br /><p style="float: right"><strong><?php
+	if($this->getProduct()->getAttributeText('display_timezone') == 'enabled')
+	{
+		$hour = date('Z') / 60 / 60;
+		echo 'Our timezone: '.Mage::app()->getStore()->getConfig('general/locale/timezone').' [UTC'.(($hour > 0)? '+'.$hour : $hour).']';
+	}
+	?></strong></p>
+    <?php echo $this->getFormatedPrice() ?></dt>
+<dd<?php if ($_option->decoratedIsLast){?> class="last"<?php }?>>
+    <div class="input-box">
+        <input type="hidden"
+               id="options_<?php echo $_option->getId() ?>_multidate"
+               class="input-text <?php echo $_option->getIsRequire() ? ' required-entry' : '' ?> product-custom-option"
+               name="options[<?php echo $_option->getId() ?>][val]"
+               value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>"
+               onchange="displaySiege(<?php echo $productId ?>, <?php echo $_option->getId() ?>, '<?php echo $this->getProduct()->getAttributeText('billable_period') ?>')" />
+         <input type="hidden"
+               id="options_multidate_offset<?php echo $productId ?>"
+               name="options[<?php echo $_option->getId() ?>][offset]"
+               value="" />
+         
+         <input type="hidden" id="pikaday_max_qty<?php echo $productId ?>" name="pikaday_max_qty" value="0" onchange="addMaxQty(<?php echo $productId ?>, <?php echo $_option->getId() ?>);"/>
+		 <div id="pikaday_element<?php echo $productId ?>">
+         	
+				    <script type="text/javascript">
+				    //<![CDATA[
+				    //var opConfig = new Product.Options({"8":{"price":100,"oldPrice":100,"priceValue":"100.0000","type":"fixed","excludeTax":100,"includeTax":100}});
+				   
+				    var dayfrom = new Date('<?php echo $mind ?>');
+				    dayfrom.setHours(0); dayfrom.setMinutes(0); dayfrom.setSeconds(0); dayfrom.setMilliseconds(0);
+				    
+				    var dayto = new Date('<?php echo $maxd ?>');
+				    dayto.setHours(0); dayto.setMinutes(0); dayto.setSeconds(0); dayto.setMilliseconds(0);
+				    
+				    var picker<?php echo $productId ?> = new Pikaday(
+				    {
+					   field: document.getElementById('options_<?php echo $_option->getId()?>_multidate'),
+					   stillShown : true,
+				        firstDay: 1,
+				        minDate: dayfrom,
+						maxDate: dayto,
+				        id: <?php echo $this->getProduct()->getId() ?>,
+				        yearRange: [2014,2100],
+				        type : '<?php echo $this->getProduct()->getAttributeText('billable_period') ?>',
+				        optionId : <?php echo $this->getOption()->getId() ?>,
+						basePrice : <?php echo $this->getProduct()->getFinalPrice()?>,
+						sessions : [],
+						reloadp : true,
+						baseUrl : '<?php echo (Mage::app()->getStore()->isCurrentlySecure())? Mage::getStoreConfig('web/secure/base_url').'index.php/' : Mage::getStoreConfig('web/unsecure/base_url') ?>'
+				    });
+
+			    	picker<?php echo $productId ?>.show();
+			    	
+			    	
+				    $('options_multidate_offset<?php echo $productId ?>').value = jstz.determine().name();
+
+				    //Eric: Add JS Call Render Selection Siege
+				    var displaySiege = function(productId, optionId, type){
+				    	displayInfo(productId, optionId, type);
+				    	var value = $('options_' + optionId + '_multidate').value;
+				    	if(value == ''){
+				    		deselectionSiegeRender(productId);
+				    	}
+				    	else{
+					    	
+				    		var arr = value.split(",");
+					    	 
+							if (typeof selectionSiegeRender != "undefined") { 
+								var date = new Date(parseInt(arr[0], 10));
+								var dateStr = date.getFullYear() + '-' + (1 + date.getMonth()) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds();
+								selectionSiegeRender(dateStr, "<?php echo $this->getUrl('reservationreseau/reservations/getreservation/') ?>",productId); 
+							}
+				    	}
+				    }
+
+				    //]]>
+				    </script>
+
+        		</div>
+        		<div style="clear: both;"></div>
+        		<div id="pikaday_info<?php echo $productId ?>" class="notice-msg no-display" style="position:relative; <?php echo ($this->getProduct()->getAttributeText('billable_period') == 'Session')? 'width: 270px' : 'width: 270px'?>">
+        			<p><span><div id="pikaday_info_title<?php echo $productId ?>" style="margin-left: 10px"></div></span></p>
+        			<div id="pikaday_info_text<?php echo $productId ?>" style="margin-left: 10px"></div>
+        			<div id="pikaday_info_text_qty<?php echo $productId ?>" style="margin-left: 10px"></div>
+        		</div>
+        		
+
+    </div>
+    
+
+<?php if($this->getProduct()->getData('price_rule')): ?>
+    	<?php $bookme = Mage::helper('bookme');?>
+    	<div id="pikaday_info<?php echo $productId ?>" class="notice-msg pikaday-info-block">
+    		<?php echo $bookme->__('Availible discounts for checkout: ').'<br />'?>
+        	<?php foreach ($this->getProduct()->getData('price_rule') as $rule): ?>
+        	<?php 
+         	$out = '';
+         	$value = $rule['value'];
+         	
+        	if($rule['type'] != 3)
+        		$value = strtotime(date('Y-m-d')) + VDesign_Bookme_Model_Product_Type_Booking_Price::getDifferention($rule);
+        	 
+         	switch ($rule['type']){
+         		case '1' : 
+         			$out .= $bookme->__('For reservations after ') . Mage::helper('core')->formatDate(date('Y-m-d', $value), 'medium', false) . $bookme->__(' there is First Moment');
+         			break;
+         		case '2' : 
+         			$out .= $bookme->__('For reservations before ') . Mage::helper('core')->formatDate(date('Y-m-d', $value), 'medium', false) . $bookme->__(' there is Last Minute');
+         			break;
+         		case '3' : 
+         			$out .= $bookme->__('For reservations of more than ') . $value . (($this->getProduct()->getAttributeText('billable_period') == 'Session')? $bookme->__(' sessions') : $bookme->__(' days')) . $bookme->__(' there is ');
+         			break;
+         	}
+         	
+         	$out .= (($rule['move'] == 1)? $bookme->__(' mark-up by ') : $bookme->__(' discount by ')).$rule['amount'];
+         	$out .= ($rule['amount_type'] == 1)? '%.' : Mage::app()->getLocale()->currency(Mage::app()->getStore()->getCurrentCurrencyCode())->getSymbol().'.';
+        	echo $out. '<br />';
+        	?>
+        	
+        	
+        	<?php endforeach;?>
+        </div>
+    
+    <?php endif;?>
+    
+    
+     <?php 
+    $_product = $this->getProduct();
+  	$helper = Mage::helper('bookmepro');?>
+   
+       
+        <table style="float:left">
+	        <?php foreach ($_product->getData('price_profile') as $profile): ?>
+	        <?php $translation = $helper->getProfileTranslation($profile['profile_id'], Mage::app()->getStore()->getCode()); ?>
+	        <?php $name = 'p#'.$profile['profile_id']; ?>
+	        <tr><td style="width: 40px">
+	        <strong style="margin-right: 4px"><?php echo $translation?></strong></td>
+	        
+	        <td style="margin-right: 4px"><button type="button" style="margin-right: 5px" class="button" onclick="document.getElementById('qty_<?php echo $name?>').value = (document.getElementById('qty_<?php echo $name?>').value == 0)? 0 : (document.getElementById('qty_<?php echo $name?>').value - 1); fireEvent(document.getElementById('qty_<?php echo $name?>'), 'change', { firedBy: document.getElementById('qty_<?php echo $name?>') });"><span><span>-</span></span></button></td>        
+	        
+	        <td style="width: 35px">
+	        <input type="text" class="input-text" 
+	        id="qty_<?php echo $name?>" 
+	        name="qty_<?php echo $name?>"
+	        onchange="$('qty_multidate_<?php echo $name?>').value = this.value" value="0"/></td>
+	        <td style="margin-right: 4px"><button type="button" style="margin-right: 5px" class="button" onclick="document.getElementById('qty_<?php echo $name?>').value++; fireEvent(document.getElementById('qty_<?php echo $name?>'), 'change', { firedBy: document.getElementById('qty_<?php echo $name?>') });"><span><span>+</span></span></button></td>
+			<td><span class="regular-price" style="margin-right: 10px"><span class="price" id="mulidate_<?php echo $name?>_price"> x
+	        
+	        <?php echo Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, Mage::helper('bookmepro')->getProfilePrice($_product->getFinalPrice(), $profile)), true, false);?></span></span></td></tr>
+	        
+	        <?php endforeach;?>
+        </table>
+  
+    <?php ?>
+    
+    
+    
+</dd>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * dotsquares.com
+ *
+ * Dotsquares_Taxrate extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   	Dotsquares
+ * @package		Dotsquares_Taxrate
+ * @copyright  	Copyright (c) 2013
+ * @license		http://opensource.org/licenses/mit-license.php MIT License
+ * @author      Jagdish Ram <jagdish.ram@dotsquares.com>
+ */
+--> 
+<layout>
+	<!-- Taxrates grid action -->
+	<adminhtml_taxrate_taxrate_index>
+		<reference name="menu">
+			<action method="setActive">
+				<menupath>taxrate/taxrate</menupath>
+			</action>
+		</reference>
+		<reference name="content">
+			<block type="taxrate/adminhtml_taxrate" name="taxrate" />
+		</reference>
+	</adminhtml_taxrate_taxrate_index>
+	<adminhtml_taxrate_taxrate_grid>
+		<block type="core/text_list" name="root" output="toHtml">
+			<block type="taxrate/adminhtml_taxrate_grid" name="taxrate_grid"/>
+		</block>
+	</adminhtml_taxrate_taxrate_grid>
+	<!-- Taxrate add/edit action -->
+	<adminhtml_taxrate_taxrate_edit>
+		<update handle="editor"/>
+		<reference name="menu">
+			<action method="setActive">
+				<menupath>taxrate/taxrate</menupath>
+			</action>
+		</reference>
+		<reference name="content">
+			<block type="taxrate/adminhtml_taxrate_edit" name="taxrate_edit"></block>
+		</reference>
+		<reference name="left">
+			<block type="taxrate/adminhtml_taxrate_edit_tabs" name="taxrate_tabs"></block>
+		</reference> 
+	</adminhtml_taxrate_taxrate_edit>
+</layout>

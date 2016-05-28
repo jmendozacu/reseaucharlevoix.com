@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * dotsquares.com
+ *
+ * Dotsquares_Taxrate extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   	Dotsquares
+ * @package		Dotsquares_Taxrate
+ * @copyright  	Copyright (c) 2013
+ * @license		http://opensource.org/licenses/mit-license.php MIT License
+ * @author      Jagdish Ram <jagdish.ram@dotsquares.com>
+ */
+-->
+<config>
+	<modules>
+		<Dotsquares_Taxrate>
+			<version>0.0.1</version>
+		</Dotsquares_Taxrate>
+	</modules>
+	<global>
+		<resources>
+			<dotsquares_taxrate_setup>
+				<setup>
+					<module>Dotsquares_Taxrate</module>
+					<class>Dotsquares_Taxrate_Model_Resource_Setup</class>
+				</setup>
+			</dotsquares_taxrate_setup>
+		</resources>
+		<blocks>
+			<taxrate>
+				<class>Dotsquares_Taxrate_Block</class>
+			</taxrate>
+		</blocks>
+		<helpers>
+			<taxrate>
+				<class>Dotsquares_Taxrate_Helper</class>
+			</taxrate>
+		</helpers>
+		<models>
+			<taxrate>
+				<class>Dotsquares_Taxrate_Model</class>
+				<resourceModel>taxrate_resource</resourceModel>
+			</taxrate>
+			<taxrate_resource>
+				<class>Dotsquares_Taxrate_Model_Resource</class>
+				<entities>
+					<taxrate>
+						<table>dotsquares_taxrate_taxrate</table>
+					</taxrate>
+				</entities>
+			</taxrate_resource>
+		</models>
+	</global>
+	<adminhtml>
+		<layout>
+			<updates>
+				<dotsquares_taxrate>
+					<file>dotsquares_taxrate.xml</file>
+				</dotsquares_taxrate>
+			</updates>
+		</layout>
+		<translate>
+			<modules>
+				<Dotsquares_Taxrate>
+					<files>
+						<default>Dotsquares_Taxrate.csv</default>
+					</files>
+				</Dotsquares_Taxrate>
+			</modules>
+		</translate>
+	</adminhtml>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Dotsquares_Taxrate before="Mage_Adminhtml">Dotsquares_Taxrate_Adminhtml</Dotsquares_Taxrate>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<default>
+		<taxrate>
+		</taxrate>
+	</default>
+</config>

@@ -1,0 +1,122 @@
+<?php 
+/**
+ * ITORIS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ITORIS's Magento Extensions License Agreement
+ * which is available through the world-wide-web at this URL:
+ * http://www.itoris.com/magento-extensions-license.html
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to sales@itoris.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extensions to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to the license agreement or contact sales@itoris.com for more information.
+ *
+ * @category   ITORIS
+ * @package    ITORIS_GROUPEDPRODUCTS
+ * @copyright  Copyright (c) 2013 ITORIS INC. (http://www.itoris.com)
+ * @license    http://www.itoris.com/magento-extensions-license.html  Commercial License
+ */
+
+ 
+?>
+<?php  /* @var $this Itoris_GroupedProductConfiguration_Block_Product_Edit*/ ?>
+
+<?php if ($this->getDataHelper()->isRegisteredFrontend()): ?>
+	<?php if ($this->getGroupedProduct()->getTypeId() == 'grouped'): ?>
+	<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>itoris/groupedproductconfiguration/groupedproduct.js"></script>
+	<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>itoris/groupedproductconfiguration/pickaday.js"></script>
+	<script type="text/javascript">itorisGroupedOptions = []; opConfig = {reloadPrice : function(){}}; spConfig = {reloadPrice : function(){}}; bundle = {reloadPrice : function(){}};</script>
+    <!--script type="text/javascript">
+       var addMaxQty = function(productId, optionId){
+            if($('options_' + optionId + '_multidate').value != '')
+                $('pikaday_info_text_qty' + productId).innerHTML = '<br /><?php echo Mage::helper('bookme')->__('Maximal bookable quantity: ')?>'+ $('pikaday_max_qty' + productId).value;
+        };
+    var displayInfo = function(productId, optionId, type){
+        var value = $('options_' + optionId + '_multidate').value;
+        var text = '';
+        var title = '';
+
+        if(value == ''){
+            if(type == 'Session'){
+                title = '<?php echo Mage::helper('bookme')->__('No selected session.')?>';
+                text = '<?php echo Mage::helper('bookme')->__('Please select date and session to book this product.')?>';
+                $('pikaday_info_text_qty' + productId).innerHTML = '';
+            }else{
+                title = '<?php echo Mage::helper('bookme')->__('No selected date.')?>';
+                text = '<?php echo Mage::helper('bookme')->__('Please select date or day range to book this product.')?>';
+                $('pikaday_info_text_qty' + productId).innerHTML = '';
+            }
+        }else{
+            if(type == 'Session'){
+                title = '<?php echo Mage::helper('bookme')->__('Your selected session:')?>';
+                var arr = value.split(",");
+                for(var index = 0; index < arr.length - 1; index++){
+                    if(index > 4)
+                    {
+                        text += "...<br />";
+                        break;
+                    }
+                    var date = new Date(parseInt(arr[index], 10));
+                    text += date.toLocaleDateString()+" "+date.toLocaleTimeString()+"<br />";
+                }
+            }else{
+                title = '<?php echo Mage::helper('bookme')->__('Your selected dates:')?>';
+                var arr = value.split(",");
+                text += 'From : ';
+                text += new Date(parseInt(arr[0], 10)).toLocaleDateString()+"<br />";
+                text += 'To : ';
+                text += new Date(parseInt(arr[arr.length - 2], 10)).toLocaleDateString()+"<br />";
+            }
+        }
+
+        $('pikaday_info_title' + productId).innerHTML = title;
+        $('pikaday_info_text' + productId).innerHTML = text;
+        $('pikaday_info' + productId).className = 'notice-msg';
+    };
+    </script-->
+	<link rel="stylesheet" type="text/css" href="<?php echo Mage::getDesign()->getSkinUrl('itoris/groupedproductconfiguration/css/groupedproduct.css', array()) ?>"/>
+		<div id="itoris_grouped_product_configuration">
+			<?php $subProducts = $this->getSubProducts();?>
+            <?php $img = array(); ?>
+            <?php $productUrl = array();
+             ?>
+            <?php echo $this->calendarHtml();?>
+			<?php foreach($subProducts as $subProduct): ?>
+					<?php if ($subProduct->getHasOptions()): ?>
+                		<script type="text/javascript">
+							var optionsPrice<?php echo $subProduct->getId();?> = new Product.OptionsPrice(<?php echo $this->getConfig($subProduct); ?>);
+						</script>
+						<div class="itoris_grouped_product_associated_product <?php if ($subProduct->getTypeId()=='bundle') {echo 'itoris_grouped_product_bundle';}?>" id="itoris_grouped_product_<?php echo $subProduct->getId();?>" style="display: none;">
+                            <?php echo $this->optionBlock($subProduct)->toHtml();?>
+						</div>
+					<?php endif; ?>
+                <?php
+                    if ($this->getDataHelper()->getSettings()->getShowImage()) {
+                    	//Eric: Remove Img for nav.. sku that sent to itoris js to render
+                    	if(substr($subProduct->getSku(), 0, 3) != "nav" && substr($subProduct->getSku(),0,3) != 'spc'){
+                        	$img[$subProduct->getId()] = (string)Mage::helper('catalog/image')->init($subProduct, 'small_image')->resize(75);
+                    	}
+                    }
+                ?>
+                <?php
+                    if ($this->getDataHelper()->getSettings()->getMakeClickable() && $subProduct->getVisibility() != Mage_Catalog_Model_Product_Visibility::VISIBILITY_NOT_VISIBLE) {
+                        $productUrl[$subProduct->getId()] = $subProduct->getProductUrl();
+                    }
+                ?>
+			<?php endforeach; ?>
+		</div>
+	<script type="text/javascript">
+		var itorisGroupedProduct = new Itoris.GroupedProduct('<?php echo Mage::getUrl('groupedproductconfiguration/cart/add'); ?>', <?php echo Zend_Json::encode($img)?>, <?php echo Zend_Json::encode($productUrl)?>, '<?php echo Mage::helper('core/url')->getCurrentUrl() ?>', <?php echo $this->showQtyAsCheck(); ?>);
+	</script>
+		<style>
+			.data-table .pika-table th, .data-table .pika-table td {padding:0;border:none;}
+			.pikaday-info-block {position: relative !important;}
+		</style>
+	<?php endif?>
+<?php endif?>

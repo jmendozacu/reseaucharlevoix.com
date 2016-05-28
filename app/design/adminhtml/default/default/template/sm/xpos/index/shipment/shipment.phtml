@@ -1,0 +1,168 @@
+<script>
+    window.shippingObject = [];
+    for (var member in window.shippingObject) delete window.shippingObject[member];
+    var elementShipment = {};
+    var currentPriceShippingMethod = '';
+    var currentCodeShipment = '';
+</script>
+<script type="text/javascript">
+    function select_shipping_method(shipping_code) {
+        iLog('select Shiping Method');
+        jQuery(".shipping-method-item").removeClass('active');
+        jQuery("#s_method_" + shipping_code).addClass('active');
+        var grandTotalForShip = jQuery('#order_grandtotal').val();
+        var currentCode = jQuery('#order_shipping_method_hidden').val();
+        jQuery('#order_shipping_method_hidden').val(shipping_code);
+        var currentPrice = 0;
+        var changePrice = 0;
+        var diff = 0;
+        var balance = parseFloat(jQuery('#balance').val());
+        var cashIn = unFormatCurrency(jQuery('#cash-in').val(), priceFormat);
+//        console.log(window.shippingObject);
+        jQuery.each(window.shippingObject, function (key, value) {
+            if (value.code == currentCode) {
+                iLog('>> detect == currentcode ', currentCode);
+                iLog('>> current Price', value.price);
+                currentPrice = value.price;
+            }
+            if (value.code == shipping_code) {
+                iLog('>> detect == change shipping code ', shipping_code);
+                iLog('>> change Price', value.price);
+                changePrice = value.price;
+            }
+        });
+        diff = parseFloat(changePrice) - parseFloat(currentPrice);
+        grandTotalForShip = parseFloat(grandTotalForShip) + diff;
+        jQuery('#order_grandtotal').val(grandTotalForShip);
+        jQuery('#grandtotal').text(formatCurrency(grandTotalForShip.toFixed(2), priceFormat));
+        if (balance > 0) {
+            updateBalance();
+        } else {
+            jQuery('#cash-in').val(formatCurrency(grandTotalForShip.toFixed(2), priceFormat));
+        }
+    }
+
+</script>
+<?php
+    $defaultShipping = Mage::helper('xpos/configXPOS')->getDefaultShipping();
+    if (SM_XPos_Adminhtml_XposController::$_callFromControllerXpos == false) {
+        return;
+    }
+    $quote = Mage::getSingleton('adminhtml/sales_order_create')->getQuote();
+    $quoteId = Mage::getSingleton('adminhtml/sales_order_create')->getQuote()->getId();
+    if (!!$quoteId) {
+        if (!Mage::helper('xpos/configXPOS')->getOnlyUseDefaultShipping()) {
+            /*TODO: Important - Need Collect Shipping Rate*/
+            $quote->getShippingAddress()->setCollectShippingRates(true)->collectShippingRates();
+        }
+
+        $shippingMethod = $quote->getShippingAddress()->getShippingMethod();
+        if (!$shippingMethod) {
+            $shippingAddress = $quote->getShippingAddress();
+            if (!!$defaultShipping) {
+                Mage::getSingleton('adminhtml/sales_order_create')->setShippingMethod($defaultShipping);
+            }
+        }
+        ?>
+        <?php
+        $session = Mage::getSingleton('adminhtml/session_quote');
+        if ($this->getActiveMethodRate()) {
+            $shippingMethod = $this->getActiveMethodRate()->getMethodTitle();
+        } else {
+            if (Mage::helper('xpos/configXPOS')->getOnlyUseDefaultShipping())
+                $shippingMethod = Mage::getModel('xpos/iayz')->getCurrentShippingTitle($defaultShipping);
+            else
+                $shippingMethod = 'No Shipping';
+        }
+        ?>
+        <script>
+            jQuery("#shipping_detail").html('<?php echo $shippingMethod; ?>');
+        </script>
+        <div id="order-shipping-method-choose">
+            <div class="shipment-methods">
+                <?php if ($_shippingRateGroups = $quote->getShippingAddress()->getGroupedAllShippingRates()) {
+                    ?>
+                    <!--{
+                    code: xpayment_pickup_shipping-> rate:
+                    freeshipping->
+                    }-->
+                    <?php foreach ($_shippingRateGroups as $code => $_rates) { ?>
+                    <?php foreach ($_rates as $_rate) {
+                    $_code = $_rate->getCode();/*full code shipping*/
+                    ?>
+                    <div
+                        onclick="select_shipping_method('<?php echo($_code); ?>');syncShipping('<?php echo $_code ?>','<?php echo $_rate->getMethodTitle() ?>');"
+                        id="s_method_<?php echo($_code); ?>"
+                        class="shipping-method-item checkout-item <?php if ($methodActive = $this->getActiveMethodRate()) {
+                            $methodActive = $methodActive->getMethod();
+                            $currentLoopMethod = $_rate->getMethod();
+                            if ($currentLoopMethod == $methodActive) {
+                                echo "active";
+                            }
+                        } ?>">
+
+                            <span
+                                onclick="/*select_shipping_method('<?php echo($_code); ?>');order.setShippingMethodSyn('<?php echo $_code ?>','<?php echo $_rate->getMethodTitle() ?>');*/">
+                                <?php echo $this->getCarrierName($code); ?> :
+                                <?php echo $_rate->getMethodTitle() ? $_rate->getMethodTitle() : $_rate->getMethodDescription() ?>
+                                -
+                                <?php
+                                    /*get price not include cotainer(-)*/
+                                    $inclNotContainer = $session->getQuote()->getStore()->convertPrice(
+                                        Mage::helper('tax')->getShippingPrice(
+                                            $_rate->getPrice(),
+                                            true,
+                                            $session->getQuote()->getShippingAddress(),
+                                            null,
+                                            //We should send exact quote store to prevent fetching default config for admin store.
+                                            $session->getQuote()->getShippingAddress()->getQuote()->getStore()
+                                        ),
+                                        false
+                                    ); ?>
+                                <?php if ($this->helper('tax')->displayShippingPriceExcludingTax()): ?>
+                                    <?php echo $this->getShippingPrice($_rate->getPrice(), false); ?>
+                                <?php else: ?>
+                                    <?php echo $this->getShippingPrice($_rate->getPrice(), true) ?>
+                                <?php endif; ?>
+                                </span>
+                    </div>
+                    <script>
+                        window.shippingObject.push({
+                            'code': '<?php echo $_code;  ?>',
+                            'price': '<?php echo $inclNotContainer;  ?>'
+                        });
+                    </script>
+                <?php } ?>
+
+                <?php } ?>
+                <input type="hidden" value="<?php if ($_rate = $this->getActiveMethodRate()) {
+                    echo $_rate->getCode();
+                } ?>" name="order[shipping_method]" id="order_shipping_method_hidden">
+
+
+                <?php } else {
+                    if (!Mage::helper('xpos/configXPOS')->getOnlyUseDefaultShipping()){
+                ?>
+
+                    <div class="shipping-method-item checkout-item active">
+                        <span><?php echo Mage::helper('sales')->__('No Shipping Methods') ?></span>
+                    </div>
+
+
+                <?php } else {
+                    ?>
+                    <div class="shipping-method-item checkout-item active">
+                        <span><?php echo Mage::getModel('xpos/iayz')->getCurrentShippingTitle($defaultShipping); ?></span>
+                    </div>
+                    <?php
+
+                }
+                } ?>
+
+            </div>
+        </div>
+
+
+        <?php
+    }
+?>

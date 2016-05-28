@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Megnor_Specialproducts>
+            <version>2.0</version>
+        </Megnor_Specialproducts>
+    </modules>
+    <global>
+        <helpers>
+            <specialproducts>
+                <class>Megnor_Specialproducts_Helper</class>
+            </specialproducts>
+        </helpers>		
+		<blocks>
+			<specialproducts>
+				<class>Megnor_Specialproducts_Block</class>
+			</specialproducts>
+		</blocks>
+        <resources>
+            <specialproducts_setup>
+                <setup>
+                    <module>Megnor_Specialproducts</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </specialproducts_setup>
+            <specialproducts_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </specialproducts_write>
+            <specialproducts_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </specialproducts_read>
+        </resources>
+    </global>
+  
+    <adminhtml>
+        <menu>
+            <megnor_menu translate="title" >
+                <children>
+					<specialproductssetting >
+						<title>SpecialProducts</title>
+						<sort_order>7</sort_order>
+						<action>adminhtml/system_config/edit/section/specialproducts</action>
+					</specialproductssetting>
+                </children>                
+            </megnor_menu>
+        </menu>
+
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <specialproducts>
+                                            <title>SpecialProducts</title>
+                                        </specialproducts>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+	
+	<default>
+		<specialproducts>
+			<general>
+				<active>1</active>
+				<categorywised>1</categorywised>
+			</general>
+			
+		</specialproducts>
+	</default>
+</config>

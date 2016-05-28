@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_VPayment>
+            <version>0.1.0</version>
+        </SM_VPayment>
+    </modules>
+
+    <global>
+        <blocks>
+            <vpayment>
+                <class>SM_VPayment_Block</class>
+            </vpayment>
+        </blocks>
+        <models>
+            <vpayment>
+                <class>SM_VPayment_Model</class>
+            </vpayment>
+            <!--<cashpayment_adminhtml>
+                <class>SM_Cashpayment_Adminhtml_Model</class>
+            </cashpayment_adminhtml>-->
+        </models>
+        <resources>
+            <vpayment_setup>
+                <setup>
+                    <module>SM_VPayment</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </vpayment_setup>
+            <vpayment_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </vpayment_write>
+            <vpayment_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </vpayment_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <vpayment_interactpayment>
+                <active>1</active>
+                <model>vpayment/interact</model>
+                <order_status>pending</order_status>
+                <title>X-POS Interact</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </vpayment_interactpayment>
+            <vpayment_mastercardpayment>
+                <active>1</active>
+                <model>vpayment/master</model>
+                <order_status>pending</order_status>
+                <title>X-POS Master Card</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </vpayment_mastercardpayment>
+            <vpayment_visapayment>
+                <active>1</active>
+                <model>vpayment/visa</model>
+                <order_status>pending</order_status>
+                <title>X-POS Visa Payment</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </vpayment_visapayment>
+        </payment>
+    </default>
+</config>

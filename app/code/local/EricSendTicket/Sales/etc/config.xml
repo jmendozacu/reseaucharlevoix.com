@@ -1,0 +1,27 @@
+<config>
+    <modules>
+        <EricSendTicket_Sales>
+            <version>0.1.0</version>
+        </EricSendTicket_Sales>
+    </modules>
+    <global>
+        <models>
+            <sales>
+                <rewrite>
+                    <observer>EricSendTicket_Sales_Model_Observer</observer>
+                </rewrite>
+            </sales>
+        </models>
+        <events>
+            <checkout_submit_all_after>
+                <observers>
+                    <sales_notification_observer>
+                        <type>singleton</type>
+                        <class>sales/observer</class>
+                        <method>doSomething</method>
+                    </sales_notification_observer>
+                </observers>
+            </checkout_submit_all_after>
+        </events>
+    </global>
+</config>

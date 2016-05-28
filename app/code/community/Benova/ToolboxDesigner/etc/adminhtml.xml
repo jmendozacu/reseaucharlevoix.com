@@ -1,0 +1,26 @@
+<!-- <config>
+    <menu>
+        <benova>
+            <title>Benova</title>
+            <sort_order>999</sort_order>
+            <children>
+                <toolbox>
+                    <title>Toolbox Designer</title>
+                    <sort_order>1</sort_order>
+                    <children>
+                        <create>
+                            <title>Create Toolboxes</title>
+                            <sort_order>1</sort_order>
+                            <action>adminhtml/catalog_product/new/set/4/type/bundle/</action>
+                        </create>
+                        <list>
+                            <title>List Toolboxes</title>
+                            <sort_order>2</sort_order>
+                            <action>adminhtml/toolbox/index</action>
+                        </list>
+                    </children>
+                </toolbox>
+            </children>
+        </benova>
+    </menu>
+</config> -->

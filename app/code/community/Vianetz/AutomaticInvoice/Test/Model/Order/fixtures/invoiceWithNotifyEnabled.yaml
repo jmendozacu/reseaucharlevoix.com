@@ -1,0 +1,26 @@
+tables:
+  sales/order:
+      - entity_id: 1
+        billing_address_id: 1
+        shipping_address_id: 2
+    sales/invoice:
+      - entity_id: 1
+        order_id: 1
+        email_sent: 0
+        state: 2 # paid
+    sales/order_address:
+      - entity_id: 1
+        parent_id: 1
+        address_type: billing
+        is_deleted: 0
+      - entity_id: 2
+        parent_id: 1
+        address_type: shipping
+        is_deleted: 0
+    sales/order_payment:
+      - entity_id: 1
+        parent_id: 1
+        method: checkmo
+
+config:
+  default/automaticinvoice/invoice/notify_customer: 1

@@ -1,0 +1,156 @@
+<?php
+
+	$validationResetQuery = "update Magento.reseauchx_reservationreseau_reservationsiege set validation = 0";
+	$resource = Mage::getSingleton('core/resource');
+	$writeConnection = $resource->getConnection('core_write');
+	$writeConnection->query($validationResetQuery);
+	
+	date_default_timezone_set("America/New_York");
+	$fromDate = date('Y-m-d H:i:s', strtotime("2015-04-26"));
+	$toDate = date('Y-m-d H:i:s', strtotime("2016-01-01"));
+	
+	$orders = Mage::getModel('sales/order');
+	$reservationSiege = Mage::getModel('sales/order');
+	$ordersCollection = $orders->getCollection()
+		->addAttributeToFilter('created_at', array('from'=>$fromDate, 'to'=>$toDate))
+		->addAttributeToFilter('status', array('neq' => Mage_Sales_Model_Order::STATE_CANCELED));	
+	
+	
+	
+	echo "<h1>Orders validations</h1>";
+	
+	foreach($ordersCollection as $order){
+		echo "Order: " . $order->getIncrementId() . " " . $order->status . " ";
+		$items = $order->getAllItems();
+		$navQty = 0;
+		$seatQty = 0;
+		$bookQty = 0;
+		foreach($items as $item){
+			if(substr($item->getSku(),0,3) == "nav" || substr($item->getSku(),0,3) == "spc" ){
+				$navQty += $item->getData('qty_ordered');
+			}
+			if($item->product_type == "booking" ){
+				$bookinHasSeat = false;
+				$bookQty +=1;
+				$options = $item->getProductOptions();
+				$selectedDate = null;
+				foreach ($options as $optiontype){
+					$_printValue = "";
+					foreach ($optiontype as $option){
+						if($option['option_type'] =='multidate_type'){
+							$selectedSession = unserialize($option['value']);
+							$selectedSession = explode("#",$selectedSession['values']);
+							Mage::log('Session: ' . $selectedSession[0]);
+							$session = Mage::getModel('bookmepro/session')->load($selectedSession[0]);
+							$selectedDateStr = Mage::helper('core')->formatDate($session['date_from']." ".date('H:i:s', strtotime($session['time_from'])), 'medium', true);
+							$_printValue = $selectedDateStr;
+							echo $_printValue . " ";
+							$selectedDate = new DateTime($selectedDateStr);
+						}
+						//if($selectedDate <= new DateTime("now")){$bookinHasSeat = true;echo  " <b style='color:green'> Skipping past reservation</b> ";}
+						if($option['option_type'] && $option['option_type'] =='selectionsiege_type' ){
+							$bookinHasSeat = true;
+							echo "Sieges: " . " ";
+							$sieges = explode(',', $option['value']);
+							foreach ($sieges as $siege) {
+								$siegeId = ltrim($siege, 's');
+								echo $siegeId . " ";
+								$seatQty +=1;
+								$reservationsiegeCollection =  Mage::getModel('reseauchx_reservationreseau/reservationsiege')
+								->getCollection()
+								->addFieldToFilter('siege_id', array('eq' => $siegeId))
+								->addFieldToFilter('dateheuredebut', array('eq' => $selectedDate->format('Y-m-d H:i:s')))
+								->addFieldToFilter('idorder', array('eq' => $order->getId()));
+								//$reservationsiege->printLogQuery(true);
+								if($reservationsiegeCollection->count() < 1){
+									
+									if($order->status == "complete"){
+										echo  " <b style='color:red'>*** Error: Seat not found</b> ";
+										/*$modelSalle = Mage::getModel('reseauchx_reservationreseau/siege')->load($siegeId);
+										$salle = $modelSalle->getData('salle_id');
+										$data = array(
+												'salle_id'=>$salle,
+												'siege_id'=>$siegeId,
+												'dateheuredebut'=>$selectedDate->format('Y-m-d H:i:s'),
+												'dateheurefin'=>$selectedDate->format('Y-m-d H:i:s'),
+												'confirme'=>1,
+												'idquote'=>0,
+												'book_id'=>0,
+												'idorder'=>$order->getId(),
+												'status'=>1,
+												'updated_at'=>time(),
+												'created_at'=>time(),
+										);
+										$model = Mage::getModel('reseauchx_reservationreseau/reservationsiege')->setData($data);
+										try {
+											$insertId = $model->save()->getId();
+											echo  " <b style='color:green'>*** Insert: Seat</b> ";
+										} catch (Exception $e){
+											Mage::log($e->getMessage());
+										}*/
+									}
+								}
+								else{
+										$reservationsiegeCollection->getFirstItem()->validation += 1;
+										$reservationsiegeCollection->getFirstItem()->save();
+										$doubleBookCollection =  Mage::getModel('reseauchx_reservationreseau/reservationsiege')
+										->getCollection()
+										->addFieldToFilter('siege_id', array('eq' => $siegeId))
+										->addFieldToFilter('dateheuredebut', array('eq' => $selectedDate->format('Y-m-d H:i:s')))
+										->addFieldToFilter('idorder', array('neq' => $order->getId()))
+										->addFieldToFilter('idorder', array('notnull' => true));
+										if($doubleBookCollection->count() > 0 && $selectedDate >= new DateTime("now")){
+											foreach($doubleBookCollection as $doubleBook){
+												echo  " <b style='color:red'>**** Error: Double Booking with order: " . $doubleBook->getData('idorder')  .  "</b> ";
+												$ordersDoubleBook = Mage::getModel('sales/order')
+												->getCollection()
+												->addFieldToFilter('entity_id', array('eq' => $doubleBook->getData('idorder')));
+												foreach($ordersDoubleBook as $orderDoubleBook){
+													echo  $orderDoubleBook->status . " " . $orderDoubleBook->increment_id . " ";
+												}
+												
+												
+											}
+										}
+										
+								}
+							}
+							echo  " ";
+						}
+					}
+				}
+				if($bookinHasSeat == false && $selectedDate >= new DateTime("now")){
+					echo  "<b style='color:red'>*** Error: booking whithout seat</b>";
+				}
+			}
+		}
+		if($navQty > 0){
+			echo "Ticket Qty: " . $navQty . " ";
+		}
+		if($navQty != ($seatQty / $bookQty)){
+			echo  "<b style='color:red'>*** Error: Ticket qty and seat qty does not match</b>" .  " " ;
+		}
+		echo "<br/>";
+	}
+	echo "<br/>";
+	echo "<h1>Obsolete seats</h1>";
+	$reservationsiegeCollection =  Mage::getModel('reseauchx_reservationreseau/reservationsiege')
+	->getCollection()
+	->addFieldToFilter('idorder', array('notnull' => true))
+	->addFieldToFilter('validation', array('eq' => 0));
+	foreach ($reservationsiegeCollection as $reservationsiege) {
+		echo $reservationsiege->getId() . "- Siege: " . $reservationsiege->siege_id . " Date: " . $reservationsiege->dateheuredebut;
+		echo "<br/>";
+	}
+	echo "<br/>";
+	echo "<h1>Double booking in same order</h1>";
+	$reservationsiegeCollection2 =  Mage::getModel('reseauchx_reservationreseau/reservationsiege')
+	->getCollection()
+	->addFieldToFilter('idorder', array('notnull' => true))
+	->addFieldToFilter('validation', array('gt' => 1));
+	foreach ($reservationsiegeCollection2 as $reservationsiege) {
+		echo $reservationsiege->getId() . "- Siege: " . $reservationsiege->siege_id . " Date: " . $reservationsiege->dateheuredebut;
+		echo "<br/>";
+	}
+	
+?>

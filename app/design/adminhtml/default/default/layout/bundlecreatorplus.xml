@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <adminhtml_catalog_product_extendedbundle>
+        <reference name="head">
+            <action method="addCss"><name>bundlecreatorplus.css</name></action>
+        </reference>
+        <reference name="product_tabs">
+            <action method="addTab">    
+                <name>extendedbundle_items</name>
+                <block>bundlecreatorplus/adminhtml_product_edit_tab_package</block>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_extendedbundle>
+    <adminhtml_sales_order_view>
+        <reference name="order_items">
+            <action method="addItemRender">
+              <type>extendedbundle</type>
+              <block>bundlecreatorplus/adminhtml_sales_order_view_items_renderer</block>
+              <template>bundlecreatorplus/sales/order/view/items/renderer.phtml</template>
+            </action>
+        </reference>
+    </adminhtml_sales_order_view>
+</layout>

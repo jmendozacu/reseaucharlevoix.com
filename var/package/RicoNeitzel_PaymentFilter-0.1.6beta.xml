@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package>
+    <name>RicoNeitzel_PaymentFilter</name>
+    <version>0.1.6beta</version>
+    <stability>beta</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Select which payment methods are available for&#xD;
+every customer group. Also, Payment methods can be disabled for products.</summary>
+    <description>This module enables you to select which payment methods are available for&#xD;
+every customer group. Also, Payment methods can be disabled for products.&#xD;
+A customer can only use the payment methods during checkout&#xD;
+available to his customer group AND not disabled for the products in the&#xD;
+shopping cart.&#xD;
+&#xD;
+It was created by Vinai Kopp &lt;vinai@netzarbeiter.com&gt; for Rico Neitzel&#xD;
+(http://n-punkt.de/).&#xD;
+&#xD;
+After installing this extension you have to configure the payment&#xD;
+methods available to each customer group. You can do that in the admin interface&#xD;
+under Customers &gt; Customer Groups. The default is NONE, so if you don't do that NO&#xD;
+payment methods will be available, abd the customer can not check out.&#xD;
+&#xD;
+The default for products is to allow ALL payment methods, so you only have to touch&#xD;
+the product level configuration if you want to disable payment methods for specific&#xD;
+products.&#xD;
+&#xD;
+The whole extension can be disabled in System &gt; Config &gt; Sales &gt; Checkout on a&#xD;
+Global or Website scope.</description>
+    <notes>Pretty stable though</notes>
+    <authors><author><name>Vinai Kopp</name><user>auto-converted</user><email>vinai@netzarbeiter.com</email></author></authors>
+    <date>2011-07-14</date>
+    <time>09:56:24</time>
+    <contents><target name="magecommunity"><dir name="RicoNeitzel"><dir name="PaymentFilter"><dir name="Block"><dir name="Adminhtml"><dir name="Group"><file name="Form.php" hash="737de45aaf3356299bedc0e3660f2179"/></dir></dir></dir><dir name="Helper"><dir name="Payment"><file name="Data.php" hash="04294141b2e8ae21e74c873c83262ceb"/></dir><file name="Data.php" hash="927209978975511add69d201a8343bbf"/></dir><dir name="Model"><dir name="Config"><dir name="Source"><dir name="Payment"><file name="Methods.php" hash="1c57f30d7850feb3471da33c28266658"/></dir></dir></dir><dir name="Entity"><dir name="Backend"><dir name="Payment"><file name="Methods.php" hash="3a328a6eecbdc5c92d0ef13c97fdf8f1"/></dir></dir></dir><dir name="Payment"><dir name="Method"><file name="Free.php" hash="cf1754c1b6d3bcee80d5076c0c8c8486"/></dir></dir><file name="Observer.php" hash="2b24c850be32ef8f8624266153a902bb"/></dir><dir name="etc"><file name="config.xml" hash="6246005e609172b2285d3ef65f15b713"/><file name="system.xml" hash="5077034cd9b5336b36446e35acb184ee"/></dir><dir name="sql"><dir name="payfilter_setup"><file name="mysql4-install-0.1.0.php" hash="8fd0e2f0f30efdd9d691c51d0e80673d"/><file name="mysql4-upgrade-0.1.1-0.1.2.php" hash="20df382296563006e3f3e79ac3c106d3"/></dir></dir><file name="README.txt" hash="921bc1a7917346c91cbc1f3d2515bc91"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="RicoNeitzel_PaymentFilter.xml" hash="1a874976572567a2e7be169c8fad13d6"/></dir></target><target name="magelocale"><dir name="de_DE"><file name="RicoNeitzel_PaymentFilter.csv" hash="bc46ffe9ef3246f26272f7c00d818c34"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

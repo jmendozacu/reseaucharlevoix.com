@@ -1,0 +1,4 @@
+"history_amount","balance","status","customer_name","order_increment_id","recipient_name","created_at","expired_at","store_id","currency","customer_id","customer_email","recipient_email","recipient_address","message"
+"25.0000","25.0000","active","Nguyen Dac Doan","100000031","","2011-12-06 04:07:52","2012-12-05 00:00:00","1","USD","2","doan.1988@yahoo.com","","",""
+"100.0000","100.0000","active","Nguyen Dac Doan","100000030","Doanh","2011-12-06 03:20:08","2012-06-11 03:20:07","1","USD","2","doan.1988@yahoo.com","doanhbk@yahoo.com","Nguyen Dac Doan\n\nNew York\n\n\n\n\nNew York,  New York, 1000\nUnited States\nT: 123456789\n","Custom message"
+"25.0000","500.0000","pending","Nguyen Dac Doan","100000007","Doanh","2011-08-29 09:14:18","2012-08-28 00:00:00","1","USD","2","dacdoan_88@yahoo.com","doanh@oss.com.vn","Nguyen Dac Doan\nOSS\nTran Dai Nghia\n\n\n\n\nHa Noi,  084\nVietnam\nT: 123456789\n","Happy birth day!"

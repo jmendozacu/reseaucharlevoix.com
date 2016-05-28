@@ -1,0 +1,271 @@
+/** headerTag ***/
+@import url("headerTag.css");
+
+#partnaires-list li{
+	margin-right: 95px;
+}
+#partnaires-list {
+  position: relative;
+  padding: 0 80px;
+}
+#homeReserv{
+	width: 240px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#homeReservMap{
+	display: none;
+	float:none;
+	margin-right: 0px;
+}
+#homeReservWidget{
+	width: 240px;
+	float:left;
+}
+
+.rsBtn{
+	line-height: 41px;
+}
+.rsBtnInv{
+	line-height: 41px;
+}
+.rsBtn a{
+	display: inline;
+	border: 2px #061435 solid;
+	padding:10px 30px 10px 30px;
+	font-size: 12px;
+	color:#061435; 
+	text-transform: uppercase;
+}
+.rsBtnInv a{
+	display: inline;
+	border: 2px white solid;
+	padding:10px 30px 10px 30px;
+	font-size: 12px;
+	color:white; 
+	text-transform: uppercase;
+}
+
+.featHomeCanvas{
+	height:20%;
+}
+.featHome{
+	position: relative;
+    width: 100vw;
+    left: calc(-50vw + 49%);
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+.featHome p {
+	text-align:center;
+	max-width: 600px;
+	margin-left:auto;
+	margin-right:auto;
+	color: white;
+	font-size: 20px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.featOverlay{
+	/*width: 100%;*/
+	background-color: rgba(15,23,40,0.5);
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	
+}
+.featTitle{
+	font-family: 'SantEliaRoughAlt-Black';
+	color:white;
+	font-size: 30px;
+	line-height: 40px;	
+	margin-bottom: 20px;
+}
+#featExp{
+	background-image: url('http://74.115.206.247/temp/magento/skin/frontend/templatemela/MAG100210_default/images/rc/featHomeExp.jpg');
+	
+}
+#featHebergement{
+	background-image: url('http://74.115.206.247/temp/magento/skin/frontend/templatemela/MAG100210_default/images/rc/homeHebergement.jpg');
+	
+}
+
+.destiHomeCol{
+	width: 260px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	margin-bottom: 60px;
+}
+.destiHomePic{
+	background-color: black;
+	border-radius: 50%;
+	
+}
+.destiHomePic img{
+	border-radius: 50%;
+	width: 100%;
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+  
+}
+.destiHomeTitle{
+	font-size: 24px;
+	font-weight: bold;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	line-height: 26px;
+}
+
+.txtHome{
+	text-align: center;	
+	margin-top: 60px;
+}
+.txtHome p {
+	text-align:center;
+	max-width: 600px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size: 20px;
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.txtHomeTitle{
+	font-family: 'SantEliaRoughAlt-Black';
+	font-size: 35px;
+	line-height: 35px;
+	margin-bottom: 30px;
+}
+
+#featHotel{
+	background-color: rgb(6, 20, 53);
+	color:white;
+	padding-top: 0px;
+	padding-bottom: 60px;
+}
+#featHotelContainer{
+	width: 80%;
+	margin-left:auto;
+	margin-right:auto;
+}
+.hotelCol{
+	width: 90%;
+	padding-left:4%;
+	padding-right:4%;
+	text-align: center;
+	border-bottom: 1px white solid;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.hotelColNoBorder{
+	border-bottom: none !important;
+}
+.hotelNum{
+	font-size: 30px;
+	font-family: 'SantEliaRoughAlt-Black';
+	line-height: 50px;
+}
+.hotelName{
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	#partnaires-list {
+	  position: relative;
+	  padding: 0 40px;
+	}
+	#partnaires-list li{
+		margin-right: 30px;
+		width: 120px;
+	}
+	#partnaires-list li img{
+		width: 120px;
+	}
+	
+}
+
+@media screen and (min-width: 950px) {
+	#homeReserv{
+		width: 718px;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	#homeReserv img{
+		width: 378px;
+	}
+	#homeReservMap{
+		width: 378px;
+		float: left;
+		margin-right: 100px;
+		display: block;
+	}
+	#homeReservWidget{
+		width: 240px;
+		float:left;
+	}
+	.featHomeCanvas{
+		height:25%;
+	}
+	.featHome{
+		
+		background-size: 100% auto;
+	}
+	#featHotelContainer{
+		width: 80%;
+	}
+	#featHotel{
+		background-color: rgb(6, 20, 53);
+		color:white;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		padding-right: 0px;
+	}
+	.hotelCol{
+		width: 24%;
+		padding-left:4%;
+		padding-right:4%;
+		float: left;
+		text-align: center;
+		border-right: 1px white solid;
+		border-bottom: none;
+		padding-top: 30px;
+		padding-bottom: 30px;	
+	}
+	.hotelColNoBorder{
+		border-right: none !important;
+	}
+	.hotelNum{
+		font-size: 50px;
+		line-height: 50px;
+	}
+	.hotelName{
+		font-size: 20px;
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+	
+}
+
+@media screen and (min-width: 720px) {
+	
+	.featTitle{
+		font-size: 50px;
+		line-height: 50px;			
+	}
+	.destiHomeCol{
+		width: 24%;
+		margin-left:4%;
+		margin-right:4%;
+		float: left;
+		text-align:center;
+	}	
+}
+
+/* Full responsive Youtube */
+.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }

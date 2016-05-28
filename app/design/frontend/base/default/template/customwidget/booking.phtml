@@ -1,0 +1,497 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: vjcspy
+ * Date: 9/12/15
+ * Time: 11:36 PM
+ */
+?>
+<?php
+$storeId = 1;
+$productId = 423;
+$product = Mage::getModel('catalog/product')->setStoreId($storeId)->load($productId);
+$categoryIds = $product->getCategoryIds();
+if (isset($categoryIds[0])) {
+    $category = Mage::getModel('catalog/category')->setStoreId($storeId)->load($categoryIds[0]);
+//    Mage::register('current_category', $category);
+}
+$url = $product->getProductUrl();
+
+
+$storeId = 1;
+$url2 = $product->getProductUrl();
+$typeImage = $this->getData('type_image');
+$urlIamge = $this->getSkinUrl('customwidget/image/Preloader_' . $typeImage . '.gif');
+?>
+
+<?php 
+$helper = Mage::helper('toolbox');
+ ?>
+<script>
+    window.urlProduct = '<?php echo $url; ?>';
+    window.urlProduct1 = '<?php echo $url2; ?>';
+    window.urlSkin = "<?php echo $this->getSkinUrl('customwidget/uikit.min.css'); ?>";
+    window.urlJs = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/uikit.min.js'; ?>";
+    window.urlWidget = "<?php echo Mage::getUrl('customwidget/index/checkProduct') ?>";
+    console.log('<?php echo $urlIamge ?>');
+</script>
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<!--<link rel="stylesheet" href="--><?php //echo $this->getSkinUrl('customwidget/uikit.min.css'); ?><!--"/>-->
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('customwidget/default.css'); ?>"/>
+<link rel="stylesheet" href="<?php echo $this->getSkinUrl('customwidget/default.date.css'); ?>"/>
+<!--<script
+    src="<?php /*echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/uikit.min.js'; */ ?>"></script>-->
+<!--<script-->
+<!--    src="--><?php //echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/form-select.js'; ?><!--"></script>-->
+
+<script
+    src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/picker.js'; ?>"></script>
+<script
+    src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/picker.date.js'; ?>"></script>
+<script
+    src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/legacy.js'; ?>"></script>
+<style xmlns="http://www.w3.org/1999/html">
+    .panel-default > .panel-heading {
+        background-color: #061435;
+        border-color: #ddd;
+        color: #ffffff;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: large;
+    }
+
+    .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+margin-top: 5px;
+width: 164px;
+    }
+
+    /*div {*/
+    /*display: block;*/
+    /*}*/
+
+    .ahtml {
+        font-size: 10px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    /*-------*/
+    .panel-body {
+        padding: 15px;
+    }
+
+    .panel-body {
+        /* -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;*/
+        box-sizing: border-box;
+        /*-webkit-box-sizing: border-box;*/
+        -moz-box-sizing: border-box;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+    }
+
+    .abody {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 12px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        padding: 5px 2px 2px 2px;
+        width: 90%;
+    }
+
+.pure-button pure-button-primaryr {
+
+        background-color: #061435 !important;
+	color: #fff !important;
+
+    }
+
+
+    .allWidget {
+        display: block;
+        box-sizing: border-box;
+        height: 97%;
+        position: relative;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+		border-bottom-left-radius: 3px;
+		border-bottom-right-radius: 3px;
+border:#006 solid 1px;
+	
+width: 240px;
+    }
+
+    /*BODY*/
+
+    .none-display {
+        display: none;
+    }
+
+    .y-display {
+        display: block;
+    }
+
+    /*TD table*/
+    .yearTd {
+        padding: 0.04em !important;
+        text-align: center;
+        font-size: 12.5px !important;
+        border: 0px !important;
+    }
+</style>
+<style>
+    .se-pre-con {
+        /*background-color: transparent;*/
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(<?php echo $urlIamge ?>) center no-repeat #fff;
+    }
+</style>
+<div class="block block-list block-viewed allWidget"  ng-app="Toolbox" style="background: #fff none repeat scroll 0 0;
+    /*border-left: 1px solid #e6e6e6;
+    border-right: 1px solid #e6e6e6;*/
+    margin-bottom: 0;">
+    <!--<div class="widget-title">
+    </div>-->
+
+
+    <div class="panel panel-default" ng-controller="MainController">
+        <div class="panel-heading form-inline">
+            Réservation Train
+        </div>
+        <!-- /.panel-heading -->
+        <div class="panel-body abody ahtml">
+            <form class="pure-form pure-form-stacked uk-form" style="display: block;">
+                <fieldset1>
+
+                    <select 
+                    id="rOa"
+                     style="width: 100%;height: 36px" ng-model="rOa"
+                                            ng-options="item as item.label for item in rOas track by item.id"
+                                        ></select>
+                    <label for="from" class="abody"><?php echo $helper->__('From'); ?></label>
+                    <select id="originCity" ng-model="originCity" style="width: 100%;height: 36px"
+                                            ng-options="item as item.label for item in originPlaces track by item.id"
+                                            >
+                                    </select>
+                    <label for="from" class="abody"><?php echo $helper->__('To'); ?></label>
+                    <select id="destinationCity" style="width: 100%;height: 36px"
+                                            ng-options="item as item.label for item in destinationPlaces track by item.id"
+                                            ng-model="destinationCity"
+                                        >
+                                    </select>
+                    <label for="fromDate" class="abody"><?php echo $helper->__('Departure date'); ?></label>
+                    
+                    <input  id="fromDate" type="text" style="width: 100%;height: 36px"
+                                           data-uk-datepicker="{format:'DD/MM/YYYY'}"
+                                            ng-disabled="isLoading"
+                                            ng-model="fromDate"
+                                        >
+
+                    <label for="returnDate" class="abody"><?php echo $helper->__('Return date'); ?></label>
+                     <input id="returnDate" type="text" style="width: 100%;height: 36px"
+                                               data-uk-datepicker="{format:'DD/MM/YYYY'}"
+                                               ng-disabled="isLoading || rOa.id =='all'"
+                                               ng-model="returnDate"
+                                            >
+
+                    <div
+                        style="display: block; box-sizing: border-box;width: 80%;padding-top:12px;padding-bottom: 15px;/*border-bottom: 1px solid #cccccc*/;margin-bottom: 3px;">
+                        <table class="pure-table abody pure-table-horizontal">
+                            <tbody>
+                            <tr>
+                                <td class="yearTd" >Adult</td>
+                                <td class="yearTd" >Youth</td>
+                                <td class="yearTd" >Juvenile</td>
+                                <td class="yearTd" >Senior</td>
+                            </tr>
+
+                            <tr>
+                                <td class="yearTd" >
+                                    <select
+                                    ng-options="item for item in qtys"
+                                    id="adult" ng-model="adult"></select>
+                                </td>
+                                <td class="yearTd" >
+                                   <select
+                                    ng-options="item for item in qtys"
+                                    id="youth" ng-model="youth"></select>
+                                </td>
+                                <td class="yearTd" >
+                                    <select
+                                    ng-options="item for item in qtys"
+                                    id="juvenile" ng-model="juvenile"></select>
+                                </td>
+                                <td class="yearTd" >
+                                     <select
+                                    ng-options="item for item in qtys" 
+                                    id="senior" ng-model="senior"></select>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td class="yearTd" >26-59</td>
+                                <td class="yearTd" >18-25</td>
+                                <td class="yearTd" >7-17</td>
+                                <td class="yearTd" >60+</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="margin-top: 3px">
+                        <button style="width: 100%;align-content: center;margin: auto;font-size: 16px; background-color: #061435; color: #fff !important;"
+                                type="button"
+                                 ng-disabled="!canSearch()"
+                                        ng-click="search()"
+                                class="pure-button pure-button-primaryr" idd="btSearch">
+                                <?php echo $helper->__('Search'); ?>
+                        </button>
+                    </div>
+                    <div id="wResult" class="abody none-display" style="margin-top: 3px;">
+                        >> Find <strong style="color: red">0</strong> results found!
+                    </div>
+                </fieldset1>
+            </form>
+        </div>
+        <!-- /.panel-body -->
+    </div>
+</div>
+<div class="se-pre-con" style="display: none"></div>
+<script>
+    //*TODO: CHANGE TIME*/
+    var departDate = jQuery('#fromDate');
+    var returnDate = jQuery('#returnDate');
+    var fromDate, toDate;
+    var dateMin = '<?php echo $minDate ?>'.split('-'),
+        dateMax = '<?php echo $maxDate ?>'.split('-');
+    var today = new Date();
+    var months = ['janvier','février','mars','avril', 'mai','juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre '];
+    var days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    departDate.pickadate({
+        today: '',
+        disable:[
+            true,
+//            {from: today, to: new Date(dateMax) }
+        ],
+//        clear: 'Clear selection',
+        close: 'Cancel',
+        weekdaysShort: days,
+        monthsShort: months,
+        format: 'yyyy/mm/dd',
+        formatSubmit: 'yyyy/mm/dd',
+        onSet: function (context) {
+//            console.log('Just set stuff:', context);
+            var d = new Date(context.select);
+            fromDate = d;
+            console.log(d);
+            if(jQuery('#rOa').val() == 'ret' && this.get('select')){
+                returnDate.pickadate('picker').open();
+            }
+        },
+    });
+   
+    returnDate.pickadate({
+        today: '',
+        disable:[
+            true,
+//            {from: today, to: new Date(dateMax) }
+        ],
+//        clear: 'Clear selection',
+        close: 'Cancel',
+        weekdaysShort: days,
+        monthsShort: months,
+        format: 'yyyy/mm/dd',
+        formatSubmit: 'yyyy/mm/dd',
+        onSet: function (context) {
+//            console.log('Just set stuff:', context);
+            var d = new Date(context.select);
+            toDate = d;
+            console.log(d);
+        },
+        onOpen: function (context) {
+//            console.log('Just set stuff:', context);
+            departSelected = departDate.pickadate('picker').get('select');
+            if(departSelected){
+                this.set('min', new Date(departSelected.pick))
+            }
+        },
+
+        onClose: function (context) {
+//            console.log('Just set stuff:', context);
+            console.log('close');
+        }
+    });
+
+
+</script>
+
+
+<script>
+    var rOaElem = jQuery('#rOa');
+    // rOaElem.change(function () {
+    //     if (rOaElem.val() == 'all')
+    //         returnDate.prop('disabled', true);
+    //     else
+    //         returnDate.prop('disabled', false);
+    // });
+    /*TODO: CHANGE CITY*/
+    var city = [{
+        code: 'mal', city: 'La Malbaie'
+    }, {
+        code: 'sti', city: 'Saint-Iréné'
+    }, {
+        code: 'sti',
+        city: 'Les eboulements'
+    }, {
+        code: 'bsp', city: 'Baie-Saint-Paul'
+    }, {
+        code: 'prs', city: 'Petites rivière Saint-Francois'
+    }, {
+        code: 'mas',
+        city: 'Le massif'
+    }, {
+        code: 'cap', city: 'Cap tourmente'
+    }, {
+        code: 'bsa', city: 'Basilique Sainte-Anne'
+    }, {
+        code: 'mmo',
+        city: 'Quebec'
+    }];
+    function getDestination(_origin) {
+        var _destination;
+        switch (_origin) {
+            case 'mal':
+                _destination = ['sti', 'sjo', 'bsp'];
+                break;
+            case 'sti':
+                _destination = ['sjo', 'bsp', 'mal'];
+                break;
+            case 'sjo':
+                _destination = ['bsp', 'sti', 'mal'];
+                break;
+            case 'bsp':
+                _destination = ['prs', 'mas', 'cap', 'bsa', 'mmo', 'sjo', 'sti', 'mal'];
+                break;
+            case 'prs':
+                _destination = ['mas', 'cap', 'bsa', 'mmo', 'bsp'];
+                break;
+            case 'mas':
+                _destination = ['cap', 'bsa', 'mmo', 'prs', 'bsp'];
+                break;
+            case 'cap':
+                _destination = ['bsa', 'mmo', 'mas', 'prs', 'bsp'];
+                break;
+                break;
+            case 'mmo':
+                _destination = ['bsa', 'cap', 'mas', 'prs', 'bsp'];
+                break;
+            case 'bsa':
+                _destination = ['mmo', 'cap', 'mas', 'prs', 'bsp'];
+                break;
+        }
+        return _destination;
+    }
+
+    _originCity = jQuery('#originCity');
+    _destination = jQuery('#destinationCity');
+    /*_originCity.change(function () {
+            _destination.text('');
+            var _ori = _originCity.val();
+            if (_ori != '0') {
+                var arrayDestination = getDestination(_ori);
+                jQuery.each(arrayDestination, function (i, item) {
+                    jQuery.each(city, function (_k, _v) {
+                        if (_v.code == item)
+                            _destination.append(jQuery('<option>', {
+                                value: item,
+                                text: _v.city
+                            }));
+                    });
+                });
+            } else {
+                _destination.append(jQuery('<option>', {
+                    value: 0,
+                    text: 'Please select origin city'
+                }));
+            }
+            console.log('Origin: ' + _ori);
+        }
+    );*/
+    /*_destination.change(function () {
+        console.log('Destination: ' + _destination.val());
+    });*/
+    /*Check btSearch*/
+    var btSearch = jQuery('#btSearch');
+    btSearch.click(function () {
+        if (_originCity.val() == '0') {
+            alert('Please select city');
+            return false;
+        }
+        if (from.val() == '' || (returnDate.val() == '' && rOaElem.val() == 'ret')) {
+            alert('Please select date');
+            return false;
+        }
+        var url = window.urlWidget;
+        var rOa = jQuery('#rOa').val();
+        var storeId = '<?php echo Mage::app()->getStore()->getId(); ?>';
+        console.log('storeId:' + storeId);
+        url += '?ra=' + rOa + '&from=' + fromDate + '&return=' + toDate + '&origin=' + _originCity.val() + '&destination=' + _destination.val() + '&storeId=' + storeId;
+        var wResult = jQuery('#wResult');
+        showLoad();
+        jQuery.getJSON(url, function (json) {
+            hideLoad();
+            if (json.result == true) {
+                openNewUrl(json.link);
+            } else {
+                wResult.removeClass(" none-display").addClass('y-display');
+            }
+        });
+    });
+</script>
+<script>
+    jQuery(window).load(function () {
+        // Animate loader off screen
+        hideLoad();
+    });
+    function showLoad() {
+        jQuery(".se-pre-con").show();
+    }
+    function hideLoad() {
+        jQuery(".se-pre-con").fadeOut("slow");
+    }
+    function openNewUrl(url) {
+        window.location.assign(url);
+    }
+</script>
+<script>
+    var URL = '<?php echo Mage::getBaseUrl(); ?>';
+    var URL_X = '<?php echo Mage::getUrl('toolbox-designer'); ?>';
+    var SKIN_URL = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>';
+    var storeId = '<?php echo Mage::app()->getStore()->getId(); ?>';
+
+    //label
+    var no_result_found = '<?php echo $helper->__("No result found!"); ?>'
+    var you_can_select_ticket_from = '<?php echo $helper->__("You can take a ticket from"); ?>';
+    var found = '<?php echo $helper->__("Found") ;?>';
+    var result = '<?php echo $helper->__("result"); ?>';
+    var results = '<?php echo $helper->__("results"); ?>';
+    var loading = '<?php echo $helper->__("Loading"); ?>';
+
+    var round_trip = '<?php echo $helper->__("Round trip"); ?>';
+    var one_way = '<?php echo $helper->__("One-way"); ?>';
+
+    var select_depart_station = '<?php echo $helper->__("Please select"); ?>';
+    var select_arrive_station = '<?php echo $helper->__("Please select"); ?>';
+    /*"Round trip"*/
+    var mode = 'lite';
+    var sAdult = 1;
+    var sYouth = 0;
+    var sSenior = 0;
+    var sJuvenile = 0;
+</script>

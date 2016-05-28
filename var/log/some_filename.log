@@ -1,0 +1,4 @@
+2015-07-03T02:13:22+00:00 DEBUG (7): SELECT ticket_barcode.barcode, ticket_orders.product, catalog_product_entity_varchar.value as name FROM ticket_barcode, ticket_orders, catalog_product_entity, catalog_product_entity_varchar WHERE ticket_barcode.order_id = 15289cashier_name AND ticket_barcode.ticket_id = ticket_orders.ticket_id AND catalog_product_entity.sku = SUBSTR( ticket_orders.product FROM 1  FOR 15 ) AND catalog_product_entity.entity_id = catalog_product_entity_varchar.entity_id AND catalog_product_entity_varchar.attribute_id = 63 AND catalog_product_entity_varchar.store_id = 0 
+2015-07-03T02:18:35+00:00 DEBUG (7): 15291
+2015-07-03T02:19:20+00:00 DEBUG (7): 15291
+2015-07-03T02:21:57+00:00 DEBUG (7): 15291

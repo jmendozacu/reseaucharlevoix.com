@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ReseauChx_ReservationReseau extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       ReseauChx
+ * @package        ReseauChx_ReservationReseau
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+--> 
+<layout>
+    <adminhtml_reservationreseau_reservationsiege_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/reservationsiege</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_reservationsiege" name="reservationsiege" />
+
+        </reference>
+    </adminhtml_reservationreseau_reservationsiege_index>
+    <adminhtml_reservationreseau_reservationsiege_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="reseauchx_reservationreseau/adminhtml_reservationsiege_grid" name="reservationsiege_grid"/>
+        </block>
+    </adminhtml_reservationreseau_reservationsiege_grid>
+    <!-- Reservationsiege add/edit action -->
+    <adminhtml_reservationreseau_reservationsiege_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/reservationsiege</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_reservationsiege_edit" name="reservationsiege_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="reseauchx_reservationreseau/adminhtml_reservationsiege_edit_tabs" name="reservationsiege_tabs"></block>
+        </reference>
+    </adminhtml_reservationreseau_reservationsiege_edit>
+
+    <adminhtml_reservationreseau_salle_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/salle</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_salle" name="salle" />
+
+        </reference>
+    </adminhtml_reservationreseau_salle_index>
+    <adminhtml_reservationreseau_salle_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="reseauchx_reservationreseau/adminhtml_salle_grid" name="salle_grid"/>
+        </block>
+    </adminhtml_reservationreseau_salle_grid>
+    <!-- Salle add/edit action -->
+    <adminhtml_reservationreseau_salle_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/salle</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_salle_edit" name="salle_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="reseauchx_reservationreseau/adminhtml_salle_edit_tabs" name="salle_tabs"></block>
+        </reference>
+    </adminhtml_reservationreseau_salle_edit>
+
+    <adminhtml_reservationreseau_siege_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/siege</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_siege" name="siege" />
+
+        </reference>
+    </adminhtml_reservationreseau_siege_index>
+    <adminhtml_reservationreseau_siege_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="reseauchx_reservationreseau/adminhtml_siege_grid" name="siege_grid"/>
+        </block>
+    </adminhtml_reservationreseau_siege_grid>
+    <!-- Siege add/edit action -->
+    <adminhtml_reservationreseau_siege_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/siege</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_siege_edit" name="siege_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="reseauchx_reservationreseau/adminhtml_siege_edit_tabs" name="siege_tabs"></block>
+        </reference>
+    </adminhtml_reservationreseau_siege_edit>
+
+
+    <adminhtml_reservationreseau_verification_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>bookmepro/reseauchx_reservationreseau/verification</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="reseauchx_reservationreseau/adminhtml_verification" name="verification" />
+
+        </reference>
+    </adminhtml_reservationreseau_verification_index>
+
+</layout>

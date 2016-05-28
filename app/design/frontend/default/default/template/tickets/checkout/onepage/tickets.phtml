@@ -1,0 +1,613 @@
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/themes/base/jquery-ui.css" type="text/css" media="all" />
+<link rel="stylesheet" href="https://static.jquery.com/ui/css/demo-docs-theme/ui.theme.css" type="text/css" media="all" />
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.10/jquery-ui.min.js" type="text/javascript"></script>
+
+<script>
+jQuery = jQuery.noConflict();
+
+jQuery(function() {
+	jQuery("input#date" ).datepicker({
+		changeMonth: true,
+		changeYear: true,
+		dateFormat: 'yy-mm-dd',
+		yearRange: '1900:2012',
+		nextText: '<?php echo $this->__('Next') ?>',
+		prevText: '<?php echo $this->__('Prev') ?>'
+	});
+});
+</script>
+
+<style>
+#ticket-list a {text-decoration:none; margin-left:10px; }
+.input-oke ,.input-not {
+	display: none;
+	float: right;
+}
+span.required {
+	color: red;
+}
+</style>
+
+<?php 
+$subscriptions = array();
+$type_ticket = array();
+$tickets = array();
+$cart = Mage::getModel('checkout/cart'); 
+$product_ids = Mage::getModel('checkout/cart')->getProductIds(); 
+?>
+<form id="co-tickets-form" action="">
+	<!-- START - Standaard items hidden -->
+  <input type="hidden" id="active" value="" />
+  <input type="hidden" id="kaartSku" value="" />
+  	<!-- START - Temporary Standaard items hidden -->
+  <input type="hidden" id="ticname" value="" />
+  <input type="hidden" id="type" name="type" value="" />
+  <input type="hidden" id="unid" name="unid" value="" />
+  <input type="hidden" id="ticsub" name="ticsub" value="" />
+  <input type="hidden" id="themecolor" name="themecolor" value="" />
+  <input type="hidden" id="themebg" name="themebg" value="" />
+  <!-- EINDE - Standaard items hidden -->
+  <!-- START - Linker kolom met reeds ingevulde tickets -->
+  <div style="float: left; width: 270px; border-right: 1px solid #e4e4e4; padding: 10px 0; margin: 0 0 10px 0;">
+    <p id="msg-tickets"><strong><?php echo $this->__('Customers:') ?></strong></p>
+    <ul id="ticket-list" style="width: 240px;">
+		<!-- Dit wordt gevult met alle ingevulde tickets -->
+    </ul>
+  </div>
+  <!-- EINDE - Linker kolom met reeds ingevulde tickets -->
+  <!-- START - Rechter kolom met form voor invullen van tickets -->
+  <div style="float: left; border-left: 1px solid #e4e4e4; padding: 10px 0 10px 10px; margin: 0 0 10px -1px;">
+    <table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td  width="100px" ><label for="kaarten" ><?php echo $this->__('Tickets') ?></label></td>
+        <td  width="220px" >
+          <!-- Eric: Le dropdown de ticket est hidden pour la procédure d'ajout de ticket auto tous au même nom -->
+          <select name="kaarten" id="kaarten" class="input-text" style="width: 210px; margin-top: 3px; margin-bottom: 3px;">
+            <!-- Eric: retrait du select ... -->
+            <!-- <option value=""><?php echo $this->__('- Select -') ?></option> -->
+				<?php
+				foreach ($cart->getItems() as $item){
+					Mage::log('item: ' . $item->getName() .'is_virtual: ' . $item['is_virtual']);
+					If ($item['is_virtual'] == 1){
+						for ($i = 1; $i <= $item['qty']; $i++){
+						$name = $item->getName();
+						$sku = $item->getSku();
+						$_associatedProduct = Mage::getModel('catalog/product')->load($item->getProductId());
+						$subscription = $_associatedProduct->getAttributeText('ticket_subscription');
+						$type_ticket = $_associatedProduct->getAttributeText('available_for');
+						$themeColor = $_associatedProduct->getAttributeText('theme_color');
+						if (!empty($themeColor)){
+							$themeColor = substr($themeColor, 0, 6);
+							if (is_numeric($themeColor) && strlen($themeColor) == 6){
+								$themeColor = $themeColor;
+							}
+						} else {
+							$themeColor = "000000";
+						}
+						$themeBg = $_associatedProduct->getAttributeText('theme_bg');
+						// Hier wordt de array gevult voor de controle op Ticket of subscription.
+						Mage::log('subscription: ' . $subscription);
+						if($subscription != 'Ticket') { // 3 = subscription;  4 = ticket
+							$subscriptions[] = $sku;
+						} else {
+							$tickets[] = $sku;
+						}
+					
+				?>
+				<option value="<?php echo $sku; ?>|<?php print $themeColor; ?>|<?php print $themeBg; ?>|<?php print $type_ticket; ?>|<?php print $name; ?>|<?php print $i; ?>|<?php print $subscription; ?>"><?php echo $name; ?></option>
+				<?php 
+					}
+				}
+				} 
+				?>
+          </select>
+        </td>
+      </tr>
+	  
+	  <script type="text/javascript">
+		var subscriptionsArray = new Array(); 
+		var ticketsArray = new Array(); 
+		// hier orgineel einde script
+		
+		<?php
+		foreach ( $subscriptions as $selement ) {
+			print "subscriptionsArray.push('".$selement."');";
+		}
+		foreach ( $tickets as $telement ) {
+			print "ticketsArray.push('".$telement."');";
+		}
+		
+		?> 
+		</script>
+	
+      <tr>
+        <td width="120"><label for="gender"><?php echo $this->__('Mr. / Mrs.') ?><span class="required" > *</span></label></td>
+        <td>
+          <select name="gender" id="gender" class="input-select" style="margin-top: 3px; margin-bottom: 3px;" />>
+            <option value="heer"><?php echo $this->__('Mr.') ?></option>
+            <option value="mevrouw"><?php echo $this->__('Mrs.') ?></option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><label for="name"><?php echo $this->__('Client name') ?><span class="required" > *</span></label></td>
+        <td id="td-name"><input type="text" name="name" id="name" class="input-text" style="width: 175px; margin-top: 3px; margin-bottom: 3px;" />
+		<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+		<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" />
+		</td>
+      </tr>
+		<tr>
+		<td><label for="date"><?php echo $this->__('Date of birth') ?><span class="required" > *</span></label></td>
+        <td id="td-date"><input name="date" id="date" type="text" class="input-text" style="width: 90px; margin-top: 3px; margin-bottom: 3px;">
+		<span style="color: #888; font-size: 12px; font-style: italic; margin-left: 10px; "><?php echo $this->__('yyyy-mm-dd') ?></span>
+		<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+		<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" /></td>
+		</tr>
+      <tr>
+        <td><label for="email"><?php echo $this->__('E-mail client') ?><span class="required" > *</span></label></td>
+        <td id="td-email"><input type="text" name="email" id="email" class="input-text" style="width: 175px; margin-top: 3px; margin-bottom: 3px;" />
+		<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+		<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" /></td>
+      </tr>
+			<tr  class="hidearea">
+				<td><label for="adress"><?php echo $this->__('Address') ?><span class="required" > *</span></label></td>
+				<td id="td-adress"><input type="text" name="adress" id="adress" class="input-text" style="width: 175px; margin-top: 3px; margin-bottom: 3px;" />
+				<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+				<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" /></td>
+			</tr>
+			<tr  class="hidearea">
+				<td><label for="zipcode"><?php echo $this->__('Zipcode') ?><span class="required" > *</span></label></td>
+				<td id="td-zipcode"><input type="text" name="zipcode" id="zipcode" class="input-text" style="width: 175px; margin-top: 3px; margin-bottom: 3px;" />
+				<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+				<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" /></td>
+			</tr>
+			<tr  class="hidearea">
+				<td><label for="city"><?php echo $this->__('City') ?><span class="required" > *</span></label></td>
+				<td id="td-city"><input type="text" name="city" id="city" class="input-text" style="width: 175px; margin-top: 3px; margin-bottom: 3px;" />
+				<img src="<?php echo $this->getSkinUrl('images/input_ok.png'); ?>" class="input-oke" alt="<?php echo $this->__('input oke') ?>" border="0" align="right" />
+				<img src="<?php echo $this->getSkinUrl('images/input_not.png'); ?>" class="input-not" alt="<?php echo $this->__('input error') ?>" border="0" align="right" /></td>
+			</tr>
+      <tr>
+        <td colspan="2" height="5">
+          <button type="button" class="button" onclick="SubTicCheck();" id="btn" style="margin: 3px;" ><span><?php echo $this->__('Add Ticket') ?></span></button>
+        </td>
+		</tr>
+    </table>
+	<!--<div id="msg" style="display: none; font-weight: bold; padding: 3px; width: 100%; text-align: right;"></div>-->
+  </div>
+  <!-- EINDE - Rechter kolom met form voor invullen van tickets -->
+  <!-- START - Hidden items van tickets -->
+  <div id="tickets-id">
+		 <!-- Deze DIV wordt gevult met Hidden items van tickets -->
+  </div>
+  <!-- START - Hidden items van tickets -->
+	<input type="hidden" id="ticketsp" name="ticketsp" value='<?php echo serialize($tickets) ?>' />
+</form>
+<div style="clear:both;"></div>
+<div class="button-set">
+    <p class="required"><?php echo $this->__('* Required Fields') ?></p>
+    <div id="tickets-buttons-container">
+		<div id="msg" style="display: none; font-size: 15px; font-weight: bold; height: 21px; width: 500px; float: left;"></div>
+        <button type="button" class="button" onclick="proceed()" style="float:right;"><span><span><?php echo $this->__('Continue') ?></span></span></button>
+        <span id="tickets-please-wait" style="display:none;" class="opc-please-wait">
+            <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" class="v-middle" alt="" /> &nbsp; <?php echo $this->__('Loading next step...') ?> &nbsp;
+        </span>
+    </div>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var tickets = new Tickets('co-tickets-form', '<?php echo $this->getUrl('tickets/onepage/saveTickets') ?>');
+    var ticketsForm = new VarienForm('co-tickets-form');
+//]]>
+</script>
+  <script type="text/javascript">
+    var num = <?php echo count($tickets) ?>;
+	
+	function ShowMsg(text, kleur) {
+		jQuery('#msg').html(text).css({'color': kleur}) ;
+		jQuery('#msg').fadeIn(600,function(){ jQuery(this).delay(1500).fadeOut(600)});
+	};
+	
+    function addTicket() {
+            var active = $('active').value;
+			
+            if (active) {
+				$('unid-' + active).value = $('unid').value;
+				$('ticname-' + active).value = $('ticname').value;
+				$('ticsub-' + active).value = $('ticsub').value;
+				$('name-' + active).value = $('name').value;
+				$('date-' + active).value = $('date').value;
+				$('email-' + active).value = $('email').value;
+				$('adress-' + active).value = $('adress').value;
+				$('zipcode-' + active).value = $('zipcode').value;
+				$('city-' + active).value = $('city').value;
+				$('kaarten-' + active).value = $('kaartSku').value;
+				$('gender-' + active).value = $('gender').value;
+				$('type-' + active).value = $('type').value;
+				$('themecolor-' + active).value = $('themecolor').value;
+				$('themebg-' + active).value = $('themebg').value;
+				$('ticketName-' + active).innerHTML = $('name').value;
+				ShowMsg('<?php echo $this->__('Ticket information is changed') ?>', 'orange');
+            } else {
+                num++;
+				var TicStr = jQuery('#kaarten').val();
+				var TicArr = TicStr.split('|');
+				
+                var li = new Element('li', { 'id': 'ticket-' + num, 'style': 'position: relative; border-bottom: solid 1px #e4e4e4;' }).update();
+				var li2 = new Element('li', { 'id': 'ticketnaam-' + num, 'style': 'position: relative; font-size:10px; font-weight: bold; margin-top: 5px;' }).update($('ticname').value);
+				var unid = new Element('input', { 'id': 'unid-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][unid]', 'value' : $('unid').value });
+				var ticname = new Element('input', { 'id': 'ticname-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][ticname]', 'value' : $('ticname').value });
+				var ticsub = new Element('input', { 'id': 'ticsub-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][ticsub]', 'value' : $('ticsub').value });
+                var name = new Element('input', { 'id': 'name-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][name]', 'value' : $('name').value });
+				var date = new Element('input', { 'id': 'date-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][date]', 'value' : $('date').value });
+                var email = new Element('input', { 'id': 'email-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][email]', 'value' : $('email').value });
+				var adress = new Element('input', { 'id': 'adress-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][adress]', 'value' : $('adress').value });
+				var zipcode = new Element('input', { 'id': 'zipcode-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][zipcode]', 'value' : $('zipcode').value });
+				var city = new Element('input', { 'id': 'city-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][city]', 'value' : $('city').value }); 
+                var kaarten = new Element('input', { 'id': 'kaarten-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][kaarten]', 'value' : TicArr[0] });
+                var gender = new Element('input', { 'id': 'gender-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][gender]', 'value' : $('gender').value });
+				var type = new Element('input', { 'id': 'type-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][type]', 'value' : $('type').value });
+				var themecolor = new Element('input', { 'id': 'themecolor-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][themecolor]', 'value' : $('themecolor').value });
+				var themebg = new Element('input', { 'id': 'themebg-' + num, 'type' : 'hidden', 'name': 'tickets[' + num + '][themebg]', 'value' : $('themebg').value });
+                $('ticket-list').appendChild(li2);
+				$('ticket-list').appendChild(li);
+				$('tickets-id').appendChild(unid);
+				$('tickets-id').appendChild(ticname);
+				$('tickets-id').appendChild(ticsub);
+                $('tickets-id').appendChild(name);
+				$('tickets-id').appendChild(date);
+                $('tickets-id').appendChild(email);
+				$('tickets-id').appendChild(adress);
+				$('tickets-id').appendChild(zipcode);
+				$('tickets-id').appendChild(city);
+                $('tickets-id').appendChild(kaarten);
+                $('tickets-id').appendChild(gender);
+				$('tickets-id').appendChild(type);
+				$('tickets-id').appendChild(themecolor);
+				$('tickets-id').appendChild(themebg);
+				
+
+                var span = new Element('span', { 'class': 'cursistName', 'id': 'ticketName-' + num }).update($('name').value);
+                span['onclick'] = new Function('setTicket(' + num + ')');
+                $('ticket-' + num).appendChild(span);
+
+                var span2 = new Element('span', { 'class': 'cursistOptions', 'style': 'position: absolute; right: 0; top: 2px;', 'id': 'span-' + num }).update();
+                $('ticket-' + num).appendChild(span2);
+
+                var img = new Element('a', { 'onclick': 'setTicket(' + num + ')' }).update('<img src="<?php echo $this->getSkinUrl('images/ticket_edit.png'); ?>" alt="<?php echo $this->__('Edit') ?>" border="0" style="cursor:pointer;" />');
+                img['onclick'] = new Function('setTicket(' + num + ')');
+                $('span-' + num).appendChild(img);
+
+                var img2 = new Element('a', { 'onclick': 'delTicket(' + num + ')' }).update('&nbsp;<img src="<?php echo $this->getSkinUrl('images/ticket_remove.png'); ?>" alt="<?php echo $this->__('Edit') ?>" border="0" style="cursor:pointer;" />');
+                img2['onclick'] = new Function('delTicket(' + num + ')');
+                $('span-' + num).appendChild(img2);
+				
+                ShowMsg('<?php echo $this->__('Ticket information is added') ?>', 'green');
+				removeticket();
+				TicArr = '';
+            }
+			
+            $('active').value = '';
+			$('unid').value = '';
+			$('ticname').value = '';
+			$('ticsub').value = '';
+            $('name').value = '';
+			$('date').value = '';
+            $('email').value = '';
+			$('adress').value = '';
+			$('zipcode').value = '';
+			$('city').value = '';
+            $('kaarten').value = '';
+			$('type').value = '';
+			$('themecolor').value = '';
+			$('themebg').value = '';
+			jQuery('#btn > span').html('<?php echo $this->__('Add Ticket') ?>');
+			jQuery('input').css('border-color', '');
+			jQuery('.input-oke').hide();
+			jQuery('.input-not').hide();
+        }
+	
+	function SubTicCheck(){
+		var SubTicStr = jQuery('#kaarten').val();
+		var SubTicArr = SubTicStr.split('|');
+		if (SubTicArr[6] == "Ticket"){
+			if (NameCheck() && DateCheck() && EmailCheck() && $('kaarten').value || $('active').value) {
+				//Eric: Ajout procédure d'ajout auto des tickets.
+				alert(jQuery('#kaarten option').length);
+				//var ticketCount =  $('kaarten').value
+				addTicket();
+			} else {
+				ShowMsg('<?php echo $this->__('Please fill in all required fields.') ?>', 'red');
+				return false;
+			};
+		} else if (SubTicArr[6] != "Ticket" && SubTicArr[6] != ""){
+			if (NameCheck() && DateCheck() && EmailCheck() && AdresCheck() && ZipCheck() && CityCheck() && $('kaarten').value || $('active').value) {
+				addTicket();
+			} else {
+				ShowMsg('<?php echo $this->__('Please fill in all required fields.') ?>', 'red');
+				return false;
+			};
+		} else {
+			alert('<?php echo $this->__('Something went wrong, please try again.') ?>');
+		}
+	
+	}
+	
+    function setTicket(id) {
+        $('active').value = id;
+		showhidefields($('kaarten-' + id).value);
+		$('unid').value = $('unid-' + id).value;
+		$('ticname').value = $('ticname-' + id).value
+		$('ticsub').value = $('ticsub-' + id).value;
+        $('name').value = $('name-' + id).value;
+		$('date').value = $('date-' + id).value;
+        $('email').value = $('email-' + id).value;
+		$('adress').value = $('adress-' + id).value;
+		$('zipcode').value = $('zipcode-' + id).value;
+		$('city').value = $('city-' + id).value;   
+		$('kaartSku').value = $('kaarten-' + id).value;
+        $('gender').value = $('gender-' + id).value;
+		$('type').value = $('type-' + id).value;
+		$('themecolor').value = $('themecolor-' + id).value;
+		$('themebg').value = $('themebg-' + id).value;
+		jQuery('#btn > span').html('<?php echo $this->__('Save changes') ?>');
+    }
+
+    function delTicket(num) {
+		if ($('active').value != ""){
+			ShowMsg('<?php echo $this->__('You can not delete this ticket while editing') ?>', 'red');
+			return false;
+		}else{
+        input_box = confirm("<?php echo $this->__('Are you sure you want to delete this?') ?>");
+        if (input_box == true) {
+			addKaartSel($('kaarten-' + num).value, $('ticname-' + num).value, $('themebg-' + num).value, $('themecolor-' + num).value, $('type-' + num).value, $('unid-' + num).value, $('ticsub-' + num).value );
+            $('ticket-' + num).remove();
+			$('ticketnaam-' + num).remove();
+			$('unid-' + num).remove();
+			$('ticname-' + num).remove();
+			$('ticsub-' + num).remove();
+            $('name-' + num).remove();
+			$('date-' + num).remove();
+            $('email-' + num).remove();
+			$('adress-' + num).remove();
+			$('zipcode-' + num).remove();
+			$('city-' + num).remove();  
+            $('kaarten-' + num).remove();
+			$('type-' + num).remove();
+			$('themecolor-' + num).remove();
+			$('themebg-' + num).remove();
+            $('gender-' + num).remove();
+			jQuery('#btn > span').html('<?php echo $this->__('Add Ticket') ?>');
+            $('active').value = '';
+			$('unid').value = '';
+			$('ticname').value = '';
+			$('ticsub').value = '';
+            $('name').value = '';
+			$('date').value = '';
+            $('email').value = '';
+			$('adress').value = '';
+			$('zipcode').value = '';
+			$('city').value = '';
+            $('kaarten').value = '';
+			$('kaartSku').value = '';
+			$('type').value = '';
+			$('themecolor').value = '';
+			$('themebg').value = '';
+			ShowMsg('<?php echo $this->__('Selected ticket removed from list') ?>', 'red');
+        }
+    }
+	}
+	
+	function NameCheck() {
+        var hasError = false;
+        var NameVal = jQuery('input#name').val();
+		
+        if(NameVal == '') {
+            hasError = true;
+        }
+ 
+        if(hasError == true) { 
+			jQuery('input#name').css('border-color', 'red');
+			jQuery('#td-name > img.input-oke').hide();
+			jQuery('#td-name > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#name').css('border-color', 'green');
+			jQuery('#td-name > img.input-not').hide();
+			jQuery('#td-name > img.input-oke').show(600);
+			return true;
+		}
+	};
+	
+	jQuery('input#name').keyup(function() {
+		NameCheck();
+	});
+	
+	function DateCheck() {
+        var hasError = false;
+        var DateReg = /[0-9].-[0-9].-[0-9]/g;
+        var DateVal = jQuery('input#date').val();
+		
+        if(DateVal == '') {
+            hasError = true;
+        }
+ 
+        else if(!DateReg.test(DateVal)) {
+            hasError = true;
+        }
+ 
+        if(hasError == true) { 
+			jQuery('input#date').css('border-color', 'red');
+			jQuery('#td-date > img.input-oke').hide();
+			jQuery('#td-date > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#date').css('border-color', 'green');
+			jQuery('#td-date > img.input-not').hide();
+			jQuery('#td-date > img.input-oke').show(600);
+			return true;
+		}
+	};
+
+	jQuery('input#date').change(function() {
+		DateCheck();
+	});	
+	
+	function EmailCheck() {
+        var hasError = false;
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var emailaddressVal = jQuery('input#email').val();
+		
+        if(emailaddressVal == '') {
+            hasError = true;
+        }
+ 
+        else if(!emailReg.test(emailaddressVal)) {
+            hasError = true;
+        }
+ 
+        if(hasError == true) { 
+			jQuery('input#email').css('border-color', 'red');
+			jQuery('#td-email > img.input-oke').hide();
+			jQuery('#td-email > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#email').css('border-color', 'green');
+			jQuery('#td-email > img.input-not').hide();
+			jQuery('#td-email > img.input-oke').show(600);
+			return true;
+		}
+	}; 
+	
+	jQuery('input#email').keyup(function() {
+		EmailCheck();
+	});	
+	
+	function AdresCheck() {
+        var hasError = false;
+        var AdresVal = jQuery('input#adress').val();
+		
+        if(AdresVal == '') {
+            hasError = true;
+        }
+ 
+        if(hasError == true) { 
+			jQuery('input#adress').css('border-color', 'red');
+			jQuery('#td-adress > img.input-oke').hide();
+			jQuery('#td-adress > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#adress').css('border-color', 'green');
+			jQuery('#td-adress > img.input-not').hide();
+			jQuery('#td-adress > img.input-oke').show(600);
+			return true;
+		}
+	};
+	
+	jQuery('input#adress').keyup(function() {
+		AdresCheck();
+	});
+	
+	function ZipCheck() {
+        var hasError = false;
+        var ZipVal = jQuery('input#zipcode').val();
+		
+        if(ZipVal == '') {
+            hasError = true;
+        }
+ 
+        if(hasError == true) { 
+			jQuery('input#zipcode').css('border-color', 'red');
+			jQuery('#td-zipcode > img.input-oke').hide();
+			jQuery('#td-zipcode > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#zipcode').css('border-color', 'green');
+			jQuery('#td-zipcode > img.input-not').hide();
+			jQuery('#td-zipcode > img.input-oke').show(600);
+			return true;
+		}
+	};
+	
+	jQuery('input#zipcode').keyup(function() {
+		ZipCheck();
+	});
+	
+	function CityCheck() {
+        var hasError = false;
+        var CityVal = jQuery('input#city').val();
+		
+        if(CityVal == '') {
+            hasError = true;
+        }
+ 
+        if(hasError == true) {
+			jQuery('input#city').css('border-color', 'red');
+			jQuery('#td-city > img.input-oke').hide();
+			jQuery('#td-city > img.input-not').show(600);
+			return false; 
+		} else {
+			jQuery('input#city').css('border-color', 'green');
+			jQuery('#td-city > img.input-not').hide();
+			jQuery('#td-city > img.input-oke').show(600);
+			return true;
+		}
+	};
+	
+	jQuery('input#city').keyup(function() {
+		CityCheck();
+	});
+
+    function proceed() {
+        if (jQuery('#ticket-list li').length > 0 && jQuery('#kaarten option').length <= 1) {
+				tickets.save();
+        } else {
+				alert("<?php echo $this->__('You have not yet filled in all the tickets') ?>");
+			return false;
+        }
+    }
+	
+	function removeticket(){
+		jQuery('select#kaarten option:selected').remove();
+	}
+	
+	function addKaartSel(sku, naam, themebg, themecolor, type, unid, sub ){
+		var KaartVal = sku +"|"+ themecolor +"|"+ themebg +"|"+ type +"|"+ naam +"|"+ unid +"|"+ sub;
+		jQuery('select#kaarten').append('<option value="'+ KaartVal +'" selected="selected">'+ naam + '</option>');
+	}
+		
+		//Hier is het controle punt of het subscription is of ticket en 
+		//daarmee items aan of uit gezet
+		
+		jQuery('select#kaarten').change(function() {
+			var strArray = jQuery(this).val().split('|');
+			var sku = strArray[0];
+			if(jQuery.inArray(sku, subscriptionsArray) != -1) {
+				jQuery('.hidearea').show(600);
+			}
+			
+			if(jQuery.inArray(sku, ticketsArray) != -1) {
+				jQuery('.hidearea').hide(600);
+			}
+			
+			jQuery('input#ticname').val(strArray[4]);
+			jQuery('input#type').val(strArray[3]);
+			jQuery('input#unid').val(strArray[5]);
+			jQuery('input#ticsub').val(strArray[6]);
+			jQuery('input#themecolor').val(strArray[1]);
+			jQuery('input#themebg').val(strArray[2]);
+			strArray = '';
+		});
+		
+		function showhidefields(mySel) {
+			var sku = mySel;
+			if(jQuery.inArray(sku, subscriptionsArray) != -1) {
+				jQuery('.hidearea').show(600);
+			}
+			
+			if(jQuery.inArray(sku, ticketsArray) != -1) {
+				jQuery('.hidearea').hide(600);
+			}
+		};
+  </script>
+  <div style="clear:both;"></div>

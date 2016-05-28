@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+        <api>
+                <resources>
+                        <resource_name translate="title" module="Rcharlevoix_GunTicket">
+                        <title>Get Barcode</title>
+                        <model>GunTicket/objectmodel_api</model>
+                                <methods>
+                                        <methodName translate="title" module="Rcharlevoix_GunTicket">
+                                                <title>Activate Barcode</title>
+                                        </methodName>
+                                </methods>
+                        </resource_name>
+                </resources>
+        </api>
+</config>

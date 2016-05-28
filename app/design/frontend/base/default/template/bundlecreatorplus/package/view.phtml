@@ -1,0 +1,147 @@
+<?php $_product = $this->getProduct() ?>
+<?php $_helper = $this->helper('catalog/output'); ?>
+<script type="text/javascript">
+    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+</script>
+<div class="package-items">
+    <?php foreach($this->getItems() as $item): ?> 
+        <?php 
+            $step++;
+            if (!$item->getIsActive() && $item->getIsComplete()) {   
+                $stateClass = 'complete';
+            } elseif($item->getIsActive()) {
+                $stateClass = 'active';
+            } else {
+                $stateClass = 'inactive';  
+            }
+        ?>        
+        <div class="package-item <?php echo $stateClass ?>" id="<?php echo 'step-'.$item->getCode() ?>"> 
+            <a href="<?php echo $this->getItemUrl($item->getId()) ?>" class="item-link">
+                <h3><?php echo $item->getTitle() ?></h3>
+                <?php if($item->getIsComplete()): ?>
+                    <div class="image">
+                        <img src="<?php echo Mage::helper('catalog/image')->init(Mage::getModel('catalog/product')->load($item->getProduct()->getId()), 'image')->resize(40, 40) ?>" />
+                    </div>
+                    <p class="name"><?php echo ($item->getQty() > 1 ? intval($item->getQty()) . ' x ' : '') . $item->getProduct()->getName() ?></p>
+                <?php else: ?>
+                    <h2><?php echo $this->__('Step') . ' ' . $step ?></h2>
+                    <div class="nocomplete-image"></div> 
+                <?php endif ?>
+            </a>
+        </div>
+    <?php endforeach ?>
+</div>
+<?php foreach($this->getItems() as $item): ?>
+    <?php if($item->getIsComplete()): ?>
+        <?php if(!$item->getProduct()->getIsSalable()): ?>
+            <div class="out-of-stock-message">
+                <?php echo $item->getProduct()->getName() ?> is <span><?php echo $this->__('Out of stock') ?></span>
+            </div>
+        <?php endif ?>
+    <?php endif ?>
+<?php endforeach ?>
+
+<div class="package-info">
+    <?php if(count($this->getItems()) && $this->getActiveItem() && $this->getActiveItem()->getDescription()): ?>
+      <div class="step-description">
+        <?php echo $this->getActiveItem()->getDescription() ?>
+      </div>
+    <?php endif ?>
+    <?php if ($_product->getDescription()):?>
+        <div class="description">
+            <h2><?php echo $this->__('Details') ?></h2>
+            <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getDescription()), 'description') ?></div>
+        </div>
+    <?php endif;?>
+    <div class="package-state">
+        <form action="<?php echo $this->getAddToCartUrl() ?>" method="post" id="product_addtocart_form">
+            <?php if ($this->getPackageSession()->getIsComplete()): ?>
+                <?php if ($_product->isSaleable() && $this->hasOptions()):?> <?php echo $this->getChildChildHtml('container1', '', true, true) ?> <?php endif;?>
+            <?php endif ?>
+            <div class="total">
+                <span class="price">
+                    Total: 
+                    <span id="product-price-<?php echo $_product->getId() ?>"><?php echo Mage::helper('core')->currency($this->getPackageTotal(), true, false) ?></span>
+                </span>
+                <?php if (intval($_product->getDiscount()) && $_product->getDiscount() < 100): ?>
+                    <div class="discount">
+                        Including discount
+                        <span id="discount-<?php echo $_product->getId() ?>"><?php echo number_format($_product->getDiscount(), 2) ?>%</span>
+                    </div>
+                <?php endif ?>
+                <p class="reset">
+                    <a href="<?php echo $this->getResetUrl() ?>" class="reset-link">
+                        Start Over
+                    </a>
+                </p>
+                <?php if ($this->getPackageSession()->getIsComplete()): ?>
+                    <label for="qty">Qty:</label>
+                    <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+                    <?php $buttonLabel = $this->getPackageSession()->getCartItemId() ? 'Update Cart': 'Add to Cart' ?>
+                    <button type="button" title="<?php echo $buttonLabel ?>" class="button btn-cart" onclick="packageProductAddToCartForm.submit(this)"><span><span><?php echo $buttonLabel ?></span></span></button>
+                <?php endif ?>
+                <ul class="add-to-links">
+                    <li><a href="<?php echo $this->getAddToWishlistUrl() ?>/" onclick="packageProductAddToCartForm.submitLight(this, this.href); return false;" class="link-wishlist">Add to Wishlist</a></li>
+                </ul>
+            </div>
+        </form>
+        <script type="text/javascript">
+        //<![CDATA[
+        var packageProductAddToCartForm = new VarienForm('product_addtocart_form');
+        packageProductAddToCartForm.submit = function(button, url) {
+            if (this.validator.validate()) {
+                var form = this.form;
+                var oldUrl = form.action;
+
+                if (url) {
+                   form.action = url;
+                }
+                var e = null;
+                try {
+                    this.form.submit();
+                } catch (e) {
+                }
+                this.form.action = oldUrl;
+                if (e) {
+                    throw e;
+                }
+
+                if (button && button != 'undefined') {
+                    button.disabled = true;
+                }
+            }
+        }.bind(packageProductAddToCartForm);
+
+        packageProductAddToCartForm.submitLight = function(button, url){
+            if(this.validator) {
+                var nv = Validation.methods;
+                delete Validation.methods['required-entry'];
+                delete Validation.methods['validate-one-required'];
+                delete Validation.methods['validate-one-required-by-name'];
+                // Remove custom datetime validators
+                for (var methodName in Validation.methods) {
+                    if (methodName.match(/^validate-datetime-.*/i)) {
+                        delete Validation.methods[methodName];
+                    }
+                }
+
+                if (this.validator.validate()) {
+                    if (url) {
+                        this.form.action = url;
+                    }
+                    this.form.submit();
+                }
+                Object.extend(Validation.methods, nv);
+            }
+        }.bind(packageProductAddToCartForm);
+    //]]>
+    </script>
+    </div>
+    <br class="clear">
+</div>
+
+<?php if($this->getActiveItem() && $this->getItems()) { ?>
+
+    <?php echo $this->getChildHtml('item.product.list') ?>
+
+<?php } ?>

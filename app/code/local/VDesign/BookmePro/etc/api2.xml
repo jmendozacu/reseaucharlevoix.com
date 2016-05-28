@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <api2>
+        <resource_groups>
+            <bookmepro translate="title" module="VDesign_BookmePro">
+                <title>BookmePRO API</title>
+                <sort_order>10</sort_order>
+            </bookmepro>
+        </resource_groups>
+        <resources>
+            <bookmepro_order translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_order</model>
+                <title>Order Item Booking Data</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <product_id>Product ID</product_id>
+                    <reserved_times>Booking times</reserved_times>
+                    <qty>Quantity</qty>
+                    <offset>Customers timezone</offset>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/order/:id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_order>
+            
+            <bookmepro_product translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product</model>
+                <title>Product's booking data managing</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <product_id>Product ID</product_id>
+                    <bookable_to>Bookable to</bookable_to>
+                    <bookable_qty>Bookable Quantity</bookable_qty>
+                    <bookable_from>Bookable from</bookable_from>
+                    <include_shipping>include shipping</include_shipping>
+                    <billable_period>Billable period</billable_period>
+                    <display_timezone>Display timezone</display_timezone>
+                    <book_time_slot>Book time slot</book_time_slot>
+                    <min_book_time>Minimal booking time</min_book_time>
+                    <one_day_book>One day book</one_day_book>
+                    <custom_session>custom session</custom_session>
+                    <exclude_day>exclude days</exclude_day>
+                    <price_profile>price profile</price_profile>
+                    <price_rule>price rule</price_rule>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/product/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_product>
+            
+            <bookmepro_session translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product_session</model>
+                <title>Booking session loading</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <product_id>Product ID</product_id>
+                    <session_id>session id</session_id>
+                    <customsession_id>custom session id</customsession_id>
+                    <time_id>time id</time_id>
+                    <date_from>date from</date_from>
+                    <time_from>ttime from</time_from>
+                    <date_to>date to</date_to>
+                    <time_to>time to</time_to>
+                    <max_quantity>max capacity</max_quantity>
+                    <booked_qty>booked capacity</booked_qty>
+                    <book_type>billable period</book_type>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/products/session/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_session>
+            
+            <bookmepro_session_definition translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product_sessiondefinition</model>
+                <title>Session definition loading</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <session_id>Product ID</session_id>
+                    <sessions>session id</sessions>
+                    <entity_id>Product ID</entity_id>
+                    <session_day>time id</session_day>
+                    <spec_day>date from</spec_day>
+                    <day_start>ttime from</day_start>
+                    <day_end>date to</day_end>
+                    <specific_date_start>time to</specific_date_start>
+                    <specific_date_end>max capacity</specific_date_end>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/products/sessiondefinition/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_session_definition>
+            
+            <bookmepro_exday translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product_exday</model>
+                <title>Exclude days loading</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <entity_id>Product ID</entity_id>
+                    <exday_id> id</exday_id>
+                    <period_type>period</period_type>
+                    <from_date>from_date</from_date>
+                    <to_date>to_date</to_date>
+                    <value>value</value>
+                    <specific_date_end>max capacity</specific_date_end>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/products/exday/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_exday>
+            
+            <bookmepro_pricerule translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product_pricerule</model>
+                <title>Price rules loading</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <entity_id>Product ID</entity_id>
+                    <rule_id> id</rule_id>
+                    <type>type</type>
+                    <move>price move</move>
+                    <amount>amount</amount>
+                    <value>value</value>
+                    <amount_type>amount_type</amount_type>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/products/pricerule/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_pricerule>
+            
+            <bookmepro_priceprofile translate="title" module="VDesign_BookmePro">
+                <group>bookmepro</group>
+                <model>bookmepro/api2_product_priceprofile</model>
+                <title>Price profiles loading</title>
+                <sort_order>10</sort_order>
+                <privileges>
+                    <admin>
+                        <create>1</create>
+                        <retrieve>1</retrieve>
+                    </admin>
+                </privileges>
+                <attributes>
+                    <entity_id>Product ID</entity_id>
+                    <translations>translation</translations>
+                    <profile_id>id</profile_id>
+                    <move>price move</move>
+                    <amount>amount</amount>
+                    <name>name</name>
+                    <amount_type>amount_type</amount_type>
+                </attributes>
+                <routes>
+                    <route>
+                        <route>/bookmepro/products/priceprofile/:product_id</route>
+                        <action_type>collection</action_type>
+                    </route>
+                </routes>
+                <versions>1</versions>
+            </bookmepro_priceprofile>
+        </resources>
+    </api2>
+</config>

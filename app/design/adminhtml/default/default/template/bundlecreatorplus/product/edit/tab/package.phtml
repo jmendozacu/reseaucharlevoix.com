@@ -1,0 +1,21 @@
+
+<script type="text/javascript">
+if(typeof Package=='undefined') {
+    Package = {};
+}
+var product_id = <?php echo $this->getProductId()?$this->getProductId():'0' ?>;
+</script>
+
+<div class="entry-edit custom-items package" id="product_package_container">
+    <div class="entry-edit-head">
+        <h4><?php echo $this->__('Bundle Items') ?></h4>
+        <div class="right"><?php echo $this->getAddButtonHtml() ?></div>
+    </div>
+
+    <div id="product_items_container" class="box">
+        <div id="product_package_container_top"></div>
+        <?php echo $this->getItemsBoxHtml() ?>
+    </div>
+</div>
+
+<!--<div><input type="hidden" name="affect_bundle_product_selections" value="1" /></div>-->

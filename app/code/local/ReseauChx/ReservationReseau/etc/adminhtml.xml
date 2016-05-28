@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ReseauChx_ReservationReseau extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       ReseauChx
+ * @package        ReseauChx_ReservationReseau
+ * @copyright      Copyright (c) 2015
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <reseauchx_reservationreseau translate="title" module="reseauchx_reservationreseau">
+                                        <title>ReservationReseau</title>
+                                    </reseauchx_reservationreseau>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <bookmepro>
+                        <children>
+                            <reseauchx_reservationreseau translate="title" module="reseauchx_reservationreseau">
+                                <title>Sieges</title>
+                                <children>
+                                    <reservationsiege translate="title" module="reseauchx_reservationreseau">
+                                        <title>Reservation Siege</title>
+                                        <sort_order>0</sort_order>
+                                    </reservationsiege>
+                                    <salle translate="title" module="reseauchx_reservationreseau">
+                                        <title>Salle</title>
+                                        <sort_order>10</sort_order>
+                                    </salle>
+                                    <siege translate="title" module="reseauchx_reservationreseau">
+                                        <title>Siege</title>
+                                        <sort_order>20</sort_order>
+                                    </siege>
+                                    <verification translate="title" module="reseauchx_reservationreseau">
+                                        <title>Vérification</title>
+                                        <sort_order>30</sort_order>
+                                    </verification>
+                                </children>
+                            </reseauchx_reservationreseau>                        
+						</children>
+                    </bookmepro>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <bookmepro>
+            <children>
+                <reseauchx_reservationreseau translate="title" module="reseauchx_reservationreseau">
+                    <title>Sieges</title>
+                    <sort_order>0</sort_order>
+                    <children>
+                        <reservationsiege translate="title" module="reseauchx_reservationreseau">
+                            <title>Reservations Sieges</title>
+                            <action>adminhtml/reservationreseau_reservationsiege</action>
+                            <sort_order>0</sort_order>
+                        </reservationsiege>
+                        <salle translate="title" module="reseauchx_reservationreseau">
+                            <title>Salles</title>
+                            <action>adminhtml/reservationreseau_salle</action>
+                            <sort_order>10</sort_order>
+                        </salle>
+                        <siege translate="title" module="reseauchx_reservationreseau">
+                            <title>Sieges</title>
+                            <action>adminhtml/reservationreseau_siege</action>
+                            <sort_order>20</sort_order>
+                        </siege>
+                        <verification translate="title" module="reseauchx_reservationreseau">
+                            <title>Vérification</title>
+                            <action>adminhtml/reservationreseau_verification</action>
+                            <sort_order>30</sort_order>
+                        </verification>
+                    </children>
+                </reseauchx_reservationreseau>
+			</children>
+        </bookmepro>
+
+    </menu>
+</config>

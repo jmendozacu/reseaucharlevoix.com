@@ -1,0 +1,127 @@
+#advancedmenu {
+    position:relative;        
+	margin:0 auto;
+ 	z-index:9;
+ 	margin-top: 50px;
+}
+div.column.last{margin:0px;}
+div.menu {
+    float: none;
+}
+div.menu.act {
+   background:none;
+}
+div.menu.active {
+	background:none;
+	/*color:#5E5E5E ;*/ 
+}
+div.megnor-advanced-menu-popup { 
+  background:#FFF;
+  background: rgba(6,20,53,0.85); 
+	position:absolute;
+	display: none; 
+	text-align:left; 
+	top:auto;
+	left:300px !important;
+	margin-top:-43px;
+	border:1px solid #e7e6db;
+}
+.subparentMenu:hover .subparentmenu-hover{ display:block; width:160px; left:300px !important;
+	margin-top:-41px; }
+.megnor-advanced-menu-popup_inner{	 background:transparent;	padding:20px;}
+div.menu a, div.megnor-advanced-menu-popup a {   display:block; }
+div.megnor-advanced-menu-popup a		
+{ 
+	padding:3px 0 5px;
+	text-transform:none;
+	
+}
+.menu  .parentMenu,.subparentMenu.menu0.seeall,.subparentMenu.menu0.seeall{border-right:5px solid transparent;}
+.menu.menu-arrow.active .parentMenu,.subparentMenu.menu0.seeall:hover {
+    /*border-right: 5px solid #d0be99 ;*/
+}
+div.megnor-advanced-menu-popup a:hover{}
+div.megnor-advanced-menu-popup a.actParent {
+    color: #acbce2;
+}
+div.megnor-advanced-menu-popup a.act {
+    color: #d3dbed;
+}
+div.column {
+    float:left;
+    width:240px; /* column width */
+    padding:0px;
+	margin-right:10px;
+}
+div.column:last-child{margin:0px;}
+div.itemSubMenu {
+    /*margin-left:20px;*/
+}
+.clearBoth {
+    clear:both;
+}
+
+div.megnor-advanced-menu-popup .block1		{ }
+div.megnor-advanced-menu-popup .block2		{ padding:0px;}
+#advancedmenu .megnor-advanced-menu-popup .itemMenu  a	{ font-weight:normal;  font-size: 13px; text-align:left;}
+
+.level1{
+	color:#ffffff;
+}
+.level1:hover > a{
+	color:#d3dbed;
+}
+
+#advancedmenu .level1 > a.itemMenuName {
+    font-size: 14px;
+	/*font-weight:bold  ;*/ 
+	
+	font-family:'Open Sans',Arial;
+	-webkit-tap-highlight-color: transparent;
+	text-align:left;
+} 
+
+
+
+.itemSubMenu .itemMenu {}
+.itemSubMenu .itemMenu a.itemMenuName
+{
+	
+    color: #3b3b3c; 
+	font-size:12px;
+    font-weight: normal;
+    padding: 0px; 
+	line-height:26px;
+
+}
+.block2 p{margin:25px 0px 0px 0px;}
+.block2 p a{padding:0px;}
+.itemSubMenu .itemMenu a:hover	{ color: #000;}
+
+.custom_menu:hover .customblock_inner {    display: block;} 
+.customblock_inner		{ background:#FFF; width:450px; padding:5px;}
+.subparentmenu-hover {
+   display: none;
+   width:auto;
+}
+.subparentMenu:hover  .subparentmenu-hover{display:block;position:absolute;background: url("../../images/menu-arrow.png") no-repeat scroll 40px 1px transparent; padding-top:0px; width:180px;}
+ .subparentmenu-hover .menu{background:#fff; width:100%; }
+ .menu .parentMenu{text-align:center;}
+ div.menu .parentMenu a{display:block; padding:11px 0px 0px px; min-width:170px; border-bottom:1px solid #e7e6db; margin-left: 30px;}
+ div.menu.menu-arrow .parentMenu a{background: url("../../images/menu-arrow.png") no-repeat scroll right 20px;}
+ 
+ 
+ .subparentmenu-hover{ display:none; position:absolute; background:#fff; background:rgba(255,255,255,0.91); }
+.subparentmenu-hover div.menu { float:none; background:none; }
+.menu .subparentmenu-hover div.menu a{  font-size: 14px;
+    padding: 8px 12px; color:#3b3c3c; background:none; font-family:'OPen Sans',Arial;  }
+	.subparentmenu-hover div.menu a:hover{color:#d3dbed;}
+	.seeall div.megnor-advanced-menu-popup{background:none;}
+.subparentMenu:hover .subparentmenu-hover{ display:block; width:230px; box-shadow:-2px 4px 6px 1px rgba(0, 0, 0, 0.15); margin-top:-38px; border:1px solid #e7e6db;}
+.super-sub{ position:relative;  background:#fff; background:rgba(255,255,255,0.91); }
+.subparentmenu-hover div.megnor-advanced-menu-popup{ left:230px !important;  top: auto !important; margin-top:-35px; width:160px; background:#fff; background:rgba(255,255,255,0.91);}
+.subparentmenu-hover .level1 > a.itemMenuName { background:none; }
+ 
+ 
+ .menu:hover > .parentMenu a{border-bottom:1px solid #d3dbed; color:#d3dbed;}
+ .menu:hover > .subparentMenu a{ color:#d3dbed;}

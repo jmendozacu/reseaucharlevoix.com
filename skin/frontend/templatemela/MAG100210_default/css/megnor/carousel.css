@@ -1,0 +1,162 @@
+
+/* display none until init */
+.product-carousel{
+	display: none;
+	opacity:1!important;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+#column-left .product-carousel, #column-right .product-carousel { display:block;}
+#column-left .customNavigation, #column-right .customNavigation { display:none;}
+
+#column-left .banners-slider-carousel .customNavigation,
+#column-right .banners-slider-carousel .customNavigation{ display:block;}
+
+.product-carousel .slider-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+	-webkit-perspective: 1000;
+}
+.product-carousel .slider-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.product-carousel .slider-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.product-carousel .slider-item{
+	float: left;
+}
+.slider-controls .slider-page,
+.slider-controls .slider-buttons div{
+	cursor: pointer;
+}
+.slider-controls {
+	
+	-webkit-tap-highlight-color: transparent;
+}
+
+/* mouse grab icon */
+ 
+.grabbing { 
+    cursor:url("../../image/megnor/grabbing.png") 8 8, move;
+}
+
+
+/* fix */
+.product-carousel  .slider-wrapper,
+.product-carousel  .slider-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+	list-style:none;
+}
+.customNavigation    { text-align: center; position:relative;width:100%}
+.customNavigation a{
+
+	-webkit-tap-highlight-color:transparent;
+	display: block;
+    float: right;
+    height: 22px;
+    position: absolute;
+    top: -45px;
+    width: 22px; 
+	 text-indent: -9999px;
+	 cursor:pointer;
+} 
+.customNavigation a.prev {
+  	background: url("../../images/sprite.png") no-repeat scroll -206px 2px  transparent;
+    right:35px;
+}
+.blog-container  .customNavigation a,.featured-products .customNavigation a,.latest_product  .customNavigation a,.box-up-sell  .customNavigation a,.crosssell  .customNavigation a,.manufacture  .customNavigation a{
+width:40px; 
+height:40px;
+top:-48px;
+}
+
+.featured-products .customNavigation a.prev,.latest_product  .customNavigation a.prev,.blog-container  .customNavigation a.prev,.box-up-sell  .customNavigation a.prev,.crosssell  .customNavigation a.prev,.manufacture  .customNavigation a.prev{  	background: transparent url("../../images/sprite.png") no-repeat scroll -10px -511px;   left:-44px; right:0px; margin:0 auto;}
+.featured-products .customNavigation a.prev:hover,.latest_product  .customNavigation a.prev:hover,.blog-container  .customNavigation a.prev:hover,.box-up-sell  .customNavigation a.prev:hover,.crosssell  .customNavigation a.prev:hover,.manufacture  .customNavigation a.prev:hover {background-position:-60px -511px;}
+.featured-products .customNavigation a.next:hover,.latest_product  .customNavigation a.next:hover,.blog-container  .customNavigation a.next:hover,.box-up-sell  .customNavigation a.next:hover,.crosssell  .customNavigation a.next:hover,.manufacture  .customNavigation a.next:hover{background-position: -110px -511px;}
+.featured-products .customNavigation a.next,.latest_product  .customNavigation a.next,.blog-container  .customNavigation a.next,.box-up-sell  .customNavigation a.next,.crosssell  .customNavigation a.next,.manufacture  .customNavigation a.next{
+  	background: transparent url("../../images/sprite.png") no-repeat scroll -160px -511px;
+   right:-44px;
+   left:0px; 
+   margin:0 auto;
+}
+.customNavigation a.prev:hover 	{ background-position: -206px -27px; text-decoration:none;}
+.customNavigation a.next {
+	background: url("../../images/sprite.png") no-repeat scroll -236px 2px transparent;
+    right:10px;
+}
+.customNavigation a.next:hover 	{ background-position: -236px -27px; text-decoration:none;}
+.additional-carousel .customNavigation a{ width:40px; height:40px; top:45px; z-index:9;}
+.additional-carousel .customNavigation a{top:40px;}
+.additional-carousel .customNavigation a.prev{background:transparent url("../../images/sprite.png") no-repeat scroll -2px -202px; left:-20px;}
+.additional-carousel .customNavigation a.next{background:transparent url("../../images/sprite.png") no-repeat scroll -42px -202px; right:-20px;}
+.additional-carousel .customNavigation a.prev:hover{background-position:-2px -241px;}
+.additional-carousel .customNavigation a.next:hover{background-position:-42px -241px;}
+/**************** additional carousel start *******************/
+.additional-carousel .product-carousel{  width:auto; margin:0 35px; }
+/*.additional-carousel .customNavigation a.prev {
+  	background:url("../../images/sprite.png") no-repeat scroll -203px -265px transparent;
+    left:-3px;
+	top:33px;
+	z-index:999;  
+	  text-indent: -9999px;
+	cursor:pointer;
+}
+.additional-carousel .customNavigation a.prev:hover 	{ background-position: -203px -295px; text-decoration:none; z-index:999;}
+.additional-carousel .customNavigation a.next {
+	background: url("../../images/sprite.png") no-repeat scroll -233px -295px  transparent;
+    right:-7px;
+	top:33px;
+	cursor:pointer;
+	z-index:999; 
+	 text-indent: -9999px;
+}
+.additional-carousel .customNavigation a.next:hover 	{ background-position: -233px -295px; text-decoration:none; z-index:999;}*/
+.additional-carousel .slider-item {   float: left;  width: 90px; }
+.additional-carousel .slider-item .product-block{ background: none repeat scroll 0 0 #FFFFFF;
+   
+    clear: both;
+    margin:15px;
+    overflow: hidden;}
+
+/**************** additional carousel End *******************/
+
+.product-info .product-image .customNavigation    { text-align: center; position:absolute; width:100%; z-index:9;}
+.product-info .product-image .customNavigation a{
+	
+	-webkit-tap-highlight-color: transparent;
+	display: block;
+    float: right;
+    height: 20px;
+    position: absolute;
+    top: -34px;
+    width: 16px;
+}
+
+.product-info .product-image .customNavigation a.prev {
+  	background: url("../../image/megnor/sprite.png") no-repeat scroll -11px -60px transparent;
+    left:-3px;
+	top:35px;
+}
+.product-info .product-image .customNavigation a.prev:hover 	{ background-position: -11px -90px; text-decoration:none;}
+.product-info .product-image .customNavigation a.next {
+	background: url("../../image/megnor/sprite.png") no-repeat scroll -43px -60px transparent;
+	right:-3px;
+	top:35px;
+}
+.product-info .product-image .customNavigation a.next:hover 	{ background-position: -43px -90px; text-decoration:none;}
+.featured-products  .slider-controls .slider-pagination,.latest_product  .slider-controls .slider-pagination,.manufacturer_outer  .slider-controls .slider-pagination{display:none;}
+.blog-container .slider-controls .slider-page{width:8px; height:8px; border:2px solid #c3c3c3; display:inline-block; margin:0px 4px;}
+.slider-pagination{text-align:center;}
+.blog-container .slider-controls .slider-page.active{border-color:#000;}

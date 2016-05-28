@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="1.0.0">
+    <PRODUCT_TYPE_extendedbundle>
+        <reference name="head">
+            <action method="addJs" ifconfig="ajaxcart_cfg/general/enable"><script>varien/product.js</script></action>
+            <action method="addJs" ifconfig="ajaxcart_cfg/general/enable"><script>calendar/calendar.js</script></action>
+            <action method="addJs" ifconfig="ajaxcart_cfg/general/enable"><script>calendar/calendar-setup.js</script></action>
+            <action method="addItem" ifconfig="ajaxcart_cfg/general/enable"><type>skin_js</type><name>js/bundle.js</name></action>
+            <action method="addCss" ifconfig="ajaxcart_cfg/general/enable"><stylesheet>peexl_ajaxcart/css/style.css</stylesheet></action>
+            <action method="addItem" ifconfig="ajaxcart_cfg/general/enable"><type>skin_js</type><name>peexl_ajaxcart/js/ajaxcart.js</name></action>
+            <block type="core/template"  name="ajaxcart.head" as="ajaxcart.head">
+                <action ifconfig="ajaxcart_cfg/general/enable" method="setTemplate"><template>peexl_ajaxcart/head-script.phtml</template></action>
+            </block>
+	</reference>
+    </PRODUCT_TYPE_extendedbundle>
+</layout>

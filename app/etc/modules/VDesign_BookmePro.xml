@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <VDesign_BookmePro>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <VDesign_Bookme />
+            </depends>
+        </VDesign_BookmePro>
+    </modules>
+</config>

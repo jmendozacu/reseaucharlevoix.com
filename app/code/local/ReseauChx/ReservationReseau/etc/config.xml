@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * ReseauChx_ReservationReseau extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       ReseauChx
+ * @package        ReseauChx_ReservationReseau
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <ReseauChx_ReservationReseau>
+            <version>1.0.0</version>
+        </ReseauChx_ReservationReseau>
+    </modules>
+    <global>
+        <resources>
+            <reseauchx_reservationreseau_setup>
+                <setup>
+                    <module>ReseauChx_ReservationReseau</module>
+                    <class>ReseauChx_ReservationReseau_Model_Resource_Setup</class>
+                </setup>
+            </reseauchx_reservationreseau_setup>
+        </resources>
+        <blocks>
+            <reseauchx_reservationreseau>
+                <class>ReseauChx_ReservationReseau_Block</class>
+            </reseauchx_reservationreseau>
+        </blocks>
+        <helpers>
+            <reseauchx_reservationreseau>
+                <class>ReseauChx_ReservationReseau_Helper</class>
+            </reseauchx_reservationreseau>
+        </helpers>
+        <models>
+            <reseauchx_reservationreseau>
+                <class>ReseauChx_ReservationReseau_Model</class>
+                <resourceModel>reseauchx_reservationreseau_resource</resourceModel>
+            </reseauchx_reservationreseau>
+            <reseauchx_reservationreseau_resource>
+                <class>ReseauChx_ReservationReseau_Model_Resource</class>
+                <entities>
+                    <reservationsiege>
+                        <table>reseauchx_reservationreseau_reservationsiege</table>
+                    </reservationsiege>
+                    <salle>
+                        <table>reseauchx_reservationreseau_salle</table>
+                    </salle>
+                    <siege>
+                        <table>reseauchx_reservationreseau_siege</table>
+                    </siege>
+                </entities>
+            </reseauchx_reservationreseau_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <reseauchx_reservationreseau>
+                    <file>reseauchx_reservationreseau.xml</file>
+                </reseauchx_reservationreseau>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <ReseauChx_ReservationReseau>
+                    <files>
+                        <default>ReseauChx_ReservationReseau.csv</default>
+                    </files>
+                </ReseauChx_ReservationReseau>
+            </modules>
+        </translate>
+        <global_search>
+            <reservationsiege>
+                <class>reseauchx_reservationreseau/adminhtml_search_reservationsiege</class>
+                <acl>reseauchx_reservationreseau</acl>
+            </reservationsiege>
+            <salle>
+                <class>reseauchx_reservationreseau/adminhtml_search_salle</class>
+                <acl>reseauchx_reservationreseau</acl>
+            </salle>
+            <siege>
+                <class>reseauchx_reservationreseau/adminhtml_search_siege</class>
+                <acl>reseauchx_reservationreseau</acl>
+            </siege>
+        </global_search>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <ReseauChx_ReservationReseau before="Mage_Adminhtml">ReseauChx_ReservationReseau_Adminhtml</ReseauChx_ReservationReseau>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <frontend>
+    	<routers>
+    		<reservationreseau>
+    			<use>standard</use>
+    			<args>
+    				<module>ReseauChx_ReservationReseau</module>
+                    <frontName>reservationreseau</frontName>
+    			</args>
+    		</reservationreseau>
+    	</routers>
+    	<events>
+    		<!-- Eric: Les evenvement sont enregistrés dans la section global se Xpos -->
+    		<!-- checkout_cart_product_add_after>
+                <observers>
+                    <reseauchx_reservationreseau_valid_cart>
+                    	<type>singleton</type>
+                        <class>reseauchx_reservationreseau/observer</class>
+                        <method>checkCartAdd</method>
+                    </reseauchx_reservationreseau_valid_cart>
+                </observers>
+            </checkout_cart_product_add_after-->
+			<!-- sales_quote_remove_item>
+				<observers>
+                    <reseauchx_reservationreseau_delete_cart_item>
+                        <class>reseauchx_reservationreseau/observer</class>
+                        <method>cancelQuoteSiege</method>
+                    </reseauchx_reservationreseau_delete_cart_item>
+                </observers>
+			</sales_quote_remove_item-->
+            <!-- sales_order_place_after>
+            	<observers>
+            		<reseauchx_reservationreseau_save_order>
+            			<type>singleton</type>
+            			<class>reseauchx_reservationreseau/observer</class>
+            			<method>confirmeReservationOptions</method>
+            		</reseauchx_reservationreseau_save_order>
+            	</observers>
+            </sales_order_place_after -->
+		</events>
+    </frontend>
+</config>

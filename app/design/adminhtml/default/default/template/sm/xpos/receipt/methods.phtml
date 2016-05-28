@@ -1,0 +1,22 @@
+<?php
+/*
+ * @var SM_XPos_Block_Adminhtml_XPos_Receipt_Methods $this
+ *
+ * SmartOSC's risk approach. Need to be cared
+ * TODO: review the condition of checking if whether no payment method
+ */
+?>
+<div class="methods" style="text-align: <?php echo $this->getHtmlAlignment(); ?>;">
+    <div class="shipping">
+        <?php if(!($this->getOrder()->getPayment() == null)): //need to be reviewed ?>
+            <span><?php echo Mage::helper('sales')->__("Shipping"); ?></span>
+        <?php endif; ?>
+        <span><?php echo Mage::helper('xpos')->__($this->getShippingMethodTitle()); ?></span>
+    </div>
+    <div class="payment">
+        <?php if(!($this->getOrder()->getShippingDescription() == '')): //need to be reviewed ?>
+            <span><?php echo Mage::helper('sales')->__("Payment"); ?></span>
+        <?php endif; ?>
+        <span><?php echo Mage::helper('xpos')->__($this->getPaymentMethodTitle()); ?></span>
+    </div>
+</div>

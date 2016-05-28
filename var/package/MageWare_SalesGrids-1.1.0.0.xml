@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>MageWare_SalesGrids</name>
+    <version>1.1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://www.gnu.org/licenses/gpl.html">GPL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Module for extending order management grids.</summary>
+    <description>Makes order management much easier and efficient for store administrators.</description>
+    <notes>Public release-1.1.0.0</notes>
+    <authors><author><name>MageWare</name><user>mageware</user><email>magentocommerce@mageware.co</email></author></authors>
+    <date>2013-03-29</date>
+    <time>21:13:53</time>
+    <contents><target name="magecommunity"><dir name="MageWare"><dir name="SalesGrids"><dir name="Block"><dir name="Adminhtml"><dir name="Sales"><dir name="Creditmemo"><file name="Grid.php" hash="eafc15a3c8ce1822beea8421b6a38b05"/></dir><dir name="Invoice"><file name="Grid.php" hash="797a7cdf943d0b08886518204ced5b16"/></dir><dir name="Order"><file name="Grid.php" hash="044c3746aaab806e792ec51509ea9146"/></dir><dir name="Shipment"><file name="Grid.php" hash="da16bda01942010040311a1a0e3010af"/></dir></dir><dir name="Widget"><dir name="Grid"><dir name="Column"><dir name="Renderer"><file name="List.php" hash="bc8b3a99b39aa84ad00c68757a8d9580"/></dir></dir></dir></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="cd4559adf776e0d4aee51bf47d3e5eb8"/></dir><dir name="Model"><file name="Observer.php" hash="ab6a027ab4951222eaf1c1a551c5e3ea"/><dir name="Resource"><dir name="Order"><file name="Creditmemo.php" hash="3fbd2b9a81844ea0d284a453ce85cc34"/><file name="Invoice.php" hash="169a2575a32d5bb22623eb92f0b60beb"/><file name="Shipment.php" hash="e9f85d42a213e759962dcbff8b2082e0"/></dir><file name="Order.php" hash="a6661cfa6104d50011ac74e9a8b2ac64"/><file name="Setup.php" hash="829694a93aac3d84469cb87e03474890"/></dir><dir name="System"><dir name="Config"><dir name="Source"><dir name="Creditmemo"><file name="Grid.php" hash="2d0ae403da508fc6d8a86440fc0c2231"/></dir><dir name="Invoice"><file name="Grid.php" hash="5d722b0ca1abd5bb6247cc168b5ffd11"/></dir><dir name="Order"><file name="Grid.php" hash="e2b30ce23e8e13e2a59305ecfa308239"/></dir><dir name="Shipment"><file name="Grid.php" hash="158c9d8393a28f99f6237d3d5d27849a"/></dir></dir></dir></dir></dir><dir name="data"><dir name="salesgrids_setup"><file name="data-install-1.0.0.0.php" hash="85ca289d4607b3a0d973487e13a77960"/><file name="data-upgrade-1.0.0.0-1.1.0.0.php" hash="acf17612d016b8bbe66c4cb6a0a7c002"/></dir></dir><dir name="etc"><file name="config.xml" hash="b72840b953761bcdba8833aae43c8b76"/><file name="system.xml" hash="1c61ebd9fec05d94c0605fc76b9ee327"/></dir><dir name="sql"><dir name="salesgrids_setup"><file name="install-1.0.0.0.php" hash="c441ab893d892da2f00ae4a6b7263c3c"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="MageWare_SalesGrids.xml" hash="a724485b1aee066050a7ba125cd70504"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php><package><name>Mage_All_Latest</name><channel>community</channel><min>1.6.0.0</min><max>1.7.0.2</max></package></required></dependencies>
+</package>

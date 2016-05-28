@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Demac_Taxfix>
+            <version>0.1.0</version>
+        </Demac_Taxfix>
+    </modules>
+    <global>
+        <models>
+            <demac_taxfix>
+                <class>Demac_Taxfix_Model</class>
+            </demac_taxfix>
+            <tax_resource>
+                <rewrite>
+                    <calculation>Demac_Taxfix_Model_Resource_Tax_Calculation</calculation>
+                </rewrite>
+            </tax_resource>
+        </models>
+    </global>
+</config>

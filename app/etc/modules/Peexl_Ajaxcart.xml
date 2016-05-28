@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Peexl_Ajaxcart>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Peexl_Ajaxcart>
+    </modules>
+</config> 

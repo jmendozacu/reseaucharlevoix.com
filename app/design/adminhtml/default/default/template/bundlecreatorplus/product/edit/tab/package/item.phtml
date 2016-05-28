@@ -1,0 +1,168 @@
+<script type="text/javascript">
+itemTemplate = '<div id="<?php echo $this->getFieldId() ?>_{{index}}" class="item-box">' +
+    '<div class="item-code">' +
+        '<label for="<?php echo $this->getFieldName() ?>[{{index}}][code]">Code<span class="required">*</span></label>' +
+        '<input class="input-text required-entry" type="text" name="product[items][{{index}}][code]" id="id_<?php echo $this->getFieldName() ?>_{{index}}_code" value="{{code}}">' +       
+        '<input class="checkbox" type="checkbox" name="product[items][{{index}}][optional]" id="id_<?php echo $this->getFieldName() ?>_{{index}}_optional" value="1" {{checked}}>' +       
+        '<label for="<?php echo $this->getFieldName() ?>[{{index}}][optional]">optional</label>' +
+        '<?php echo $this->getRemoveButton() ?>' +
+    '</div>' +
+    '<table cellpadding="0" cellspacing="0" class="item-header">' +
+    	'<tr>' +
+    		'<td style="font-weight: bold;" colspan="4">' +
+    			'Title<span class="required">*</span>' +
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td colspan="4">' +
+    			'<input type="hidden" name="product[items][{{index}}][item_id]" value="{{item_id}}" />' +
+    			'<input type="text" class="item-title input-text required-entry" name="product[items][{{index}}][title]" value="{{title}}" />' +
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td style="font-weight: bold;" colspan="4">' +
+    			'Description' +
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td colspan="4">' +
+    			'<textarea class="item-description textarea" name="product[items][{{index}}][description]" rows="5">{{description}}</textarea>' +
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td style="font-weight: bold;" colspan="4">' +
+    			'Preview Base Image' +
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td colspan="4">' +
+                    '{{preview_base_image}}'+
+                    '<input type="file" name="product_items_{{index}}_preview_base_image"><br />'+
+                    '<input type="checkbox" name="product[items][{{index}}][delete_preview_base_image]">&nbsp;Delete Image'+
+    		'</td>' +
+    	'</tr>' +
+        '<tr>' +
+    		'<td style="font-weight: bold;">' +
+    			'Price<span class="required">*</span>' +
+    		'</td>' +
+    		'<td style="font-weight: bold;">' +
+    			'Sort Order<span class="required">*</span>' +
+    		'</td>' +
+    		'<td style="font-weight: bold;">' +
+    			'Qty' +
+    		'</td>' +
+                '<td style="width:100%;"></td>' +
+    	'</tr>' +
+    	'<tr>' +
+    		'<td>' +
+    			'<input type="text" class="item-price input-text required-entry validate-zero-or-greater" name="product[items][{{index}}][price]" value="{{price}}" />' +
+    		'</td>' +
+    		'<td>' +
+    			'<input type="text" class="item-order input-text short required-entry validate-zero-or-greater" name="product[items][{{index}}][sort_order]" style="text-align: center;" value="{{sort_order}}" />' +
+    		'</td>' +
+    		'<td>' +
+    			'<input type="text" class="item-qty validate-zero-or-greater" name="product[items][{{index}}][qty]" value="{{qty}} "value="1" />' +
+    		'</td>' +
+    		'<td>' +
+    			'<?php echo $this->jsQuoteEscape($this->getShowItemsButton()) ?> <?php //echo $this->getHideItemsButton() ?>' +
+    		'</td>' +
+    	'</tr>' +
+    '</table>' +
+    '<input type="hidden" id="<?php echo $this->getFieldId() ?>_id_{{index}}" name="<?php echo $this->getFieldName() ?>[{{index}}][option_id]" value="{{option_id}}">' +
+    //'<input type="hidden" name="<?php echo $this->getFieldName() ?>[{{index}}][delete]" value="" class="delete">' +
+    '<input type="hidden" id="item-{{index}}-options" name="product[items][{{index}}][options]" value="<?php //echo $this->getOptions() ?>" />' +
+    '<div id="<?php echo $this->getFieldId() ?>_search_{{index}}">' +
+    '</div>' +
+'</div'
+</script>
+
+<?php echo $this->getSelectionHtml(); ?>
+
+<script type="text/javascript">
+
+Package.Item = Class.create();
+Package.Item.prototype = {
+    idLabel : '<?php echo $this->getFieldId() ?>',
+    top : '',
+    templateSyntax : /(^|.|\r|\n)({{(\w+)}})/,
+    templateText : '',
+    itemsCount : 0,
+    initialize : function(template) {
+        this.templateText = template;
+        this.top = $('product_package_container_top');
+    },
+
+    add : function(data) {
+        if(!data){
+            data = {};
+            this.top = $('product_package_container_top');
+        } else {
+            data.title = data.title.replace('"', "&quot;");
+        }
+
+        data.index = this.itemsCount++;
+        if(typeof(data.qty) == 'undefined')data.qty = 1;
+        else data.qty = parseInt(data.qty).toFixed();
+        if(data.is_optional == 1)data.is_optional = 'checked';
+        else data.is_optional = '';
+        
+        if(data.preview_base_image) {
+            data.preview_base_image = '<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ?>' + data.preview_base_image + '" style="display: block; margin-bottom: 5px; max-width: 100px; max-height: 100px;">'
+        }
+        
+        if(data.optional == 1) {
+            data.checked = 'checked';
+        }
+
+        this.template = new Template(this.templateText, this.templateSyntax);
+
+        Element.insert(this.top, {'after':this.template.evaluate(data)});
+
+        this.top = $(this.idLabel + '_' + data.index);
+
+        //set selected type
+        if (data.type) {
+            $A($(this.idLabel + '_'+data.index+'_type').options).each(function(option){
+                if (option.value==data.type) option.selected = true;
+            });
+        }
+
+        //set selected is_require
+        if (data.required) {
+            $A($(this.idLabel + '_'+data.index+'_required').options).each(function(option){
+                if (option.value==data.required) option.selected = true;
+            });
+        }
+        // rebind change notifications
+        varienWindowOnload(true);
+
+        return data.index;
+    },
+
+    remove : function(event){
+        var element = $(Event.findElement(event, 'div')).parentNode;
+        if(element){
+            //Element.select(element, '.delete').each(function(elem){elem.value='1'});
+            //Element.select(element, ['input', 'select']).each(function(elem){elem.hide(); elem.className = '';});
+            Element.remove(element);
+        }
+    }
+}
+
+var optionIndex = 0;
+var packageItem = new Package.Item(itemTemplate);
+
+//adding data to templates
+<?php foreach ($this->getItems() as $_item): ?>
+optionIndex = packageItem.add(<?php echo $_item->toJson() ?>);
+    <?php if ($_item->getOptions(true)): ?>
+        <?php foreach ($_item->getOptions(true) as $_option): ?>
+                <?php $_option->name = htmlentities($_option->name, ENT_QUOTES) ?>
+                var option_data = '<?php echo $_option->toJson() ?>'.evalJSON();
+                option_data.price = '<?php echo $_option->getPrice() ? Mage::helper('core')->currency($_option->getPrice(), true, false) : '' ?>';
+                option_data.special_price = '<?php echo $_option->getPrice() != $_option->getFinalPrice() ? Mage::helper('core')->currency($_option->getFinalPrice(), true, false) : '' ?>';
+                packageSelection.addRow(optionIndex, option_data);
+        <?php endforeach; ?>
+    <?php endif; ?>
+<?php endforeach; ?>
+</script>

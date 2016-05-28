@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<layout>
+
+<default>
+		<reference name="head">
+			<action method="removeItem"><type>js</type><name>bookme_calendar/pikaday.js</name><params/></action>
+			<action method="removeItem"><type>js_css</type><name>bookme_calendar/pikaday.css</name><params/></action>
+			<action method="addItem"><type>js</type><name>bookmepro_calendar/pikaday.js</name><params/></action>
+			<action method="addItem"><type>js_css</type><name>bookmepro_calendar/pikaday.css</name><params/></action>
+		</reference>
+	</default>
+
+
+	<ADMINHTML_CATALOG_PRODUCT_COMPOSITE_CONFIGURE>
+        <reference name="product.composite.fieldset.options">
+            <action method="addOptionRenderer"><type>multidate</type><block>bookme/adminhtml_catalog_product_view_options_type_multidate</block><template>vdesign_bookmepro/view/options/type/multidate.phtml</template></action>
+        </reference>
+        <reference name="product.composite.fieldset.qty">
+        	<action method="setTemplate"><template>vdesign_bookmepro/options/qty.phtml</template></action>
+        </reference>
+    </ADMINHTML_CATALOG_PRODUCT_COMPOSITE_CONFIGURE>
+    
+    <bookmepro_adminhtml_session_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="bookmepro/adminhtml_session_edit" name="session_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="bookmepro/adminhtml_session_edit_tabs" name="session_edit_tabs">
+                <block type="bookmepro/adminhtml_session_edit_tabs_main" name="session_edit_tabs_main" />
+                <action method="addTab"><name>main_section</name><block>session_edit_tabs_main</block></action>
+           </block>
+        </reference>
+    </bookmepro_adminhtml_session_edit>
+    
+    <bookmepro_adminhtml_adventure_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="bookmepro/adminhtml_adventure_edit" name="adventure_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="bookmepro/adminhtml_adventure_edit_tabs" name="adv_edit_tabs">
+                <block type="bookmepro/adminhtml_adventure_edit_tabs_main" name="adv_edit_tabs_main" />
+                <action method="addTab"><name>main_section</name><block>adv_edit_tabs_main</block></action>
+           </block>
+        </reference>
+    </bookmepro_adminhtml_adventure_edit>
+    
+    <bookmepro_adminhtml_book_edit>
+        <update handle="editor"/>
+        <reference name="content">
+            <block type="bookmepro/adminhtml_book_edit" name="book_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="bookmepro/adminhtml_book_edit_tabs" name="book_edit_tabs">
+                <block type="bookmepro/adminhtml_book_edit_tabs_main" name="book_edit_tabs_main" />
+                <action method="addTab"><name>main_section</name><block>book_edit_tabs_main</block></action>
+           </block>
+        </reference>
+    </bookmepro_adminhtml_book_edit>
+
+</layout>

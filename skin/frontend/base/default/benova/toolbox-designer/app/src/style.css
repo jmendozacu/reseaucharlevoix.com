@@ -1,0 +1,325 @@
+.card {
+    height: 125px !important;
+}
+.col-1 {
+        display: block;
+        width: 10%
+    }
+
+    .col-2 {
+        display: block;
+        width: 20%
+    }
+
+    .col-3 {
+        display: block;
+        width: 30%
+    }
+
+    .col-4 {
+        display: block;
+        width: 40%
+    }
+
+    .col-5 {
+        display: block;
+        width: 50%
+    }
+
+    .col-6 {
+        display: block;
+        width: 60%
+    }
+
+    .col-7 {
+        display: block;
+        width: 70%
+    }
+
+    .col-8 {
+        display: block;
+        width: 80%
+    }
+
+    .col-9 {
+        display: block;
+        width: 90%
+    }
+
+    .col-10 {
+        display: block;
+        width: 100%
+    }
+    .row-1 {
+        height: 10%
+    }
+
+    .row-2 {
+        height: 20%
+    }
+
+    .row-3 {
+        height: 30%
+    }
+
+    .row-4 {
+        height: 40%
+    }
+
+    .row-5 {
+        height: 50%
+    }
+
+    .row-6 {
+        height: 60%
+    }
+
+    .row-7 {
+        height: 70%
+    }
+
+    .row-8 {
+        height: 80%
+    }
+
+    .row-9 {
+        height: 90%
+    }
+
+    .row-10 {
+        height: 100%
+    }
+
+    .left {
+        float: left;
+    }
+
+    .right {
+        float: right;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .text-left{
+        text-align: left;
+    }
+    .text-right {
+        text-align: right;
+    }
+    .padding-5 {
+        padding: 5px;
+    }
+    .padding-10 {
+        padding: 10px;
+    }
+
+    .padding-15 {
+        padding: 15px;
+    }
+    .margin-0 {
+        margin: 0 !important;
+    }
+    .margin-5 {
+        margin: 5px;
+    }
+   
+    .margin-10 {
+        margin: 10px;
+    }
+
+    .margin-15 {
+        margin: 15px;
+    }
+    .margin-slide-5 {
+        margin: 0 5px;
+    }
+     .margin-slide-10 {
+        margin: 0 10px;
+    }
+     .margin-oa-5 {
+        margin: 0 5px 0;
+    }
+     .margin-oa-10 {
+        margin: 10px 0;
+    }
+    .border{
+        border: #99a576 solid thin;
+    }
+    .border-bottom-dash {
+        border-bottom: thin dashed #ddd;
+    }
+    .table{
+        display: table !important;
+    }
+    .success{
+        background-color: aliceblue;
+        padding: 5px;
+    }
+    .big-text{
+        font-size: 15px;
+        font-weight: normal;
+    }
+    .item-active{
+        border: 2px solid #014375;
+    }
+    .bundle-item{
+        min-height: 170px;
+        box-shadow: 0px 0px 5px #3E3E3E;
+        border-radius: 6px;
+    }
+    .bundle-item:hover{
+        border: 2px solid #014375;
+        cursor: pointer;
+    }
+    .product-div{
+        cursor: pointer; cursor: hand;
+    }
+    .toolbox button{
+        background: #99a576;
+        display: inline-block;
+        padding: 7px 15px;
+        border: 0;
+        color: #fff !important;
+        font-size: 13px;
+        font-weight: normal;
+        font-family: "Raleway", "Helvetica Neue", Verdana, Arial, sans-serif;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+    }
+    .cart {
+        color: #000 !important;
+        font-size: 13px;
+    }
+    .toolbox .button{
+        background: linear-gradient(to bottom, #1165a4 5%, #014375 100%) repeat scroll 0 0 #1165a4;
+        border: 2px solid #07538c;
+        border-radius: 5px;
+        box-shadow: 0 0 0 0 #cc8d78 inset;
+        color: #ffffff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 10px;
+        padding: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+     .button-ck{
+        height: 40px;
+    }
+    .cart .color{
+        background-color: #3e3e3e;
+        /*border: 1px solid #3e3e3e;*/
+        border-radius: 6px;
+    }
+    .cart .img{
+         background: none repeat scroll 0 0 #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 0 2px #3e3e3e;
+    }
+    .cart input[type=text]{
+        width: 50px
+    }
+    .circle {
+        width: 10px;
+        height: 10px;
+        background: linear-gradient(to bottom, #1165a4 5%, #014375 100%) repeat scroll 0 0 #1165a4;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        margin-top: 7px;
+    }
+    .block-shadow{
+        box-shadow: 0px 0px 5px #3E3E3E;
+        border-radius: 6px;
+        border: 5px solid #CCC;
+        color: #3E3E3E
+    }
+
+    .panel-default > .panel-heading {
+        background-color: <?php echo $this->getData('heading_color'); ?>;
+        border-color: #ddd;
+        color: <?php echo $this->getData('text_color'); ?>;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: large;
+    }
+
+    .panel-heading {
+        padding: 10px 15px;
+        border-bottom: 1px solid transparent;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+    }
+
+    /*div {*/
+    /*display: block;*/
+    /*}*/
+
+    .ahtml {
+        font-size: 10px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    /*-------*/
+    .panel-body {
+        padding: 15px;
+    }
+
+    .panel-body {
+        /* -webkit-box-sizing: border-box;
+         -moz-box-sizing: border-box;*/
+        box-sizing: border-box;
+        /*-webkit-box-sizing: border-box;*/
+        -moz-box-sizing: border-box;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857;
+    }
+
+    .abody {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #333;
+        background-color: #fff;
+        padding: 5px 2px 2px 2px;
+        width: 100%;
+    }
+
+    .allWidget {
+        display: block;
+        box-sizing: border-box;
+        height: 97%;
+        position: relative;
+    }
+
+    /*BODY*/
+
+    .none-display {
+        display: none;
+    }
+
+    .y-display {
+        display: block;
+    }
+
+    /*TD table*/
+    .yearTd {
+        padding: 0.04em !important;
+        text-align: center;
+        font-size: 12.5px !important;
+        border: 0px !important;
+    }
+    .se-pre-con {
+        /*background-color: transparent;*/
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(<?php echo $urlIamge ?>) center no-repeat #fff;
+    }

@@ -1,0 +1,60 @@
+<?php
+/*
+ * @var SM_XPos_Block_Adminhtml_XPos_Receipt_Fore $this
+ */
+?>
+<div class="footer">
+    <!--<div class="highlight">ITEMS SOLD # 4</div>-->
+    <div class="separate">----------***----------</div>
+    <div><?php echo $this->getForeMessage(); ?></div>
+</div>
+<table>
+    <?php
+    //Mage::log('D�but Cr�ation du barcode dans le template de invoice');
+    //Impression des Barcodes de ticket driework sur le coupon de Xpos. (Jeff et Eric)
+    if($info_order['order_id'] == null){
+        $_order = $order_id;
+    }else{
+        $_order = $info_order['order_id'];
+    };
+    $_order = $this->getOrder()->getIncrementId();
+    $resource = Mage::getSingleton('core/resource');
+    $sqlTicketWriter = $resource->getConnection('core_write');
+
+    $SQLp  = "SELECT ticket_barcode.barcode, ticket_orders.product, catalog_product_entity_varchar.value as name ";
+    $SQLp .= "FROM ticket_barcode, ticket_orders, catalog_product_entity, catalog_product_entity_varchar ";
+    $SQLp .= "WHERE ticket_barcode.order_id = " . $_order . " ";
+    $SQLp .= "AND ticket_barcode.ticket_id = ticket_orders.ticket_id ";
+    $SQLp .= "AND catalog_product_entity.sku = ticket_orders.product ";
+    $SQLp .= "AND catalog_product_entity.entity_id = catalog_product_entity_varchar.entity_id ";
+    $SQLp .= "AND catalog_product_entity_varchar.attribute_id = 63 ";
+    $SQLp .= "AND catalog_product_entity_varchar.store_id = 0 ";
+
+    //echo "<br>" . $SQLp . "<br><br>";
+
+    //echo $SQLp;
+    $ticketsOrders = $sqlTicketWriter->fetchAll($SQLp);
+
+    foreach ($ticketsOrders as $ticket){
+        echo "Find One!<br>";
+        $available_for = "";
+        switch (substr($ticket['product'], 16,4)) {
+            case "1899": $available_for = "Adulte"; break;
+            case "1825": $available_for = "Adulte"; break;
+            case "2664": $available_for = "Adulte"; break;
+            case "0717": $available_for = "Enfant (7-17)"; break;
+            case "0006": $available_for = "Enfant (0-6)"; break;
+            case "6599": $available_for = "65+"; break;
+            default: $available_for = "General";
+        }
+        //echo $ticket['ticket_barcode.barcode'];
+        echo '<tr><td><img src="http://reseaucharlevoix.com/skin/frontend/default/theme420/images/logo.png"/></td></tr>';
+        echo '<tr><td align="center">' . $available_for .  '</td></tr><tr><td align="center">';
+        echo '<img width="60%" src="' . str_replace("http://","http://",Mage::helper('core/url')->getHomeUrl()) . '../barcode.php?code=' . $ticket['barcode'] . '" />';
+        echo '</td></tr>';
+        echo '<tr><td  style="padding-left:0px;padding-right:50px;text-align:center;">' . $ticket['name'] . '</td></tr>';
+
+        //Mage::log('Fin Cr�ation du barcode dans le template de invoice');
+    }
+    ?>
+</table>

@@ -1,0 +1,66 @@
+<?php Mage::log('frontend option type selectionsiege template frontend default theme420 itoris grouped'); 
+//Eric: New Template
+?>
+
+<?php 
+	$_option = $this->getOption();
+	$_product =  $this->getProduct();
+	$_salle = Mage::getModel('reseauchx_reservationreseau/salle')->load($_product->getData('typesalle'));
+	Mage::log("Salle: " . $_product->getData('typesalle'),true);
+	$_sieges = $_salle->getSelectedSiegesCollection();
+	
+	//Mage::log("Sieges: " . export($_sieges),true);
+	
+	//Mage::log(var_export($_salle));
+	//$_sieges_all = Mage::getModel('ReseauChx_ReservationReseau/Siege')->getCollection();;
+	//$_sieges = $_sieges_all->addFieldToFilter('sku',$the_product_i_want);
+?>
+
+<dt>
+	<label<?php if ($_option->getIsRequire()) echo ' class="required"' ?>><?php if ($_option->getIsRequire()) echo '<em>*</em>' ?>
+		<?php echo "S&eacute;lection de si&egrave;ge(s)" . ' - ' . $_product->getAttributeText('typesalle') ?><br/>
+		* Le nombre de si&egrave;ge s&eacute;lectionn&eacute; doit &ecirc;tre identique &agrave; la quantit&eacute; de billet achet&eacute;.
+	</label>
+</dt>
+<dd>
+	<div id="salleCanvas">
+		<div id="salle">
+			<?php foreach ($_sieges as $_siege) {?>
+					<div style="background-color: grey;left:<?php echo $_siege->getData('posx'); ?>px;top:<?php echo $_siege->getData('posy'); ?>px" class="siege siege<?php echo $_product->getId() ?>" id="p<?php echo $_product->getId() ?>s<?php echo $_siege->getData('entity_id'); ?>">
+						&nbsp; 
+					</div>
+			<?php echo $this->getFormatedPrice() ?>
+			<?php } ?>
+		
+			<?php if($_product->getData('typesalle') == 3) {   ?>
+				<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ?>/reservationreseau/plan-navette2.jpg"/>
+			<?php } ?>
+			<?php if($_product->getData('typesalle') == 4) {?>
+				<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ?>/reservationreseau/plan-navette1.jpg"/>
+			<?php } ?>
+			<?php if($_product->getData('typesalle') == 5) {?>
+				<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ?>/reservationreseau/sallemulti-spectacle1.jpg"/>
+			<?php } ?>
+			<?php if($_product->getData('typesalle') == 6) {?>
+				<img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ?>/reservationreseau/plan-navette1.jpg"/>
+			<?php } ?>
+		</div>
+	</div>
+	<input type="hidden"
+			id="options_<?php echo $_product->getId() ?>_selectionsiege"
+			name="options[<?php echo $_option->getId() ?>][val]" 
+			value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" 
+			class="input-text  required-entry product-custom-option validation-failed"/>
+	<input type="hidden"
+			id="options_temp_<?php echo $_product->getId() ?>_selectionsiege"
+			value="<?php echo $this->escapeHtml($this->getDefaultValue()) ?>" />
+	<input type="hidden"
+			id="salle<?php echo $_product->getId() ?>"
+			value="<?php echo $_product->getData('typesalle') ?>"/>
+	<input type="hidden"
+			id="inputQtyId<?php echo $_product->getId() ?>" 
+			value="super_group[<?php echo $_product->getId() ?>]"/>		
+	<input type="hidden"
+			id="inputQty<?php echo $_product->getId() ?>" 
+			value="0"/>
+</dd>

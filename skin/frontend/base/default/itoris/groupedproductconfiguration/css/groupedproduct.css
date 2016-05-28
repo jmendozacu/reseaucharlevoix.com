@@ -1,0 +1,36 @@
+.itoris_grouped_product_associated_product .product-options {
+	margin: 0;
+	border: none;
+	padding: 0;
+	background: none;
+}
+.itoris_grouped_product_associated_product .product-options dt {
+	padding: 0;
+}
+.itoris_grouped_product_associated_product .product-options dd {
+	padding: 5px 10px 10px;
+}
+.minimal-price-link {
+	display: none;
+}
+.tier-prices-grouped li {
+	font-family: Arial;
+	font-size: 9.5px;
+	padding: 0;
+}
+.itoris_grouped_product_associated_product {
+	overflow: hidden;
+}
+.a-right {
+    text-align: center !important;
+}
+.itoris_grouped_product_associated_product #itoris_bundle_promotions .prices tbody th,
+.itoris_grouped_product_associated_product #itoris_bundle_promotions .prices tbody td {
+    border: none;
+}
+.itoris_grouped_product_associated_product #itoris_bundle_promotions .promodata {
+    border-left: 1px solid #D9DDE3;
+}
+.grouped-items-table-wrapper .data-table tbody tr.last td{
+    border-bottom: none;
+}

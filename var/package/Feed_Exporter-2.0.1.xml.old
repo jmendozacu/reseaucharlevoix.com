@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Feed_Exporter</name>
+    <version>2.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">Extension license name (OSL v3.0)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension creates xml files to retailtower for further distribution to price engines.</summary>
+    <description>This extension creates xml files to retailtower for further distribution to price engines.</description>
+    <notes>Stable version</notes>
+    <authors><author><name>rinkart</name><user>nobody2014</user><email>nobody2014@gmail.com</email></author></authors>
+    <date>2012-07-05</date>
+    <time>11:15:38</time>
+    <contents><target name="mageskin"><dir name="install"><dir name="default"><file name="install.php" hash="3b7de2cf163f18aa521c050bb543084f" /><file name=".htaccess" hash="8052c42ab3b8aa06a3f5f788a4ddccc2" /></dir></dir></target><target name="mage"><dir name="var"><dir name="package"><file name="pack.php" hash="3b7de2cf163f18aa521c050bb543084f" /><file name=".htaccess" hash="8052c42ab3b8aa06a3f5f788a4ddccc2" /></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.2.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

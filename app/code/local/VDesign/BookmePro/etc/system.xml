@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Catalog
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <tabs>
+        <bookmepro translate="label" module="bookmepro">
+            <label>VDesign BookmePro</label>
+            <sort_order>210</sort_order>
+        </bookmepro>
+    </tabs>
+    <sections>
+        <bookmepro_options translate="label" module="bookmepro">
+            <class>separator-top</class>
+            <label>Localisation</label>
+            <tab>bookmepro</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>40</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                
+               <locales translate="label">
+                    <label>Calendar component localisation</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <start translate="label">
+                            <label>Starts at:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+		                    <show_in_default>1</show_in_default>
+		                    <show_in_website>1</show_in_website>
+		                    <show_in_store>1</show_in_store>
+                            <comment>Do not remove apostrophes!</comment>
+                        </start>
+                        <reset translate="label">
+                            <label>Reset:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                            <comment>Do not remove apostrophes!</comment>
+                        </reset>
+                        <months translate="label">
+                            <label>Months:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                            <comment>Do not remove apostrophes and bars!</comment>
+                        </months>
+                        <week_days_short translate="label">
+                            <label>Week Days Short:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                            <comment>Do not remove apostrophes and bars!</comment>
+                        </week_days_short>
+                        <days translate="label">
+                            <label>Days:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </days>
+                        <today translate="label">
+                            <label>Today:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </today>
+                        <nearest translate="label">
+                            <label>Nearest adventures:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </nearest>
+                        <days_earlier translate="label">
+                            <label>Days Earler:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </days_earlier>
+                        <days_later translate="label">
+                            <label>Days Later:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1000</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </days_later>
+                    </fields>
+                </locales>
+            </groups>
+        </bookmepro_options>
+        
+        <bookmepro_sales translate="label" module="bookmepro">
+            <class>separator-top</class>
+            <label>Sales</label>
+            <tab>bookmepro</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>30</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                
+               <sales translate="label">
+                    <label>Display Reservation Data on</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                    <nearest_count translate="label">
+                            <label>If no adventures, display X nearest:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>0</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </nearest_count>
+                        <order_frontend translate="label">
+                            <label>Order/Invoice Item (frontend):</label>
+                            <frontend_type>select</frontend_type>                                                                                                           
+ 							<source_model>bookmepro/system_source</source_model>
+                            <sort_order>1</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </order_frontend>
+                        <order_email translate="label">
+                            <label>Order Item (email):</label>
+                            <frontend_type>select</frontend_type>                                                                                                           
+ 							<source_model>bookmepro/system_source</source_model>
+                            <sort_order>2</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </order_email>
+                        <order_print translate="label">
+                            <label>Order Item (print):</label>
+                            <frontend_type>select</frontend_type>                                                                                                           
+ 							<source_model>bookmepro/system_source</source_model>
+                            <sort_order>3</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </order_print>
+                        <invoice_email translate="label">
+                            <label>Invoice Item (email):</label>
+                            <frontend_type>select</frontend_type>                                                                                                           
+ 							<source_model>bookmepro/system_source</source_model>
+                            <sort_order>4</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </invoice_email>
+                        <invoice_print translate="label">
+                            <label>Invoice Item (print):</label>
+                            <frontend_type>select</frontend_type>                                                                                                           
+ 							<source_model>bookmepro/system_source</source_model>
+                            <sort_order>5</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </invoice_print>
+                        <day_notice translate="label">
+                            <label>Notice for day reservations (on order):</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>6</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </day_notice>
+                        <session_notice translate="label">
+                            <label>Notice for session reservations (on order):</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>6</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </session_notice>
+                        <adv_notice translate="label">
+                            <label>Notice for adventure reservations (on order):</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>6</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </adv_notice>
+                    </fields>
+                </sales>
+            </groups>
+        </bookmepro_sales>
+        
+        <bookmepro_reminder translate="label" module="bookmepro">
+            <class>separator-top</class>
+            <label>Mail Reminder Settings</label>
+            <tab>bookmepro</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                
+               <reminder translate="label">
+                    <label>Email Reminders management</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <sender_email translate="label">
+                            <label>Sender Email:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </sender_email>
+                        <sender_name translate="label">
+                            <label>Sender Name:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </sender_name>
+                        <send_copy translate="label">
+                            <label>Send copy:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <backend_model>adminhtml/system_config_backend_store</backend_model>
+                            <sort_order>50</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </send_copy>
+                        <send_copy_to translate="label">
+                            <label>Send copy to address:</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                           
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </send_copy_to>
+                    </fields>
+                </reminder>
+            </groups>
+        </bookmepro_reminder>
+        
+        <bookmepro_scheduler translate="label" module="bookmepro">
+            <class>separator-top</class>
+            <label>Schedule Manager</label>
+            <tab>bookmepro</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>50</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                
+               <task translate="label">
+                    <label>Schedule tasks adjustement</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>500</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <pending_payment translate="label">
+                            <label>Autocancel pending payment orders after:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bookmepro/system_task</source_model>
+                            <sort_order>1</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </pending_payment>
+                        <pending translate="label">
+                            <label>Autocancel pending orders after:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bookmepro/system_task</source_model>
+                            <sort_order>1</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </pending>
+                        <generate_session translate="label">
+                            <label>Pre-generate sessions every:</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>bookmepro/system_session</source_model>
+                            <sort_order>1</sort_order>
+                            
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                        </generate_session>
+                    </fields>
+                </task>
+            </groups>
+        </bookmepro_scheduler>
+    </sections>
+</config>

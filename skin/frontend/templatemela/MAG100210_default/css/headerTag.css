@@ -1,0 +1,217 @@
+/****************/
+/** headerTag ***/
+/****************/
+
+.headerTag{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background:rgba(242,240,235,0.7); 
+	color:#061435; 
+	font-weight:bold;
+	text-align: center;
+}
+#homeHeaderTag{
+	width:70%;
+	height:330px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	
+}
+.tagTitle{
+	font-family: 'SantEliaRough-Regular';
+	font-size: 30px;
+	line-height: 28px;
+	padding-top: 30px;
+	margin-bottom: 15px;
+}
+.tagDollar{
+	text-align:right;
+	width: 120px;
+	
+	font-family: 'SantEliaRoughAlt-Black';
+	font-size: 35px;
+	position:absolute;
+	margin-top: -30px;
+}
+.tagCent{
+	text-align:right;
+	width: 120px;
+	margin-top: -4px;
+	font-size: 20px;
+	position:absolute;
+	font-weight: bold;
+}
+.tagPriceContainer{
+	width: 120px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.tagLine{
+	width: 170px;
+}
+
+.tagPrice{
+	font-size: 80px;
+	font-weight: bold;
+	margin-top: 20px;
+}
+.tagTxs{
+	font-size: 10px;
+	margin-top:23px;
+	margin-bottom:17px;
+}
+.tagAss{
+	text-align:right;
+	width: 130px;
+	position:absolute;
+	margin-top: -22px;
+}
+
+@media screen and (min-width: 800px) {	
+	
+	/****************/
+	/** headerTag ***/
+	/****************/
+
+	.headerTag{
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		background:rgba(255,255,255,0.7); 
+		position:absolute;
+	}
+	#homeHeaderTag{
+		width:200px;
+		height:260px;
+		margin-top: -37%;
+		left: 50%;
+		margin-left: -190px
+	}
+	.tagTitle{
+		padding-top: 30px;
+		font-size: 20px;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+	.tagPrice{
+		font-size: 60px;
+		font-weight: bold;
+		margin-top: 8px;
+	}
+		
+	.tagLine{
+		width: 165px;
+	}
+	.tagDollar{
+		text-align:right;
+		width: 106px;
+		
+
+		font-size: 30px;
+		position:absolute;
+		margin-top: -27px;
+	}
+	.tagCent{
+		text-align:right;
+		width: 110px;
+		margin-top: -6px;
+		font-size: 22px;
+		position:absolute;
+		font-weight: bold;
+	}
+	.tagPriceContainer{
+		width: 120px;
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.tagTxs{
+		margin-top:15px;
+		margin-bottom:10px;
+	}
+	.tagAss{
+		text-align:right;
+		width: 115px;
+		position:absolute;
+		margin-top: -22px;
+	}
+}
+
+@media screen and (min-width: 920px) {
+	#homeHeaderTag{
+		margin-top: -34%;
+		margin-left: -210px
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	
+	#homeHeaderTag{
+		width:300px;
+		height:380px;
+		margin-top: -42%;
+		margin-left: -350px;
+	}
+	.tagTitle{
+		font-size: 30px;
+		line-height: 30px;
+		padding-top:50px;
+		margin-bottom: 20px;
+	}
+	.tagDollar{
+		text-align:right;
+		width: 150px;
+
+		font-size: 50px;
+		position:absolute;
+		margin-top: -25px;
+	}
+	.tagCent{
+		text-align:right;
+		width: 150px;
+		margin-top: 10px;
+		font-size: 26px;
+		position:absolute;
+		font-weight: bold;
+	}
+	.tagPriceContainer{
+		width: 150px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.tagPrice{
+		font-size: 100px;
+		font-weight: bold;
+		margin-top: 25px;
+	}
+	.tagLine{
+		width: auto;
+	}
+	.tagTxs{
+		margin-top:30px;
+		margin-bottom:20px;
+	}
+	.tagAss{
+		text-align:right;
+		width: 157px;
+		position:absolute;
+		margin-top: -14px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	#homeHeaderTag{
+		margin-top: -45%;
+	}
+}
+@media screen and (min-width: 1900px) {
+	#homeHeaderTag{
+		margin-top: -50%;
+	}
+}
+@media screen and (min-width: 2200px) {
+	#homeHeaderTag{
+		margin-top: -60%;
+	}
+}

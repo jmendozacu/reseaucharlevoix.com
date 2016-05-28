@@ -1,0 +1,647 @@
+<?php
+
+$typeImage = $this->getData('type_image');
+$urlIamge = $this->getSkinUrl('customwidget/image/Preloader_' . $typeImage . '.gif');
+$params = Mage::app()->getRequest()->getParams();
+
+$helper = Mage::helper('toolbox');
+$bagSimple = Mage::getModel('catalog/product')->loadByAttribute('sku', 'bagsimple');
+
+
+
+$rOa = !empty($params['ra']) ? $params['ra'] : '';
+$originCity = !empty($params['origin']) ? $params['origin'] : "";
+$destinationCity = !empty($params['destination']) ? $params['destination'] : "";
+$fromDate = !empty($params['from']) ? $params['from'] : "";
+$returnDate = !empty($params['return']) ? $params['return'] : "";
+
+$adult = !empty($params['adult']) ? $params['adult'] : 1;
+$youth = !empty($params['youth']) ? $params['youth'] : 0;
+$senior = !empty($params['senior']) ? $params['senior'] : 0;
+$juvenile = !empty($params['juvenile']) ? $params['juvenile'] : 0;
+
+$availableDates = Mage::helper('toolbox')->getAvailableDates();
+$minDate = $availableDates['min']['date_trajet'];
+$maxDate = $availableDates['max']['date_trajet'];
+
+$_salles = Mage::getModel('reseauchx_reservationreseau/salle')
+    ->getCollection()
+    ->addFieldToFilter('entity_id', array('in'=>array(3,4,5,6)))
+;
+
+$_sallesRaw = $_salles->getData();
+$image3 = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ."/reservationreseau/plan-navette2.jpg";
+$image4 = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ."/reservationreseau/plan-navette1.jpg";
+$image5 = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ."/reservationreseau/sallemulti-spectacle1";
+$image6 = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) ."/reservationreseau/plan-navette1.jpg";
+foreach ($_salles as $_salle) {
+    $_sieges = $_salle->getSelectedSiegesCollection();
+    $_siegesRaw = array();
+    foreach ($_sallesRaw as $k => $_salleRaw) {
+        if($_salleRaw['entity_id'] == $_salle->getId()){
+            $_sallesRaw[$k]['siege'] = $_sieges->getData();
+            $_sallesRaw[$k]['image'] = ${"image".$_salle->getId()};
+        }
+    }
+
+}
+
+$urlIamge = $this->getSkinUrl('customwidget/image/Preloader_1.gif');
+?>
+<script>
+    var URL = '<?php echo Mage::getBaseUrl(); ?>';
+    var SKIN_URL = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN); ?>';
+    var storeId = '<?php echo Mage::app()->getStore()->getId(); ?>';
+    window.urlProduct = '<?php echo $url; ?>';
+    window.urlProduct1 = '<?php echo $url2; ?>';
+    window.urlSkin = "<?php echo $this->getSkinUrl('customwidget/uikit.min.css'); ?>";
+    window.urlJs = "<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_JS) . 'customwidget/uikit.min.js'; ?>";
+    window.urlWidget = URL + 'customwidget/index/checkProduct';
+
+    var sROa = '<?php echo $rOa ?>';
+    var sOriginCity = '<?php echo $originCity ?>';
+    var sDestinationCity = '<?php echo $destinationCity ?>';
+    var sFromDate = '<?php echo $fromDate ?>';
+    var sReturnDate = '<?php echo $returnDate ?>';
+    var sAdult = <?php echo $adult ?>;
+    var sYouth = <?php echo $youth ?>;
+    var sSenior = <?php echo $senior ?>;
+    var sJuvenile = <?php echo $juvenile ?>;
+    var salles = '<?php echo json_encode($_sallesRaw) ?>';
+
+    //bag
+    var Bag = '<?php echo $bagSimple->getId();?>';
+
+    //label
+    var no_result_found = '<?php echo $helper->__("No result found!"); ?>'
+    var you_can_select_ticket_from = '<?php echo $helper->__("You can take a ticket from"); ?>';
+    var found = '<?php echo $helper->__("Found") ;?>';
+    var result = '<?php echo $helper->__("result"); ?>';
+    var results = '<?php echo $helper->__("results"); ?>';
+    var loading = '<?php echo $helper->__("Loading"); ?>';
+
+    var round_trip = '<?php echo $helper->__("Round trip"); ?>';
+    var one_way = '<?php echo $helper->__("One-way"); ?>';
+
+    var select_depart_station = '<?php echo $helper->__("From"); ?>';
+    var select_arrive_station = '<?php echo $helper->__("To"); ?>';
+    /*"Round trip"*/
+    var mode = 'full';
+</script>
+<style>
+    .se-pre-con {
+        /*background-color: transparent;*/
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+
+        background: #fff;
+        
+    }
+    /*loading*/
+                .spinner {
+                    margin: 300px auto;
+                    width: 80px;
+                    height: 80px;
+                    position: relative;
+                    text-align: center;
+
+                    -webkit-animation: sk-rotate 2.0s infinite linear;
+                    animation: sk-rotate 2.0s infinite linear;
+                }
+
+                .dot1, .dot2 {
+                    width: 60%;
+                    height: 60%;
+                    display: inline-block;
+                    position: absolute;
+                    top: 0;
+                    background-color: #00b3ff;
+                    border-radius: 100%;
+
+                    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+                    animation: sk-bounce 2.0s infinite ease-in-out;
+                }
+
+                .dot2 {
+                    top: auto;
+                    bottom: 0;
+                    -webkit-animation-delay: -1.0s;
+                    animation-delay: -1.0s;
+                }
+
+                @-webkit-keyframes sk-rotate {
+                    100% {
+                        -webkit-transform: rotate(360deg)
+                    }
+                }
+
+                @keyframes sk-rotate {
+                    100% {
+                        transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg)
+                    }
+                }
+
+                @-webkit-keyframes sk-bounce {
+                    0%, 100% {
+                        -webkit-transform: scale(0.0)
+                    }
+                    50% {
+                        -webkit-transform: scale(1.0)
+                    }
+                }
+
+                @keyframes sk-bounce {
+                    0%, 100% {
+                        transform: scale(0.0);
+                        -webkit-transform: scale(0.0);
+                    }
+                    50% {
+                        transform: scale(1.0);
+                        -webkit-transform: scale(1.0);
+                    }
+                }
+
+                /*end loading*/
+    .big-label{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        display: block;
+        text-align: center;
+    }
+    .my-input{
+        border: none !important;
+        background: #fff !important;
+        box-shadow: none !important;
+        text-align: center !important;
+    }
+    .tiny-input{
+        width: 0.1px !important;
+    }
+    /*.my-option select{*/
+        /*height: 10px !important;*/
+        /*font-size: 10px !important;*/
+        /*padding: 0 !important;*/
+    /*}*/
+    .margin-bottom{
+        margin: 10px !important;
+    }
+    .my-nav{
+        position: absolute !important;
+        right: 0 !important;
+        width: 420px !important;
+        height: 180px;
+        padding-top: 140px;
+        margin: 5px 10px!important;
+        background: #fff;
+    }
+    .my-qty{
+        font-weight: bold;
+        padding-left: 40% !important;
+        font-size: 25px;
+    }
+    .my-shadow{
+        box-shadow: 1px 0px 0px #888888 !important;
+    }
+    .my-shadow-left{
+        box-shadow: -1px 0px 0px #888888 !important;
+    }
+    .my-date{
+		cursor: pointer !important;
+		width: 98%;
+	    background-image: url(<?php echo Mage::getDesign()->getSkinUrl('benova/toolbox-designer/image/calendal.png') ?>);
+	    background-repeat: no-repeat;
+	    background-position-x: 100%;
+	    background-position-y: 3px;
+	    background-color: #fff !important;
+    }
+    .my-border{
+    	border: thin solid #ddd !important;
+    }
+   	.my-train{
+   		transition: all linear 1s !important;
+   		margin: 5px !important;
+   		background: #fff !important
+   	}
+	.my-train.ng-hide{
+	  margin-left: -1000px !important;
+	}
+	.delay{
+		color: green !important;
+	}
+</style>
+<div ng-app="Toolbox" class="toolbox" style="text-align: center">
+
+    <div class="se-pre-con">
+        <div class="spinner">
+                    <div class="dot1"></div>
+                    <div class="dot2"></div>
+                </div>
+    </div>
+    <div ng-controller="MainController" class="col-10">
+        <div class="margin-bottom my-border" style="background: #fff">
+
+            <form ng-show="isState(1) || isState(2)" class="pure-g pure-form">
+                    <fieldset style="padding-top: 10px">
+                        <div class="pure-u-10-24 left my-shadow">
+                            <div class="pure-u-12-24 left my-option my-shadow">
+                                   <strong class="big-label"> {{originCity.id}}
+                                       <span ng-show="rOa.id == 'ret'">&#8644;</span>
+                                       <span ng-show="rOa.id != 'ret'">&#8618;</span>
+                                       {{destinationCity.id}}</strong>
+                                <span class="pure-u-5-5 left">
+                                    <select id="originCity" ng-model="originCity"
+                                            class="my-input"
+                                            ng-options="item as item.label for item in originPlaces track by item.id"
+                                            >
+                                    </select>
+                                </span>
+                                <span class="pure-u-5-5 left">
+                                    <select id="destinationCity"
+                                            class="my-input"
+                                            ng-options="item as item.label for item in destinationPlaces track by item.id"
+                                            ng-model="destinationCity"
+                                        >
+                                    </select>
+                                </span>
+                                <span class="pure-u-5-5 left">
+                                    <select id="rOa" ng-model="rOa"
+                                            class="my-input"
+                                            ng-options="item as item.label for item in rOas track by item.id"
+                                        >
+                                    </select>
+                                </span>
+                            </div>
+                            <div class="pure-u-12-24 left">
+                                <div class="pure-u-12-24 left"
+
+                                    >
+									
+                                    <input  id="fromDate" type="date"
+                                           data-uk-datepicker="{format:'DD/MM/YYYY'}"
+                                            ng-disabled="isLoading"
+                                            ng-model="fromDate"
+                                            class="my-date"
+                                        >
+                                    <p><strong>{{getDate('from','date')}} {{getDate('from','month')}}</strong></p>
+                                    <p>{{getDate('from','day')}}</p>
+                                </div>
+                                <div class="pure-u-12-24 left"
+                                    >
+                                    <div class="pure-u-5-5" ng-show="rOa.id =='ret'">
+                                        <input id="returnDate" type="date"
+                                               data-uk-datepicker="{format:'DD/MM/YYYY'}"
+                                               ng-disabled="isLoading || rOa.id =='all'"
+                                               ng-model="returnDate"
+                                               class="my-date"
+                                            >
+                                        <p><strong>{{getDate('return','date')}} {{getDate('return','month')}}</strong></p>
+                                        <p>{{getDate('return','day')}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pure-u-14-24 left" style="padding-top: 15px">
+                            <div class="pure-u-1-5 left">
+                                <select
+                                    class="my-input my-qty"
+                                    ng-options="item for item in qtys"
+                                    style="width: 98%" id="adult" ng-model="adult"></select>
+                                <label for="returnDate" class="abody">26 à 64 ans</label>
+                            </div>
+                            <div class="pure-u-1-5 left">
+                                <select
+                                    class="my-input my-qty"
+                                    ng-options="item for item in qtys"
+                                    style="width: 100%"  id="youth" ng-model="youth"></select>
+                                <label for="returnDate" class="abody">18 à 26 ans</label>
+                            </div>
+                            <div class="pure-u-1-5 left">
+                                <select
+                                    class="my-input my-qty"
+                                    ng-options="item for item in qtys"
+                                    style="width: 100%" id="juvenile" ng-model="juvenile"></select>
+                                <label for="returnDate" class="abody">3 à 7 ans</label>
+                            </div>
+                            <div class="pure-u-1-5 left">
+                                <select
+                                    class="my-input my-qty"
+                                    ng-options="item for item in qtys"
+                                    style="width: 100%" id="senior" ng-model="senior"></select>
+                                <label for="returnDate" class="abody">65 ans+</label>
+                            </div>
+                            <div class="pure-u-1-5 left">
+                                <label for="returnDate" class="abody"></label>
+                                <button
+                                    style="margin-top: 30px"
+                                        type="button"
+                                        class="pure-button pure-button-primary" idd="btSearch"
+                                        ng-disabled="!canSearch()"
+                                        ng-click="search()">
+                                        <?php echo $helper->__('Search'); ?>
+                                </button>
+                            </div>
+                        </div>
+                    </fieldset>
+            </form>
+        <div class="col-10 left" ng-show="isState(2) && !isLoading">
+            <div class="margin-bottom" style="background: #fff" ng-repeat="ticket in tickets">
+                    <div class="pure-g pure-form my-border">
+                        <div class="pure-u-4-24 left" style="padding-top: 5px !important;">
+                            <p class="big-text text-center">{{getPrice(null,ticket) | currency}}</p>
+                            <button class="pure-button pure-button-primary"  ng-click="selectTicket(ticket)">
+                            <?php echo $helper->__('Choose'); ?>
+                            </button>
+                        </div>
+                        <div class="pure-u-10-24 left my-shadow">
+                            <p class="big-text text-center">
+                            <?php echo $helper->__('Go'); ?>
+                            </p>
+                            <div class="pure-u-5-5 left" ng-bind-html="ticket.getLabel('depart')"></div>
+                            <!-- <p><strong>{{ticket.getPoint('depart',1)}} - {{ticket.getPoint('depart',2)}}</strong></p>
+                            <small style="color: green">{{ticket.getDelay('depart')}}</small>
+                            <p><strong>{{ticket.getPoint('depart',3)}} - {{ticket.getPoint('depart',4)}}</strong></p> -->
+                        </div>
+                        <div class="pure-u-10-24 left">
+                            <div class="pure-u-5-5" ng-show="rOa.id == 'ret'">
+                                <p class="big-text text-center">
+                                <?php echo $helper->__('Return'); ?>
+                                </p>
+                                <div class="pure-u-5-5 left" ng-bind-html="ticket.getLabel('arrive')"></div>
+                                <!-- <p><strong>{{ticket.getPoint('arrive',1)}} - {{ticket.getPoint('arrive',2)}}</strong></p>
+                                <small style="color: green">{{ticket.getDelay('arrive')}}</small>
+                                <p><strong>{{ticket.getPoint('arrive',3)}} - {{ticket.getPoint('arrive',4)}}</strong></p> -->
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div  class="pure-g pure-form" ng-show="isState(3)">
+            <div class="pure-u-5-5 left">
+                <h3><strong>{{currentTrain.booking.name}}</strong></h3>
+            </div>
+            <div class="pure-u-5-5 left" >
+                    <div id="salle" ng-hide="currentTrain.booking.id != salle.booking.id" class="my-train" ng-repeat="salle in currentSalles track by $index">
+                                <div ng-repeat="siege in salle.siege"
+                                     ng-click="selectSiege(salle,siege)"
+                                     style="{{getStyleSiege(salle,siege)}}"
+                                     class="siege" id="{{salle.type+siege.entity_id}}">
+                                    &nbsp;
+                                </div>
+                                <img ng-src="{{salle.image}}"/>
+
+                    </div>
+                <div class="pure-u-5-5 text-cente my-nav my-border" style="">
+
+                    <div class="pure-u-5-5" style="margin-bottom: 10px">
+                        <button class="pure-button pure-button-primary" ng-disabled="!canPrev()" ng-click="navTrain('prev')">
+                        	 <?php echo $helper->__('Back'); ?>
+                        </button>
+                        <button class="pure-button pure-button-primary" ng-disabled="!canNext()" ng-click="navTrain('next')">
+                        	 <?php echo $helper->__('Next'); ?>
+                        </button>
+                    </div>
+
+                    <div class="pure-u-5-5">
+                        <button class="pure-button pure-button-primary" ng-click="goState(2);resetSiege()"> 
+                       	 <?php echo $helper->__('Back To Search Page'); ?>
+                        </button>
+                        <button class="pure-button pure-button-success" ng-disabled="!canAdd()" ng-click="add()">
+                        	<?php echo $helper->__('Add to basket'); ?>
+                        </button>
+                    </div>
+                    <div class="pure-u-5-5" style="margin-top: 10px"  ng-show="canAdd()">
+                        <h3><?php
+                        	echo $bagSimple->getName();
+                         ?></p>
+                        <select
+                                    class="my-qty"
+                                    ng-options="item for item in qtys"
+                                    style="width: 98%" id="adult" ng-model="bag"></select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-10 left" ng-show="isLoading"><h4><?php echo $helper->__('Loading'); ?>...</h4></div>
+        <div class="col-10 left" ng-show="!isLoading && (isState(1) || isState(2)) "><h4>{{message}}</h4></div>
+
+    </div>
+</div>
+
+<script>
+    /*TODO: CHANGE TIME*/
+    var departDate = jQuery('#fromDate');
+    var returnDate = jQuery('#returnDate');
+    var fromDate, toDate;
+    var dateMin = '<?php echo $minDate ?>'.split('-'),
+        dateMax = '<?php echo $maxDate ?>'.split('-');
+    var today = new Date();
+    var months = ['janvier','février','mars','avril', 'mai','juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre '];
+    var days = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+    departDate.pickadate({
+        today: '',
+        disable:[
+            true,
+//            {from: today, to: new Date(dateMax) }
+        ],
+//        clear: 'Clear selection',
+        close: 'Cancel',
+        weekdaysShort: days,
+        monthsShort: months,
+        format: 'yyyy/mm/dd',
+        formatSubmit: 'yyyy/mm/dd',
+        onSet: function (context) {
+//            console.log('Just set stuff:', context);
+            var d = new Date(context.select);
+            fromDate = d;
+            console.log(d);
+            if(jQuery('#rOa').val() == 'ret' && this.get('select')){
+            	returnDate.pickadate('picker').open();
+            }
+        },
+    });
+   
+    returnDate.pickadate({
+        today: '',
+        disable:[
+            true,
+//            {from: today, to: new Date(dateMax) }
+        ],
+//        clear: 'Clear selection',
+        close: 'Cancel',
+        weekdaysShort: days,
+        monthsShort: months,
+        format: 'yyyy/mm/dd',
+        formatSubmit: 'yyyy/mm/dd',
+        onSet: function (context) {
+//            console.log('Just set stuff:', context);
+            var d = new Date(context.select);
+            toDate = d;
+            console.log(d);
+        },
+        onOpen: function (context) {
+//            console.log('Just set stuff:', context);
+			departSelected = departDate.pickadate('picker').get('select');
+			if(departSelected){
+				this.set('min', new Date(departSelected.pick))
+			}
+        },
+
+        onClose: function (context) {
+//            console.log('Just set stuff:', context);
+            console.log('close');
+        }
+    });
+//    var rOaElem = jQuery('#rOa');
+//    rOaElem.change(function () {
+//        if (rOaElem.val() == 'all')
+//            returnDate.prop('disabled', true);
+//        else
+//            returnDate.prop('disabled', false);
+//    });
+    function openDate(type){
+        jQuery('#'+type+'Date').pickadate('picker').open()
+    }
+
+    /*TODO: CHANGE CITY*/
+    var city = [{
+        code: 'mal', city: 'Malbaie'
+    }, {
+        code: 'sti', city: 'Saint-Iréné'
+    }, {
+        code: 'sti',
+        city: 'Les eboulements'
+    }, {
+        code: 'bsp', city: 'Baie-Saint-Paul'
+    }, {
+        code: 'prs', city: 'Petites rivière Saint-Francois'
+    }, {
+        code: 'mas',
+        city: 'Le massif'
+    }, {
+        code: 'cap', city: 'Cap tourmente'
+    }, {
+        code: 'bsa', city: 'Basilique Sainte-Anne'
+    }, {
+        code: 'mmo',
+        city: 'Chutes Montmorency'
+    }];
+    function getDestination(_origin) {
+        var _destination;
+        switch (_origin) {
+            case 'mal':
+                _destination = ['sti', 'sjo', 'bsp'];
+                break;
+            case 'sti':
+                _destination = ['sjo', 'bsp', 'mal'];
+                break;
+            case 'sjo':
+                _destination = ['bsp', 'sti', 'mal'];
+                break;
+            case 'bsp':
+                _destination = ['prs', 'mas', 'cap', 'bsa', 'mmo', 'sjo', 'sti', 'mal'];
+                break;
+            case 'prs':
+                _destination = ['mas', 'cap', 'bsa', 'mmo', 'bsp'];
+                break;
+            case 'mas':
+                _destination = ['cap', 'bsa', 'mmo', 'prs', 'bsp'];
+                break;
+            case 'cap':
+                _destination = ['bsa', 'mmo', 'mas', 'prs', 'bsp'];
+                break;
+                break;
+            case 'mmo':
+                _destination = ['bsa', 'cap', 'mas', 'prs', 'bsp'];
+                break;
+            case 'bsa':
+                _destination = ['mmo', 'cap', 'mas', 'prs', 'bsp'];
+                break;
+        }
+        return _destination;
+    }
+
+//    _originCity = jQuery('#originCity');
+//    _destination = jQuery('#destinationCity');
+//    _originCity.change(function () {
+//            _destination.text('');
+//            var _ori = _originCity.val();
+//            if (_ori != '0') {
+//                var arrayDestination = getDestination(_ori);
+//                jQuery.each(arrayDestination, function (i, item) {
+//                    jQuery.each(city, function (_k, _v) {
+//                        if (_v.code == item)
+//                            _destination.append(jQuery('<option>', {
+//                                value: item,
+//                                text: _v.city
+//                            }));
+//                    });
+//                });
+//            } else {
+//                _destination.append(jQuery('<option>', {
+//                    value: 0,
+//                    text: 'Please select origin city'
+//                }));
+//            }
+//            console.log('Origin: ' + _ori);
+//        }
+//    );
+//    _destination.change(function () {
+//        console.log('Destination: ' + _destination.val());
+//    });
+    /*Check btSearch*/
+    var btSearch = jQuery('#btSearch');
+    btSearch.click(function () {
+        if (_originCity.val() == '0') {
+            alert('Please select city');
+            return false;
+        }
+        if (from.val() == '' || (returnDate.val() == '' && rOaElem.val() == 'ret')) {
+            alert('Please select date');
+            return false;
+        }
+        var url = window.urlWidget;
+        var rOa = jQuery('#rOa').val();
+
+        console.log('storeId:' + storeId);
+        url += '?ra=' + rOa + '&from=' + fromDate + '&return=' + toDate + '&origin=' + _originCity.val() + '&destination=' + _destination.val() + '&storeId=' + storeId;
+        var wResult = jQuery('#wResult');
+        showLoad();
+        jQuery.getJSON(url, function (json) {
+            hideLoad();
+            if (json.result == true) {
+                var target = jQuery('#target_product');
+                if (target.val() != json.id) {
+                    target.val();
+                    jQuery('#target_product').trigger('change');
+                }
+
+                // openNewUrl(json.link);
+            } else {
+                wResult.removeClass(" none-display").addClass('y-display');
+            }
+        });
+    });
+    jQuery(window).load(function () {
+        // Animate loader off screen
+        hideLoad();
+    });
+    function showLoad() {
+        jQuery(".se-pre-con").show();
+    }
+    function hideLoad() {
+        jQuery(".se-pre-con").fadeOut("slow");
+    }
+    function openNewUrl(url) {
+        window.location.assign(url);
+    }
+
+</script>

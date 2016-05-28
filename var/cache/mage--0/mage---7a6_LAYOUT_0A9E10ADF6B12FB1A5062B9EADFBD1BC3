@@ -1,0 +1,21 @@
+<reference name="root">
+   <block type="xpos/adminhtml_override_load" name="content"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_items" template="sm/xpos/index/cart/items.phtml" name="items">
+      <block type="xpos/adminhtml_override_grid" template="sm/xpos/index/cart/grid.phtml" name="items_grid"/>
+   </block>
+   <block type="core/text_list" name="order_item_extra_info"/>
+</reference>
+<reference name="content">
+   <block type="adminhtml/sales_order_create_shipping_method_form" template="sm/xpos/index/shipment/shipment.phtml" name="shipping_method"/>
+</reference>
+<reference name="content">
+   <block type="xpos/adminhtml_sales_order_create_billing_method_form" template="sm/xpos/index/payment/payment.phtml" name="billing_method"/>
+</reference>
+<reference name="content">
+   <block type="xpos/adminhtml_override_totals" template="sm/xpos/index/totals/totals.phtml" name="totals"/>
+</reference>
+<reference name="content">
+   <block type="page/html" name="message" template="sm/xpos/index/messages.phtml"/>
+</reference>

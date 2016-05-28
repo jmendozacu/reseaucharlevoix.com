@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <vianetz translate="label">
+            <label>vianetz modules</label>
+            <sort_order>200</sort_order>
+        </vianetz>
+    </tabs>
+    <sections>
+        <automaticinvoice translate="label" module="automaticinvoice">
+            <label>Automatic Invoice</label>
+            <tab>vianetz</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>200</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <general translate="label" module="sales">
+                    <label>General</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <note translate="label">
+                            <label></label>
+                            <frontend_type>note</frontend_type>
+                            <sort_order>0</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[
+                        <b>AutomaticInvoice</b><br />by <a href="http://www.vianetz.com" target="_blank">vianetz | Magento Enterprise Web Development</a>
+                        ]]></comment>
+                        </note>
+
+                        <licenses translate="label">
+                            <label></label>
+                            <frontend_model>Vianetz_Core_Block_Config</frontend_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </licenses>
+
+                        <licenseskey translate="label">
+                            <label>License Key</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment><![CDATA[Get license keys in your <a href="http://www.vianetz.com/shop/en/licensecheck/customer/licenses/" target="blank">VIANETZ shop account.</a>]]></comment>
+                        </licenseskey>
+
+                        <order_status translate="label">
+                            <label>New Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_order_status</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                        </order_status>
+                        <payment_methods translate="label">
+                            <label>Activated for Payment Methods</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>adminhtml/system_config_source_payment_allowedmethods</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </payment_methods>
+                        <product_types translate="label">
+                            <label>Activated for Product Types</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>automaticinvoice/source_producttypes</source_model>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>0</show_in_store>
+                            <can_be_empty>1</can_be_empty>
+                        </product_types>
+                    </fields>
+                </general>
+                <invoice translate="label" module="sales">
+                    <label>Invoice</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <generate translate="label">
+                            <label>Generate Invoice</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If set to yes an invoice document will be generated as soon as the order is in the appropriate status (see below).</comment>
+                        </generate>
+                        <generate_on_order_status translate="label">
+                            <label>Generate Invoice On Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>automaticinvoice/system_config_source_order_status_allstatuses</source_model>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <generate>1</generate>
+                            </depends>
+                            <comment>If order is in this status the invoice document will be generated (if activated above).</comment>
+                        </generate_on_order_status>
+                        <notify_customer translate="label">
+                            <label>Notify Customer</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If set to yes the invoice transactional email will be send to the customer. Note: This can be set to "Yes" although you set "Generate Invoice" to "No". Then the invoice email will be sent as soon as the invoice is generated (e.g. by your payment module or yourself in the backend).</comment>
+                        </notify_customer>
+                        <comment translate="label">
+                            <label>Use Order Comment as Invoice Comment</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <generate>1</generate>
+                            </depends>
+                        </comment>
+                        <savepdf translate="label">
+                            <label>Save Invoice PDF</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <generate>1</generate>
+                            </depends>
+                            <comment>The invoice PDF document will be stored in media/invoices folder of your Magento installation.</comment>
+                        </savepdf>
+                        <capture_online translate="label">
+                            <label>Capture Invoice Online</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <generate>1</generate>
+                            </depends>
+                            <comment>If set to "yes" the invoice will be sent to your payment provider. Otherwise it will be a regular Magento offline invoice.</comment>
+                        </capture_online>
+                    </fields>
+                </invoice>
+                <shipment translate="label" module="sales">
+                    <label>Shipment</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <generate translate="label comment">
+                            <label>Generate Shipment</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </generate>
+                        <generate_on_order_status translate="label">
+                            <label>Generate Shipment On Order Status</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>automaticinvoice/system_config_source_order_status_allstatuses</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <generate>1</generate>
+                            </depends>
+                            <comment>The shipment document will be generated if order is in this status.</comment>
+                        </generate_on_order_status>
+                        <notify_customer translate="label">
+                            <label>Notify Customer</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>If set to yes the shipment transactional email will be send to the customer.</comment>
+                        </notify_customer>
+                    </fields>
+                </shipment>
+            </groups>
+        </automaticinvoice>
+    </sections>
+</config>

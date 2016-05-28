@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SM_XPayment>
+            <version>0.1.0</version>
+        </SM_XPayment>
+    </modules>
+
+    <global>
+        <blocks>
+            <xpayment>
+                <class>SM_XPayment_Block</class>
+            </xpayment>
+        </blocks>
+        <models>
+            <xpayment>
+                <class>SM_XPayment_Model</class>
+            </xpayment>
+            <!--<cashpayment_adminhtml>
+                <class>SM_Cashpayment_Adminhtml_Model</class>
+            </cashpayment_adminhtml>-->
+        </models>
+        <resources>
+            <xpayment_setup>
+                <setup>
+                    <module>SM_XPayment</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </xpayment_setup>
+            <xpayment_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </xpayment_write>
+            <xpayment_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </xpayment_read>
+        </resources>
+    </global>
+
+    <default>
+        <payment>
+            <xpayment_cashpayment>
+                <active>1</active>
+                <model>xpayment/cashPaymentMethod</model>
+                <order_status>pending</order_status>
+                <title>X-POS Cash</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </xpayment_cashpayment>
+            <xpayment_ccpayment>
+                <active>1</active>
+                <model>xpayment/ccPaymentMethod</model>
+                <order_status>pending</order_status>
+                <title>X-POS Credit Card</title>
+                <cctypes>AE,VI,MC,DI</cctypes>
+                <payment_action>authorize</payment_action>
+                <allowspecific>0</allowspecific>
+            </xpayment_ccpayment>
+        </payment>
+        <carriers>
+            <xpayment_pickup_shipping>
+                <active>1</active>
+                <model>xpayment/pickupShippingMethod</model>
+                <name>X-POS Shipping</name>
+                <title>Pickup Shipping</title>
+                <sallowspecific>0</sallowspecific>
+                <frontend_enabled>0</frontend_enabled>
+            </xpayment_pickup_shipping>
+        </carriers>
+    </default>
+</config>

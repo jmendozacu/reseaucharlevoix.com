@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<menu>
+		<bookmepro translate="title" module="bookmepro">
+			<title>Reservations</title>
+			<sort_order>25</sort_order>
+			<children>
+                <dayly translate="title" module="bookmepro">
+                    <sort_order>0</sort_order>
+                    <title>Daily reservations</title>
+                    <action>bookmepro/adminhtml_book</action>
+                </dayly>
+                <session translate="title" module="bookmepro">
+                    <sort_order>10</sort_order>
+                    <title>Session reservations</title>
+                    <action>bookmepro/adminhtml_sessions</action>
+                </session>
+                <adventure translate="title" module="bookmepro">
+                    <sort_order>20</sort_order>
+                    <title>Adventure reservations</title>
+                    <action>bookmepro/adminhtml_adventures</action>
+                </adventure>
+			</children>
+		</bookmepro>
+	</menu>
+	<acl>
+        <resources>
+            <admin>
+                <children>
+                    <bookmepro translate="title" module="bookmepro">
+                        <title>Reservations</title>
+                        <children>
+                            <dayly translate="title">
+                                <title>Daily reservations</title>
+                                <sort_order>10</sort_order>
+                            </dayly>
+                             <session translate="title">
+                                <title>session reservations</title>
+                                <sort_order>20</sort_order>
+                            </session>
+                             <adventure translate="title">
+                                <title>adventure reservations</title>
+                                <sort_order>30</sort_order>
+                            </adventure>
+						</children>
+					</bookmepro>
+				</children>
+			</admin>
+		</resources>
+	</acl>
+</config>

@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * dotsquares.com
+ *
+ * Dotsquares_Taxrate extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category   	Dotsquares
+ * @package		Dotsquares_Taxrate
+ * @copyright  	Copyright (c) 2013
+ * @license		http://opensource.org/licenses/mit-license.php MIT License
+ * @author      Jagdish Ram <jagdish.ram@dotsquares.com>
+ */
+-->
+<config>
+	<acl>
+		<resources>
+			<admin>
+				<children>
+				  <sales>
+                        <children>
+                            <tax translate="title" module="tax">
+                                <title>Tax</title>
+                                <sort_order>500</sort_order>
+                                  <children>
+								     <taxrate translate="title" module="taxrate">
+									   <title>Manage Tax Rates With Multiple Country</title>
+								     </taxrate>
+							      </children>
+                            </tax>
+                        </children>
+                    </sales>
+					<!--<taxrate translate="title" module="taxrate">
+						<title>Taxrate</title>
+						<children>
+							<taxrate translate="title" module="taxrate">
+								<title>Taxrates</title>
+							</taxrate>
+						</children>
+					</taxrate>-->
+					<system>
+						<children>
+							<config>
+								<children>
+									<taxrate translate="title" module="taxrate">
+										<title>Manage Tax Rates With Multiple Country</title>
+									</taxrate>
+								</children>
+							</config>
+						</children>
+					</system>					
+				</children>
+			</admin>
+		</resources>
+	</acl>
+	<menu>
+	  <sales>
+	       <depends>
+				<module>Dotsquares_Taxrate</module>
+		 	</depends>
+	         <children>
+                <tax translate="title" module="tax">
+                    <title>Tax</title>
+                    <sort_order>500</sort_order>								
+                    <children>                        
+                        <taxrate translate="title" module="taxrate">
+							<title>Manage Tax Rates With Multiple Country</title>
+							<action>adminhtml/taxrate_taxrate</action>
+							<sort_order>8</sort_order>
+						</taxrate>
+					</children>
+                </tax>
+            </children>
+        </sales>	
+		<!--<taxrate translate="title" module="taxrate">
+			<title>Taxrate</title>
+			<sort_order>55</sort_order>
+			<depends>
+				<module>Dotsquares_Taxrate</module>
+		 	</depends>
+		 	<children>
+				<taxrate translate="title" module="taxrate">
+					<title>Taxrates</title>
+					<action>adminhtml/taxrate_taxrate</action>
+					<sort_order>0</sort_order>
+				</taxrate>
+			</children>
+		</taxrate>-->
+	</menu>
+</config>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<widgets>
+    <customwidget_bookingwidget type="customwidget/bookingwidget" translate="name description" module="customwidget">
+        <name>Booking</name>
+        <description type="desc">Widget for booking</description>
+        <parameters>
+            <heading_color>
+                <label>Heading Color</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <value>#00a8e6</value>
+                <comment>Color picker: http://www.w3schools.com/tags/ref_colorpicker.asp</comment>
+            </heading_color>
+            <text_color>
+                <label>Text Color</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+                <value>#CCFF33</value>
+            </text_color>
+            <type_image>
+                <label>Type Image Loading</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+                <source_model>customwidget/selectTypeLoading</source_model>
+            </type_image>
+            <!--<parameter4>
+                <label>parameter 4</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>multiselect</type>
+                <source_model>adminhtml/system_config_source_yesno</source_model>
+            </parameter4>
+            <parameter5>
+                <label>parameter 5</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>password</type>
+                <value>parameter5</value>
+            </parameter5>-->
+            <template>
+                <visible>1</visible>
+                 <type>text</type>
+                <value>customwidget/booking.phtml</value>
+                <!-- <value>benova/toolbox-designer/index.phtml</value> -->
+            </template>
+        </parameters>
+    </customwidget_bookingwidget>
+</widgets>

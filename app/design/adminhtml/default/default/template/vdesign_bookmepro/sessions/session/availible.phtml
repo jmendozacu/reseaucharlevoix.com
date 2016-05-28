@@ -1,0 +1,175 @@
+<?php
+
+?>
+<?php echo $this->getTemplatesHtml() ?>
+
+<script type="text/javascript">
+//<![CDATA[
+var firstStepTemplate = '<div class="option-box" id="question_{{id}}">'+
+            '<table id="<?php echo $this->getFieldId() ?>_{{id}}" class="option-header" cellpadding="0" cellspacing="0">'+
+            '<input type="hidden" id="<?php echo $this->getFieldId() ?>_{{id}}_is_delete" name="<?php echo $this->getFieldName() ?>[{{id}}][is_delete]" value="" />'+
+            '<input type="hidden" id="<?php echo $this->getFieldId() ?>_{{id}}_previous_type" name="<?php echo $this->getFieldName() ?>[{{id}}][previous_type]" value="{{type}}" />'+
+            '<input type="hidden" id="<?php echo $this->getFieldId() ?>_{{id}}_previous_group" name="<?php echo $this->getFieldName() ?>[{{id}}][previous_group]" value="" />'+
+            '<input type="hidden" id="<?php echo $this->getFieldId() ?>_{{id}}_id" name="<?php echo $this->getFieldName() ?>[{{id}}][id]" value="{{id}}" />'+
+            '<input type="hidden" id="<?php echo $this->getFieldId() ?>_{{id}}_question_id" name="<?php echo $this->getFieldName() ?>[{{id}}][question_id]" value="{{question_id}}" />'+
+            '<thead>'+
+                '<tr>'+
+                    '<th style="width:70%" class="que-question"><?php echo Mage::helper('bookmepro')->__('Question') ?> <span class="required">*</span></th>'+
+                    '<th class="que-order"><?php echo Mage::helper('bookmepro')->__('Sort Order') ?></th>'+
+                    '<th class="a-right"><?php echo $this->jsQuoteEscape($this->getDeleteButtonHtml()) ?></th>'+
+                '</tr>'+
+            '</thead>'+
+            '<tr>'+
+                '<td><input type="text" class="required-entry input-text" id="<?php echo $this->getFieldId() ?>_{{id}}_text" name="<?php echo $this->getFieldName() ?>[{{id}}][text]" value="{{text}}">{{checkboxScopeTitle}}</td>'+
+                '<td><input type="text" class="required-entry validate-zero-or-greater input-text" name="<?php echo $this->getFieldName() ?>[{{id}}][sort_order]" value="{{sort_order}}"></td>'+
+                '<td>&nbsp;</td>'+
+            '</tr></table></div>';
+
+var surveyQuestion = {
+    div : $('survey_questions_container_top'),
+    templateSyntax : /(^|.|\r|\n)({{(\w+)}})/,
+    templateText : firstStepTemplate,
+    itemCount : 1,
+    add : function(data) {
+        this.template = new Template(this.templateText, this.templateSyntax);
+
+        if(!data.id){
+            data = {};
+            data.id  = this.itemCount;
+            data.type = '';
+            data.option_id = 0;
+        } else {
+            this.itemCount = data.item_count;
+        }
+
+        Element.insert(this.div, {'after':this.template.evaluate(data)});
+
+        //set selected type
+        if (data.type) {
+            $A($('<?php echo $this->getFieldId() ?>_'+data.id+'_type').options).each(function(option){
+                if (option.value==data.type)
+                {
+                     option.selected = true;   
+                }
+            });
+        }
+
+        if(data.type == 'radio' || data.type == 'checkbox')
+        {
+            this.addSelectContainer(data.id);
+            for(var i = 0; i < data.optionValues.length; i++)
+            {
+            	this.addOption(null, data.id, data.optionValues[i].option_id, data.optionValues[i].text, data.optionValues[i].sort_order)
+            }
+        }
+
+        //set selected is_require
+        if (data.is_require) {
+            $A($('<?php echo $this->getFieldId() ?>_'+data.id+'_is_require').options).each(function(option){
+                if (option.value==data.is_require) option.selected = true;
+            });
+        }
+
+        if (data.checkboxScopeTitle) {
+            //set disabled
+            if ($('<?php echo $this->getFieldId() ?>_'+data.option_id+'_title') && data.scopeTitleDisabled) {
+                $('<?php echo $this->getFieldId() ?>_'+data.option_id+'_title').disable();
+            }
+        }
+
+        this.itemCount++;
+        this.bindRemoveButtons();
+        
+    },
+    addSelectContainer : function(index){
+    	element = $('survey_question_'+index+'_type_select');
+		if(!element)
+		{
+	    	this.div = $('question_'+index);
+	        var tempText = OptionTemplateSelect;
+	        var template = new Template(tempText, this.templateSyntax);
+	
+	        var data = {};
+	        data.id = index;
+	        
+	        Element.insert(this.div, {'bottom':template.evaluate(data)});
+		}
+    },
+    changeQuestionType : function(element, id){
+		if(element.value == 'radio' || element.value == 'checkbox')
+			this.addSelectContainer(id);
+		else
+			this.removeSelectContainer(id);
+    },
+    removeSelectContainer : function(id){
+		element = $('survey_question_'+id+'_type_select');
+		if(element)
+			element.remove();
+    },
+    remove : function(event){
+        var element = $(Event.findElement(event, 'div'));
+        if(element){
+            $('survey_'+element.readAttribute('id')+'_'+'is_delete').value = '1';
+            element.addClassName('no-display');
+            element.addClassName('ignore-validate');
+            element.hide();
+        }
+    },
+    addOption : function(event, index){
+        
+		var count = $('survey_question_'+index+'_answer_count').value;
+        var templatetext = OptionTemplateSelectRow;
+        var template = new Template(templatetext, this.templateSyntax);
+        
+        var data = {};
+        data.index = count;
+        data.id = index;
+        if(arguments.length > 2){
+			data.text = arguments[3];
+			data.sort_order = arguments[4];
+			data.option_id = arguments[2];
+        }
+        
+        Element.insert($('select_option_type_row_'+index), {'bottom':template.evaluate(data)});
+        $('survey_question_'+index+'_answer_count').value++;
+    },
+    removeOption : function(event, id, option_id){
+        $('survey_option_'+id+'_select_'+option_id).hidden = true;
+        $('survey_question_'+id+'_select_'+option_id+'_is_delete').value = 1;
+    },
+    bindRemoveButtons : function(){
+        var buttons = $$('div.product-custom-options .delete-product-option');
+        for(var i=0;i<buttons.length;i++){
+            if(!$(buttons[i]).binded){
+                $(buttons[i]).binded = true;
+                Event.observe(buttons[i], 'click', this.remove.bind(this));
+            }
+        }
+        var inputs = $$('div.product-custom-options button', 'div.product-custom-options input', 'div.product-custom-options select', 'div.product-custom-options textarea');
+        <?php if ($this->isReadonly()):?>
+        for (var i=0, l = inputs.length; i < l; i ++) {
+            inputs[i].disabled = true;
+            if (inputs[i].tagName.toLowerCase()=='button') {
+                inputs[i].addClassName('disabled');
+            }
+        }
+        <?php else: ?>
+            inputs.each(function(el) { Event.observe(el, 'change', el.setHasChanges.bind(el));  } )
+        <?php endif;?>
+    }
+}
+
+surveyQuestion.bindRemoveButtons();
+
+if($('<?php echo $this->getAddButtonId() ?>')){
+    Event.observe('<?php echo $this->getAddButtonId() ?>', 'click', surveyQuestion.add.bind(surveyQuestion));
+}
+
+
+//adding data to templates
+<?php foreach ($this->getOptionValues() as $_value): ?>
+	surveyQuestion.add(<?php echo $_value->toJson() ?>);
+    
+<?php endforeach; ?>
+
+</script>

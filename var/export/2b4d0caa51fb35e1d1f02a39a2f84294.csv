@@ -1,0 +1,1001 @@
+"Order Id","Created at","Amount Ex tax","Montant de la taxe",Montant,Rabais,Payé,Remboursé,Modifier,"Sales Person",Till,"Méthode d'expédition","Méthode de paiement",Warehouse,Magasin
+300015175,"2016-01-04 02:36:01","101,00 $","15,12 $","116,12 $","0,00 $","120,00 $",,"3,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015176,"2016-01-04 02:38:22","19,85 $","2,97 $","22,82 $","0,00 $","40,82 $",,"18,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015177,"2016-01-04 02:44:16","31,80 $","4,76 $","36,56 $","0,00 $","50,00 $",,"13,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015178,"2016-01-04 07:08:00","40,88 $","6,12 $","47,00 $","0,00 $","50,00 $",,"3,00 $",,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015179,"2016-01-04 07:12:57","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015180,"2016-01-04 07:18:44","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015181,"2016-01-04 07:22:49","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015182,"2016-01-04 07:26:03","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015183,"2016-01-04 07:28:09","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015184,"2016-01-04 07:31:45","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011220,"2016-01-04 08:58:45","120,00 $","17,97 $","137,97 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011221,"2016-01-04 11:40:39","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015185,"2016-01-04 11:52:01","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015186,"2016-01-04 12:10:44","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011222,"2016-01-04 13:07:32","184,40 $","27,61 $","212,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015187,"2016-01-05 05:51:13","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015188,"2016-01-05 06:58:51","12,10 $","1,82 $","13,92 $","0,00 $","13,92 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015189,"2016-01-05 07:19:01","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015190,"2016-01-05 07:24:02","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015191,"2016-01-05 10:13:41","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015192,"2016-01-05 12:15:54","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015193,"2016-01-05 12:21:46","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015194,"2016-01-06 02:08:25","83,48 $","12,50 $","95,98 $","0,00 $","95,98 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015195,"2016-01-06 02:32:24","48,84 $","7,31 $","56,15 $","0,00 $","56,15 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015196,"2016-01-06 02:37:51","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015197,"2016-01-06 05:49:39","46,05 $","6,89 $","52,94 $","0,00 $","52,94 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011223,"2016-01-06 06:12:52","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015198,"2016-01-06 07:13:20","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015199,"2016-01-06 07:17:10","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015200,"2016-01-06 07:22:25","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015201,"2016-01-06 07:23:37","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015202,"2016-01-06 07:54:05","17,30 $","2,60 $","19,90 $","0,00 $","19,90 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015203,"2016-01-06 12:04:22","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011225,"2016-01-06 16:07:01","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015204,"2016-01-07 02:29:07","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015205,"2016-01-07 06:42:55","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015206,"2016-01-07 12:13:55","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015207,"2016-01-07 12:21:32","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015208,"2016-01-07 14:26:43","19,25 $","2,88 $","22,13 $","0,00 $","22,15 $",,"0,02 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015209,"2016-01-07 14:57:00","16,65 $","2,49 $","19,14 $","0,00 $","20,00 $",,"0,86 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015210,"2016-01-08 05:02:09","118,85 $","17,80 $","136,65 $","0,00 $","136,65 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015211,"2016-01-08 06:46:00","12,10 $","1,82 $","13,92 $","0,00 $","13,92 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015212,"2016-01-08 06:58:26","86,75 $","12,99 $","99,74 $","0,00 $","99,74 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015213,"2016-01-08 07:11:17","13,15 $","1,97 $","15,12 $","0,00 $","15,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015214,"2016-01-08 07:15:22","20,85 $","3,12 $","23,97 $","0,00 $","25,00 $",,"1,03 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015215,"2016-01-08 07:21:00","19,85 $","2,97 $","22,82 $","0,00 $","40,00 $",,"17,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015216,"2016-01-08 09:02:27","11,25 $","1,68 $","12,93 $","0,00 $","12,93 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011226,"2016-01-08 09:31:18","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015217,"2016-01-08 09:57:58","14,00 $","2,10 $","16,10 $","0,00 $","20,10 $",,"4,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011227,"2016-01-08 10:07:05","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011228,"2016-01-08 11:05:34","108,70 $","16,28 $","124,98 $","0,00 $","0,00 $","124,98 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015218,"2016-01-08 12:09:22","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015219,"2016-01-08 12:20:21","11,70 $","1,76 $","13,46 $","0,00 $","14,00 $",,"0,54 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015220,"2016-01-08 12:25:04","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015221,"2016-01-08 12:26:50","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015222,"2016-01-08 12:28:24","19,85 $","2,97 $","22,82 $","0,00 $","24,00 $",,"1,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015223,"2016-01-08 14:08:20","34,30 $","5,14 $","39,44 $","0,00 $","39,44 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015224,"2016-01-08 14:09:37","10,35 $","1,55 $","11,90 $","0,00 $","20,00 $",,"8,10 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011229,"2016-01-09 06:43:58","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015225,"2016-01-09 06:47:41","9,45 $","1,41 $","10,86 $","0,00 $","10,86 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015226,"2016-01-09 07:29:35","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011230,"2016-01-09 08:07:39","21,74 $","3,26 $","25,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015227,"2016-01-09 11:01:19","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015228,"2016-01-09 12:43:36","27,70 $","4,15 $","31,85 $","0,00 $","31,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011231,"2016-01-09 17:02:42","45,00 $","6,74 $","51,74 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015229,"2016-01-10 05:58:13","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015230,"2016-01-10 07:06:28","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015231,"2016-01-10 07:31:10","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015232,"2016-01-10 09:20:38","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011232,"2016-01-10 10:16:00","152,18 $","22,79 $","174,97 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015233,"2016-01-10 10:36:19","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015234,"2016-01-10 10:36:52","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015235,"2016-01-10 11:01:46","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015236,"2016-01-10 11:03:42","101,00 $","15,12 $","116,12 $","0,00 $","120,00 $",,"3,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011233,"2016-01-10 11:41:18","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011234,"2016-01-10 11:43:31","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015237,"2016-01-10 11:57:16","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011235,"2016-01-10 15:13:33","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015238,"2016-01-11 02:24:29","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015239,"2016-01-11 02:28:17","37,40 $","5,60 $","43,00 $","0,00 $","100,00 $",,"57,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011236,"2016-01-11 04:29:13","92,18 $","13,80 $","105,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015240,"2016-01-11 04:50:44","11,55 $","1,73 $","13,28 $","0,00 $","13,50 $",,"0,22 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015241,"2016-01-11 05:35:51","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015242,"2016-01-11 07:21:13","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015243,"2016-01-11 07:25:18","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015244,"2016-01-11 07:29:13","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015245,"2016-01-11 07:31:09","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011237,"2016-01-11 09:25:18","46,10 $","6,91 $","53,01 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015246,"2016-01-11 09:41:24","16,85 $","2,52 $","19,37 $","0,00 $","19,37 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011238,"2016-01-11 13:32:30","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011239,"2016-01-11 16:37:12","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015247,"2016-01-12 02:35:56","31,80 $","4,76 $","36,56 $","0,00 $","40,60 $",,"4,04 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015248,"2016-01-12 04:09:16","11,65 $","1,74 $","13,39 $","0,00 $","13,39 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011240,"2016-01-12 04:49:25","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015249,"2016-01-12 06:05:26","39,70 $","5,95 $","45,65 $","0,00 $","45,65 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011241,"2016-01-12 09:31:02","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015250,"2016-01-12 09:42:56","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011242,"2016-01-12 12:39:39","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011243,"2016-01-12 16:28:34","130,44 $","19,53 $","149,97 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015251,"2016-01-13 06:02:57","9,85 $","1,47 $","11,32 $","0,00 $","11,32 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011244,"2016-01-13 08:15:01","92,18 $","13,80 $","105,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011245,"2016-01-13 10:15:23","1 423,90 $","213,23 $","1 637,13 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011246,"2016-01-13 10:19:46","1 423,90 $","213,23 $","1 637,13 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011247,"2016-01-13 10:25:07","148,70 $","22,27 $","170,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011248,"2016-01-13 10:29:42","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011249,"2016-01-13 10:31:26","1 423,90 $","213,23 $","1 637,13 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011250,"2016-01-13 10:33:31","1 423,90 $","213,23 $","1 637,13 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011251,"2016-01-13 11:07:24","2 867,45 $","429,40 $","3 296,85 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011252,"2016-01-13 11:11:44","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011253,"2016-01-13 11:16:02","2 345,70 $","351,27 $","2 696,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011254,"2016-01-13 11:18:21","2 926,15 $","438,19 $","3 364,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015252,"2016-01-13 11:22:10","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011255,"2016-01-13 11:22:44","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011256,"2016-01-13 11:25:37","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011257,"2016-01-13 11:27:47","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011258,"2016-01-13 11:31:11","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011259,"2016-01-13 11:33:55","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011260,"2016-01-13 11:37:35","5 856,65 $","877,03 $","6 733,68 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015253,"2016-01-13 12:37:49","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015254,"2016-01-13 12:49:57","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015255,"2016-01-14 02:20:13","21,05 $","3,15 $","24,20 $","0,00 $","24,20 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015256,"2016-01-14 02:22:42","74,25 $","11,12 $","85,37 $","0,00 $","100,00 $",,"14,63 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015257,"2016-01-14 02:58:31","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011261,"2016-01-14 05:31:27","4 758,40 $","712,57 $","5 470,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011262,"2016-01-14 05:36:13","2 087,00 $","312,53 $","2 399,53 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015258,"2016-01-14 07:20:55","9,45 $","1,41 $","10,86 $","0,00 $","10,86 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015259,"2016-01-14 09:52:34","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015260,"2016-01-14 10:21:52","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011263,"2016-01-14 12:03:50","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015261,"2016-01-14 12:22:56","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015262,"2016-01-14 12:26:21","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015263,"2016-01-14 13:25:15","17,70 $","2,66 $","20,36 $","0,00 $","20,50 $",,"0,14 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015264,"2016-01-14 13:49:23","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011264,"2016-01-14 15:04:15","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011265,"2016-01-14 15:30:52","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015265,"2016-01-15 02:55:04","74,25 $","11,12 $","85,37 $","0,00 $","100,00 $",,"14,63 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015266,"2016-01-15 02:56:08","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011266,"2016-01-15 03:40:06","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011267,"2016-01-15 03:42:25","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011268,"2016-01-15 03:59:23","1 121,40 $","167,93 $","1 289,33 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011269,"2016-01-15 04:03:06","1 667,60 $","249,72 $","1 917,32 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011270,"2016-01-15 04:06:20","1 217,40 $","182,31 $","1 399,71 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011271,"2016-01-15 04:10:02","1 947,84 $","291,69 $","2 239,53 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011272,"2016-01-15 04:20:44","1 704,36 $","255,23 $","1 959,59 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011273,"2016-01-15 04:23:16","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011274,"2016-01-15 04:28:53","4 758,40 $","712,57 $","5 470,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011275,"2016-01-15 04:31:15","2 087,00 $","312,53 $","2 399,53 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011276,"2016-01-15 04:33:18","1 217,40 $","182,31 $","1 399,71 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011277,"2016-01-15 04:36:02","1 704,36 $","255,23 $","1 959,59 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011278,"2016-01-15 04:37:58","1 704,36 $","255,23 $","1 959,59 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011279,"2016-01-15 04:42:03","1 526,10 $","228,54 $","1 754,64 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011280,"2016-01-15 04:44:45","1 658,90 $","248,43 $","1 907,33 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011281,"2016-01-15 04:50:49","2 608,80 $","390,67 $","2 999,47 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011282,"2016-01-15 04:55:32","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011283,"2016-01-15 04:58:50","1 238,90 $","185,53 $","1 424,43 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011284,"2016-01-15 05:02:41","758,64 $","113,60 $","872,24 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011285,"2016-01-15 05:06:21","1 615,23 $","241,88 $","1 857,11 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011286,"2016-01-15 05:14:42","708,18 $","106,05 $","814,23 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011287,"2016-01-15 05:17:54","708,18 $","106,05 $","814,23 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011288,"2016-01-15 05:34:49","1 826,16 $","273,47 $","2 099,63 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011289,"2016-01-15 05:37:41","1 826,16 $","273,47 $","2 099,63 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011290,"2016-01-15 05:39:55","1 826,16 $","273,47 $","2 099,63 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011291,"2016-01-15 05:43:05","1 610,88 $","241,23 $","1 852,11 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011292,"2016-01-15 05:46:00","703,83 $","105,40 $","809,23 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011293,"2016-01-15 05:51:44","1 639,20 $","245,47 $","1 884,67 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011294,"2016-01-15 05:59:37","1 676,10 $","251,00 $","1 927,10 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015267,"2016-01-15 06:39:51","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015268,"2016-01-15 07:01:04","11,00 $","1,65 $","12,65 $","0,00 $","15,00 $",,"2,35 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011295,"2016-01-15 08:33:33","2 921,80 $","437,54 $","3 359,34 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011296,"2016-01-15 08:38:45","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011297,"2016-01-15 08:43:44","5 852,30 $","876,39 $","6 728,69 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011298,"2016-01-15 08:47:15","148,70 $","22,27 $","170,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011299,"2016-01-15 09:02:00","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011300,"2016-01-15 09:09:45","6 315,35 $","945,73 $","7 261,08 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011301,"2016-01-15 09:18:19","6 315,35 $","945,73 $","7 261,08 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011302,"2016-01-15 09:20:56","3 339,20 $","500,05 $","3 839,25 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015269,"2016-01-15 09:22:48","12,45 $","1,86 $","14,31 $","0,00 $","20,50 $",,"6,19 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011303,"2016-01-15 09:26:56","6 315,35 $","945,73 $","7 261,08 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011304,"2016-01-15 09:37:18","6 315,35 $","945,73 $","7 261,08 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011305,"2016-01-15 09:43:25","5 565,44 $","833,42 $","6 398,86 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015270,"2016-01-15 09:46:00","5,35 $","0,80 $","6,15 $","0,00 $","20,00 $",,"13,85 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011306,"2016-01-15 09:50:37","5 565,44 $","833,42 $","6 398,86 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011307,"2016-01-15 09:53:15","1 947,84 $","291,69 $","2 239,53 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011308,"2016-01-15 10:02:51","886,20 $","132,71 $","1 018,91 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015271,"2016-01-15 10:25:03","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015272,"2016-01-15 12:03:42","11,70 $","1,76 $","13,46 $","0,00 $","13,46 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015273,"2016-01-15 12:05:51","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015274,"2016-01-15 12:07:09","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015275,"2016-01-15 12:28:44","13,15 $","1,97 $","15,12 $","0,00 $","20,00 $",,"4,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015276,"2016-01-15 12:29:54","13,15 $","1,97 $","15,12 $","0,00 $","15,25 $",,"0,13 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015277,"2016-01-15 12:32:35","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015278,"2016-01-15 12:36:47","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011309,"2016-01-15 16:49:39","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011310,"2016-01-16 02:55:20","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015279,"2016-01-16 07:04:19","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015280,"2016-01-16 07:12:31","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015281,"2016-01-16 07:29:02","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015282,"2016-01-16 08:28:15","13,65 $","2,04 $","15,69 $","0,00 $","20,00 $",,"4,31 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011311,"2016-01-16 12:26:34","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011312,"2016-01-16 13:02:17","108,70 $","16,28 $","124,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015283,"2016-01-17 07:20:10","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015284,"2016-01-17 07:24:47","31,80 $","4,76 $","36,56 $","0,00 $","42,00 $",,"5,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015285,"2016-01-17 07:30:34","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011313,"2016-01-17 07:41:06","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011314,"2016-01-17 08:46:40","90,00 $","13,48 $","103,48 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015286,"2016-01-17 09:18:25","8,60 $","1,29 $","9,89 $","0,00 $","20,00 $",,"10,11 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015287,"2016-01-17 10:02:26","92,20 $","13,81 $","106,01 $","0,00 $","106,01 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+100011315,"2016-01-17 11:28:23","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015288,"2016-01-17 11:39:34","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $","26,85 $","13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015289,"2016-01-17 11:56:47","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011316,"2016-01-17 12:02:59","204,40 $","30,61 $","235,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011317,"2016-01-17 12:04:52","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015290,"2016-01-17 12:23:12","19,85 $","2,97 $","22,82 $","0,00 $","24,00 $",,"1,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015291,"2016-01-17 12:24:13","31,80 $","4,76 $","36,56 $","0,00 $","0,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015292,"2016-01-17 12:24:17","31,80 $","4,76 $","36,56 $","0,00 $","0,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015293,"2016-01-17 12:24:19","31,80 $","4,76 $","36,56 $","0,00 $","37,00 $","36,56 $","0,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015294,"2016-01-17 12:28:01","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015295,"2016-01-17 14:07:39","8,65 $","1,29 $","9,94 $","0,00 $","9,94 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011318,"2016-01-18 03:42:01","1 615,23 $","241,88 $","1 857,11 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011319,"2016-01-18 03:45:24","1 615,23 $","241,88 $","1 857,11 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015296,"2016-01-18 05:08:54","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015297,"2016-01-18 06:10:45","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015298,"2016-01-18 06:16:37","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015299,"2016-01-18 09:14:59","5,95 $","0,89 $","6,84 $","0,00 $","6,84 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015300,"2016-01-18 09:21:07","7,18 $","1,08 $","8,26 $","0,00 $","8,26 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015301,"2016-01-18 10:20:18","47,95 $","7,18 $","55,13 $","0,00 $","55,13 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015302,"2016-01-18 10:23:38","16,65 $","2,49 $","19,14 $","0,00 $","19,14 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011320,"2016-01-18 11:06:55","2 345,70 $","351,27 $","2 696,97 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011321,"2016-01-18 12:19:02","1 526,10 $","228,54 $","1 754,64 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015303,"2016-01-18 12:23:17","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011322,"2016-01-18 12:53:25","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015304,"2016-01-18 13:40:39","37,00 $","5,54 $","42,54 $","0,00 $","42,54 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011323,"2016-01-18 14:43:15","1 217,40 $","182,31 $","1 399,71 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015305,"2016-01-19 02:21:25","101,00 $","15,12 $","116,12 $","0,00 $","120,12 $",,"4,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015306,"2016-01-19 02:29:35","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011324,"2016-01-19 04:00:14","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011325,"2016-01-19 07:39:39","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011326,"2016-01-19 15:59:15","108,70 $","16,28 $","124,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011327,"2016-01-20 04:06:39","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015307,"2016-01-20 04:22:18","24,45 $","3,66 $","28,11 $","0,00 $","28,11 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015308,"2016-01-20 04:35:25","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011328,"2016-01-20 04:39:40","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015309,"2016-01-20 05:34:31","15,80 $","2,37 $","18,17 $","0,00 $","18,17 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015310,"2016-01-20 05:42:51","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011329,"2016-01-20 05:59:03","2 706,80 $","405,34 $","3 112,14 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011330,"2016-01-20 07:04:05","90,00 $","13,48 $","103,48 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015311,"2016-01-20 07:04:11","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015312,"2016-01-20 14:29:29","31,90 $","4,78 $","36,68 $","0,00 $","36,68 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015313,"2016-01-21 02:02:02","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015314,"2016-01-21 02:12:04","29,45 $","4,41 $","33,86 $","0,00 $","33,86 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015315,"2016-01-21 02:37:15","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015316,"2016-01-21 02:38:59","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011331,"2016-01-21 04:37:36","1 304,40 $","195,33 $","1 499,73 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011332,"2016-01-21 04:49:13","1 487,00 $","222,68 $","1 709,68 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011333,"2016-01-21 04:51:06","869,60 $","130,22 $","999,82 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015317,"2016-01-21 04:59:28","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015318,"2016-01-21 05:14:25","18,50 $","2,78 $","21,28 $","0,00 $","21,28 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015319,"2016-01-21 09:09:18","36,60 $","5,48 $","42,08 $","0,00 $","42,08 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015320,"2016-01-21 12:19:17","16,85 $","2,52 $","19,37 $","0,00 $","20,00 $",,"0,63 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015321,"2016-01-21 12:24:34","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015322,"2016-01-21 13:36:36","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011334,"2016-01-22 06:23:53","1 582,62 $","237,00 $","1 819,62 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011335,"2016-01-22 06:27:14","1 582,62 $","237,00 $","1 819,62 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015323,"2016-01-22 07:02:21","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015324,"2016-01-22 07:17:40","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015325,"2016-01-22 09:40:46","5,35 $","0,80 $","6,15 $","0,00 $","20,00 $",,"13,85 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015326,"2016-01-22 10:21:01","14,00 $","2,10 $","16,10 $","0,00 $","20,00 $",,"3,90 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011336,"2016-01-22 12:02:33","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015327,"2016-01-22 12:22:23","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015328,"2016-01-22 12:24:22","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015329,"2016-01-22 13:53:51","6,25 $","0,93 $","7,18 $","0,00 $","10,20 $",,"3,02 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015330,"2016-01-22 14:09:05","28,60 $","4,28 $","32,88 $","0,00 $","32,88 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015331,"2016-01-22 14:11:10","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011337,"2016-01-23 04:23:14","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011338,"2016-01-23 06:50:27","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011339,"2016-01-23 07:05:31","108,70 $","16,28 $","124,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015332,"2016-01-23 07:18:29","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015333,"2016-01-23 07:23:45","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011340,"2016-01-23 09:27:31","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015334,"2016-01-23 10:02:48","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015335,"2016-01-23 12:25:58","16,65 $","2,49 $","19,14 $","0,00 $","19,14 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015336,"2016-01-23 12:26:41","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015337,"2016-01-24 04:51:05","12,10 $","1,82 $","13,92 $","0,00 $","13,92 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015338,"2016-01-24 06:39:43","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011341,"2016-01-24 07:15:20","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015339,"2016-01-24 12:11:13","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015340,"2016-01-24 12:12:55","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015341,"2016-01-24 12:15:30","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015342,"2016-01-24 12:25:56","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011342,"2016-01-24 14:41:26","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011343,"2016-01-24 16:50:45","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011344,"2016-01-25 03:02:59","1 538,10 $","230,34 $","1 768,44 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015343,"2016-01-25 03:05:38","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011345,"2016-01-25 03:06:32","1 079,40 $","161,64 $","1 241,04 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011346,"2016-01-25 06:32:11","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015344,"2016-01-25 10:29:51","9,45 $","1,41 $","10,86 $","0,00 $","10,86 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015345,"2016-01-25 12:30:56","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011347,"2016-01-25 15:12:30","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011348,"2016-01-25 16:19:34","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015346,"2016-01-26 02:23:26","20,50 $","3,07 $","23,57 $","0,00 $","23,57 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015347,"2016-01-26 02:28:42","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015348,"2016-01-26 02:42:27","63,60 $","9,52 $","73,12 $","0,00 $","73,12 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015349,"2016-01-26 03:12:37","9,45 $","1,41 $","10,86 $","0,00 $","10,86 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011349,"2016-01-26 04:23:40","1 014,20 $","151,88 $","1 166,08 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011350,"2016-01-26 04:59:41","2 916,30 $","436,72 $","3 353,02 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015350,"2016-01-26 05:30:12","43,48 $","6,51 $","49,99 $","0,00 $","49,99 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015351,"2016-01-26 05:45:01","9,85 $","1,47 $","11,32 $","0,00 $","11,32 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015352,"2016-01-26 05:46:40","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015353,"2016-01-26 05:58:06","16,00 $","2,40 $","18,40 $","0,00 $","18,40 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015354,"2016-01-26 07:51:40","23,70 $","3,55 $","27,25 $","0,00 $","27,25 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011351,"2016-01-26 11:30:37","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015355,"2016-01-26 13:53:40","31,20 $","4,67 $","35,87 $","0,00 $","35,87 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011352,"2016-01-27 03:39:39","1 685,10 $","252,35 $","1 937,45 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011353,"2016-01-27 04:09:39","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015356,"2016-01-27 05:03:25","250,80 $","37,56 $","288,36 $","0,00 $","288,36 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015357,"2016-01-27 05:13:17","44,90 $","6,73 $","51,63 $","0,00 $","52,00 $",,"0,37 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015358,"2016-01-27 08:39:18","19,50 $","2,93 $","22,43 $","0,00 $","22,43 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015359,"2016-01-27 08:42:52","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015360,"2016-01-27 13:02:53","22,00 $","3,29 $","25,29 $","0,00 $","25,29 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015361,"2016-01-28 02:27:06","31,80 $","4,76 $","36,56 $","0,00 $","37,00 $",,"0,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015362,"2016-01-28 02:39:27","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015363,"2016-01-28 02:44:10","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015364,"2016-01-28 02:49:18","101,00 $","15,12 $","116,12 $","0,00 $","116,15 $",,"0,03 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011354,"2016-01-28 02:56:22","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015365,"2016-01-28 05:44:12","5,22 $","0,78 $","6,00 $","0,00 $","6,00 $","6,00 $",,,"Service a Bord","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015366,"2016-01-28 05:44:53","6,96 $","1,04 $","8,00 $","0,00 $","8,00 $","8,00 $",,,"Service a Bord","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015367,"2016-01-28 05:53:18","6,25 $","0,93 $","7,18 $","0,00 $","7,20 $",,"0,02 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015368,"2016-01-28 07:02:25","66,35 $","9,94 $","76,29 $","0,00 $","80,50 $",,"4,21 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015369,"2016-01-28 08:59:54","5,22 $","0,78 $","6,00 $","0,00 $","6,00 $","6,00 $",,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015370,"2016-01-28 09:00:25","6,96 $","1,04 $","8,00 $","0,00 $","8,00 $","8,00 $",,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011355,"2016-01-28 09:29:14","1 743,00 $","261,01 $","2 004,01 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011356,"2016-01-28 09:31:15","2 863,00 $","428,73 $","3 291,73 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015371,"2016-01-28 10:20:11","68,70 $","10,29 $","78,99 $","0,00 $","78,99 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015372,"2016-01-28 14:08:22","24,45 $","3,66 $","28,11 $","0,00 $","28,11 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011357,"2016-01-28 14:34:52","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015373,"2016-01-29 06:58:58","118,85 $","17,80 $","136,65 $","0,00 $","146,00 $",,"9,35 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015374,"2016-01-29 07:02:43","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015375,"2016-01-29 07:15:49","118,85 $","17,80 $","136,65 $","0,00 $","136,65 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015376,"2016-01-29 07:19:30","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015377,"2016-01-29 07:31:09","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015378,"2016-01-29 09:03:17","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $","5,24 $",,,"Service a Bord","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015379,"2016-01-29 09:12:33","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015380,"2016-01-29 09:13:10","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015381,"2016-01-29 09:13:44","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015382,"2016-01-29 09:14:39","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $","5,24 $",,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015383,"2016-01-29 09:26:13","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015384,"2016-01-29 09:27:51","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015385,"2016-01-29 09:28:30","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015386,"2016-01-29 09:29:10","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015387,"2016-01-29 09:29:53","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015388,"2016-01-29 09:32:02","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015389,"2016-01-29 09:33:36","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015390,"2016-01-29 09:34:10","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015391,"2016-01-29 09:35:01","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015392,"2016-01-29 09:36:01","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015393,"2016-01-29 09:39:02","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015394,"2016-01-29 09:39:33","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015395,"2016-01-29 09:40:04","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015396,"2016-01-29 09:40:40","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015397,"2016-01-29 09:41:35","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015398,"2016-01-29 09:42:08","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015399,"2016-01-29 09:45:44","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015400,"2016-01-29 10:16:50","27,40 $","4,10 $","31,50 $","0,00 $","31,50 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015401,"2016-01-29 10:55:03","11,70 $","1,76 $","13,46 $","0,00 $","13,46 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015402,"2016-01-29 12:30:13","13,15 $","1,97 $","15,12 $","0,00 $","15,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015403,"2016-01-29 12:31:51","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015404,"2016-01-29 12:33:23","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015405,"2016-01-29 14:07:08","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015406,"2016-01-30 03:40:50","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015407,"2016-01-30 03:42:10","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015408,"2016-01-30 03:43:39","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015409,"2016-01-30 03:44:24","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015410,"2016-01-30 03:53:31","9,12 $","1,37 $","10,49 $","0,00 $","10,49 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015411,"2016-01-30 03:56:29","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015412,"2016-01-30 03:57:17","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015413,"2016-01-30 03:59:58","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011358,"2016-01-30 04:42:50","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015414,"2016-01-30 05:05:13","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011359,"2016-01-30 09:50:54","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $","141,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011360,"2016-01-30 11:46:36","225,20 $","33,72 $","258,92 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015415,"2016-01-31 03:29:47","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015416,"2016-01-31 03:42:05","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015417,"2016-01-31 03:45:55","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011361,"2016-01-31 04:10:35","161,30 $","24,16 $","185,46 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011362,"2016-01-31 04:15:36","164,30 $","24,61 $","188,91 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015418,"2016-01-31 07:31:13","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015419,"2016-01-31 07:36:55","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015420,"2016-01-31 10:44:06","84,05 $","12,58 $","96,63 $","0,00 $","96,63 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015421,"2016-01-31 12:12:23","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015422,"2016-01-31 12:24:20","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015423,"2016-02-01 02:44:18","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015424,"2016-02-01 05:23:03","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015425,"2016-02-01 06:09:47","26,30 $","3,94 $","30,24 $","0,00 $","30,24 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015426,"2016-02-01 11:13:07","25,10 $","3,76 $","28,86 $","0,00 $","28,86 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015427,"2016-02-02 02:22:27","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015428,"2016-02-02 03:00:20","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015429,"2016-02-02 03:14:09","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015430,"2016-02-02 05:54:49","12,10 $","1,82 $","13,92 $","0,00 $","13,92 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015431,"2016-02-02 06:13:11","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015432,"2016-02-02 07:14:47","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011363,"2016-02-02 08:40:31","390,25 $","58,44 $","448,69 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015433,"2016-02-02 08:53:46","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015434,"2016-02-02 09:35:27","17,20 $","2,58 $","19,78 $","0,00 $","19,78 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015435,"2016-02-02 09:47:51","48,00 $","7,19 $","55,19 $","0,00 $","55,19 $",,,,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015436,"2016-02-02 13:42:42","18,50 $","2,78 $","21,28 $","0,00 $","21,28 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015437,"2016-02-02 14:15:30","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015438,"2016-02-03 02:23:46","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015439,"2016-02-03 03:33:16","5,35 $","0,80 $","6,15 $","0,00 $","6,15 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011364,"2016-02-03 04:57:04","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015440,"2016-02-03 05:37:54","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015441,"2016-02-03 07:11:30","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015442,"2016-02-03 07:36:49","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015443,"2016-02-03 07:44:26","31,90 $","4,78 $","36,68 $","0,00 $","40,00 $",,"3,32 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015444,"2016-02-03 07:58:46","14,25 $","2,13 $","16,38 $","0,00 $","20,00 $",,"3,62 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011365,"2016-02-03 10:42:11","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015445,"2016-02-03 13:44:38","6,25 $","0,93 $","7,18 $","0,00 $","7,18 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015446,"2016-02-04 02:38:36","73,70 $","11,04 $","84,74 $","0,00 $","100,00 $",,"15,26 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015447,"2016-02-04 02:41:41","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015448,"2016-02-04 04:14:24","21,80 $","3,26 $","25,06 $","0,00 $","25,06 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011366,"2016-02-04 04:15:06","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011367,"2016-02-04 06:12:35","1 245,00 $","186,44 $","1 431,44 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011368,"2016-02-04 06:16:56","12,00 $","1,80 $","13,80 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015449,"2016-02-04 07:07:17","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015450,"2016-02-04 07:19:46","8,65 $","1,29 $","9,94 $","0,00 $","9,94 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015451,"2016-02-04 07:24:49","24,75 $","3,71 $","28,46 $","0,00 $","28,46 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015452,"2016-02-04 07:27:47","37,40 $","5,60 $","43,00 $","0,00 $","45,00 $",,"2,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015453,"2016-02-04 08:17:38","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015454,"2016-02-04 09:19:11","15,10 $","2,27 $","17,37 $","0,00 $","20,00 $",,"2,63 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015455,"2016-02-04 10:10:05","36,60 $","5,48 $","42,08 $","0,00 $","60,00 $",,"17,92 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011369,"2016-02-04 10:39:16","518,45 $","77,64 $","596,09 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015456,"2016-02-04 11:30:35","16,65 $","2,49 $","19,14 $","0,00 $","19,14 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011370,"2016-02-04 11:55:55","75,90 $","11,37 $","87,27 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015457,"2016-02-04 12:04:04","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015458,"2016-02-04 12:20:59","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015459,"2016-02-04 12:23:02","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011371,"2016-02-04 17:57:57","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015460,"2016-02-05 02:34:10","11,70 $","1,76 $","13,46 $","0,00 $","20,00 $",,"6,54 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011372,"2016-02-05 05:02:17","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011373,"2016-02-05 05:13:46","91,30 $","13,68 $","104,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015461,"2016-02-05 06:16:54","101,00 $","15,12 $","116,12 $","0,00 $","120,00 $",,"3,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015462,"2016-02-05 06:21:32","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015463,"2016-02-05 07:08:54","37,40 $","5,60 $","43,00 $","0,00 $","50,00 $",,"7,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015464,"2016-02-05 09:30:00","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011374,"2016-02-05 09:41:31","3 701,25 $","554,26 $","4 255,51 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015465,"2016-02-05 11:02:41","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015466,"2016-02-05 12:27:07","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015467,"2016-02-05 12:33:58","24,00 $","3,59 $","27,59 $","0,00 $","27,59 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+100011375,"2016-02-05 13:29:08","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015468,"2016-02-06 03:36:26","4,56 $","0,68 $","5,24 $","0,00 $","10,00 $",,"4,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015469,"2016-02-06 03:38:27","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015470,"2016-02-06 03:52:26","9,12 $","1,37 $","10,49 $","0,00 $","10,49 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015471,"2016-02-06 03:53:39","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015472,"2016-02-06 03:55:38","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015473,"2016-02-06 03:56:41","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015474,"2016-02-06 03:58:27","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011376,"2016-02-06 04:36:56","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011377,"2016-02-06 05:00:36","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011378,"2016-02-06 06:34:56","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015475,"2016-02-06 07:17:11","13,65 $","2,04 $","15,69 $","0,00 $","20,00 $",,"4,31 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015476,"2016-02-06 12:14:28","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015477,"2016-02-06 12:26:21","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011379,"2016-02-06 16:21:09","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015478,"2016-02-07 03:03:17","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015479,"2016-02-07 03:44:16","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015480,"2016-02-07 03:45:02","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015481,"2016-02-07 03:49:58","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015482,"2016-02-07 03:56:00","9,12 $","1,37 $","10,49 $","0,00 $","10,49 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015483,"2016-02-07 03:56:48","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011380,"2016-02-07 05:23:43","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015484,"2016-02-07 07:18:34","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015485,"2016-02-07 08:12:47","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011381,"2016-02-07 09:15:22","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015486,"2016-02-07 09:24:22","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015487,"2016-02-07 10:53:00","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015488,"2016-02-07 12:24:06","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015489,"2016-02-07 13:38:56","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011382,"2016-02-08 05:36:59","1 604,05 $","240,20 $","1 844,25 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015490,"2016-02-08 06:53:59","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015491,"2016-02-08 06:58:14","19,85 $","2,97 $","22,82 $","0,00 $","24,00 $",,"1,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011383,"2016-02-08 07:02:03","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015492,"2016-02-08 07:40:20","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015493,"2016-02-08 12:18:39","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015494,"2016-02-09 02:10:52","15,05 $","2,25 $","17,30 $","0,00 $","17,30 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015495,"2016-02-09 02:14:34","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011384,"2016-02-09 03:44:21","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015496,"2016-02-09 05:56:14","71,00 $","10,63 $","81,63 $","0,00 $","81,63 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015497,"2016-02-09 11:29:51","14,00 $","2,10 $","16,10 $","0,00 $","16,10 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015498,"2016-02-09 12:06:56","17,60 $","2,64 $","20,24 $","0,00 $","20,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015499,"2016-02-09 12:25:26","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015500,"2016-02-09 12:34:41","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015501,"2016-02-09 13:56:32","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011385,"2016-02-09 14:42:03","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $","141,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011386,"2016-02-09 18:42:48","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015502,"2016-02-10 02:38:04","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011387,"2016-02-10 03:54:15","1 604,05 $","240,20 $","1 844,25 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015503,"2016-02-10 05:13:46","11,55 $","1,73 $","13,28 $","0,00 $","20,00 $",,"6,72 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015504,"2016-02-10 05:50:24","15,80 $","2,37 $","18,17 $","0,00 $","18,17 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015505,"2016-02-10 06:43:30","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015506,"2016-02-10 06:46:30","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011388,"2016-02-10 13:47:47","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015507,"2016-02-10 14:00:18","19,50 $","2,93 $","22,43 $","0,00 $","22,43 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011389,"2016-02-10 15:54:38","233,20 $","34,92 $","268,12 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015508,"2016-02-11 02:18:15","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015509,"2016-02-11 02:21:31","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015510,"2016-02-11 02:31:54","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015511,"2016-02-11 02:43:13","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015512,"2016-02-11 02:46:37","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011390,"2016-02-11 09:15:22","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015513,"2016-02-11 09:22:29","16,85 $","2,52 $","19,37 $","0,00 $","19,37 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015514,"2016-02-11 10:37:08","16,65 $","2,49 $","19,14 $","0,00 $","20,00 $",,"0,86 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015515,"2016-02-11 12:22:11","63,60 $","9,52 $","73,12 $","0,00 $","73,12 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015516,"2016-02-11 14:22:01","12,45 $","1,86 $","14,31 $","0,00 $","20,00 $",,"5,69 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015517,"2016-02-12 02:35:36","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015518,"2016-02-12 06:35:40","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015519,"2016-02-12 07:21:22","60,80 $","9,10 $","69,90 $","0,00 $","80,00 $",,"10,10 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015520,"2016-02-12 08:39:09","107,15 $","16,05 $","123,20 $","0,00 $","123,20 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015521,"2016-02-12 12:04:33","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015522,"2016-02-12 12:28:13","13,15 $","1,97 $","15,12 $","0,00 $","15,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015523,"2016-02-12 12:31:26","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015524,"2016-02-12 12:35:02","50,10 $","7,51 $","57,61 $","0,00 $","60,00 $",,"2,39 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011391,"2016-02-12 14:00:52","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015525,"2016-02-12 14:11:07","10,30 $","1,55 $","11,85 $","0,00 $","22,00 $",,"10,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015526,"2016-02-13 03:37:30","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015527,"2016-02-13 03:39:02","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015528,"2016-02-13 03:53:07","6,09 $","0,91 $","7,00 $","0,00 $","10,00 $",,"3,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015529,"2016-02-13 04:39:11","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011392,"2016-02-13 04:43:06","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015530,"2016-02-13 06:23:41","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015531,"2016-02-13 07:19:32","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015532,"2016-02-13 07:20:09","10,00 $","1,50 $","11,50 $","0,00 $","11,50 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015533,"2016-02-13 07:32:20","81,76 $","12,25 $","94,01 $","0,00 $","94,01 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+100011393,"2016-02-13 08:35:57","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015534,"2016-02-13 10:34:30","16,65 $","2,49 $","19,14 $","0,00 $","19,14 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015535,"2016-02-13 12:28:20","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011394,"2016-02-13 15:41:54","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $","47,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015536,"2016-02-14 03:29:59","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015537,"2016-02-14 03:53:17","4,56 $","0,68 $","5,24 $","0,00 $","10,00 $",,"4,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015538,"2016-02-14 03:54:23","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015539,"2016-02-14 03:59:19","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015540,"2016-02-14 04:00:02","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015541,"2016-02-14 04:00:42","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015542,"2016-02-14 04:01:13","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015543,"2016-02-14 06:48:17","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015544,"2016-02-14 07:11:18","13,65 $","2,04 $","15,69 $","0,00 $","15,69 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015545,"2016-02-14 07:12:47","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015546,"2016-02-14 12:23:54","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015547,"2016-02-14 12:25:04","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015548,"2016-02-14 12:27:06","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015549,"2016-02-15 02:33:15","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015550,"2016-02-15 05:06:07","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011395,"2016-02-15 06:47:27","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015551,"2016-02-15 07:06:20","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015552,"2016-02-15 07:18:04","74,25 $","11,12 $","85,37 $","0,00 $","90,00 $",,"4,63 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015553,"2016-02-15 07:21:31","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011396,"2016-02-15 07:35:43","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011397,"2016-02-15 07:48:31","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011398,"2016-02-15 08:21:40","151,30 $","22,66 $","173,96 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015554,"2016-02-15 10:19:54","9,45 $","1,41 $","10,86 $","0,00 $","10,86 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+200000125,"2016-02-15 10:47:51","168,60 $","25,25 $","193,85 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",English
+100011399,"2016-02-15 12:31:29","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015555,"2016-02-15 12:59:21","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011400,"2016-02-15 16:37:13","130,44 $","19,53 $","149,97 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011401,"2016-02-15 17:17:02","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011402,"2016-02-15 19:00:37","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011403,"2016-02-16 04:32:19","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011404,"2016-02-16 05:14:15","2 863,00 $","428,73 $","3 291,73 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011405,"2016-02-16 05:20:34","1 743,00 $","261,01 $","2 004,01 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015556,"2016-02-16 05:42:27","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011406,"2016-02-16 06:28:43","168,60 $","25,25 $","193,85 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011407,"2016-02-16 06:33:04","108,60 $","16,26 $","124,86 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015557,"2016-02-16 06:43:05","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011408,"2016-02-16 14:45:11","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015558,"2016-02-17 02:20:32","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015559,"2016-02-17 02:33:16","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015560,"2016-02-17 04:53:29","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015561,"2016-02-17 05:28:37","124,20 $","18,60 $","142,80 $","0,00 $","142,80 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011409,"2016-02-17 06:53:07","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015562,"2016-02-17 07:12:13","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015563,"2016-02-17 07:16:08","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011410,"2016-02-17 07:35:23","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011411,"2016-02-17 08:10:28","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015564,"2016-02-17 11:26:18","22,95 $","3,44 $","26,39 $","0,00 $","26,39 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+200000126,"2016-02-17 14:24:41","254,60 $","38,13 $","292,73 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",English
+300015565,"2016-02-18 02:25:46","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015566,"2016-02-18 02:35:58","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011412,"2016-02-18 05:31:21","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015567,"2016-02-18 06:40:56","38,35 $","5,75 $","44,10 $","0,00 $","44,10 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015568,"2016-02-18 06:55:29","13,65 $","2,04 $","15,69 $","0,00 $","20,00 $",,"4,31 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015569,"2016-02-18 07:06:43","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015570,"2016-02-18 07:27:10","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011413,"2016-02-18 08:20:18","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011414,"2016-02-18 08:25:44","97,30 $","14,58 $","111,88 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015571,"2016-02-18 11:23:24","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015572,"2016-02-19 02:27:57","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011415,"2016-02-19 09:04:46","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015573,"2016-02-19 10:19:09","19,25 $","2,88 $","22,13 $","0,00 $","50,13 $",,"28,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015574,"2016-02-19 11:50:25","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011416,"2016-02-19 11:54:10","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015575,"2016-02-19 12:04:21","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011417,"2016-02-19 12:12:36","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015576,"2016-02-19 12:25:51","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015577,"2016-02-19 12:28:23","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015578,"2016-02-19 13:48:13","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011418,"2016-02-19 15:45:22","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015579,"2016-02-20 03:45:49","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015580,"2016-02-20 03:46:39","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015581,"2016-02-20 03:47:18","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011419,"2016-02-20 03:49:02","24,00 $","3,59 $","27,59 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015582,"2016-02-20 03:52:06","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015583,"2016-02-20 03:54:57","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015584,"2016-02-20 03:55:58","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015585,"2016-02-20 05:14:51","8,65 $","1,29 $","9,94 $","0,00 $","9,94 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015586,"2016-02-20 10:11:46","75,85 $","11,36 $","87,21 $","0,00 $","87,21 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011420,"2016-02-20 15:26:31","163,52 $","24,49 $","188,01 $","0,00 $","0,00 $","188,01 $",,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015587,"2016-02-21 03:48:56","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015588,"2016-02-21 03:55:37","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015589,"2016-02-21 03:56:50","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015590,"2016-02-21 03:57:58","4,56 $","0,68 $","5,24 $","0,00 $","10,00 $",,"4,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015591,"2016-02-21 03:58:39","12,18 $","1,82 $","14,00 $","0,00 $","14,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015592,"2016-02-21 07:09:00","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015593,"2016-02-21 07:10:47","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015594,"2016-02-21 07:13:13","46,70 $","7,00 $","53,70 $","0,00 $","53,70 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015595,"2016-02-21 07:27:05","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015596,"2016-02-21 11:45:07","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015597,"2016-02-21 11:55:19","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015598,"2016-02-21 12:25:04","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015599,"2016-02-21 12:33:51","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015600,"2016-02-21 12:59:35","27,85 $","4,17 $","32,02 $","0,00 $","32,02 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015601,"2016-02-22 02:31:27","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015602,"2016-02-22 02:32:42","23,35 $","3,50 $","26,85 $","0,00 $","27,00 $",,"0,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015603,"2016-02-22 02:57:27","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015604,"2016-02-22 06:35:43","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015605,"2016-02-22 07:34:48","12,45 $","1,86 $","14,31 $","0,00 $","20,00 $",,"5,69 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015606,"2016-02-23 05:27:37","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015607,"2016-02-23 05:57:33","22,70 $","3,40 $","26,10 $","0,00 $","26,10 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015608,"2016-02-23 07:17:39","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015609,"2016-02-23 08:16:17","92,20 $","13,81 $","106,01 $","0,00 $","106,01 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015610,"2016-02-23 08:20:42","81,76 $","12,25 $","94,01 $","0,00 $","94,01 $","94,01 $",,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+300015611,"2016-02-23 14:03:00","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015612,"2016-02-24 02:26:40","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015613,"2016-02-24 02:37:19","19,85 $","2,97 $","22,82 $","0,00 $","40,00 $",,"17,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015614,"2016-02-24 06:38:05","9,45 $","1,41 $","10,86 $","0,00 $","20,00 $",,"9,14 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011421,"2016-02-24 07:13:58","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011422,"2016-02-24 07:22:37","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011423,"2016-02-24 10:07:10","3 715,00 $","556,32 $","4 271,32 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015615,"2016-02-24 12:11:52","39,70 $","5,95 $","45,65 $","0,00 $","45,65 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011424,"2016-02-24 14:36:43","21,74 $","3,26 $","25,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011425,"2016-02-24 16:20:54","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015616,"2016-02-25 07:13:04","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015617,"2016-02-25 07:24:09","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015618,"2016-02-25 07:27:18","37,40 $","5,60 $","43,00 $","0,00 $","45,00 $",,"2,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015619,"2016-02-25 10:23:10","26,10 $","3,91 $","30,01 $","0,00 $","30,01 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015620,"2016-02-25 10:31:33","163,52 $","24,49 $","188,01 $","0,00 $","188,01 $",,,,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015621,"2016-02-25 10:56:24","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011426,"2016-02-25 13:06:11","136,95 $","20,51 $","157,46 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015622,"2016-02-25 13:25:27","23,75 $","3,56 $","27,31 $","0,00 $","27,31 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015623,"2016-02-26 02:21:33","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011427,"2016-02-26 05:04:21","194,60 $","29,14 $","223,74 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011428,"2016-02-26 05:46:05","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $","141,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011429,"2016-02-26 06:41:58","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $","47,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011430,"2016-02-26 06:49:02","294,60 $","44,12 $","338,72 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015624,"2016-02-26 06:58:45","173,30 $","25,96 $","199,26 $","0,00 $","199,26 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015625,"2016-02-26 07:21:51","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015626,"2016-02-26 07:24:07","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015627,"2016-02-26 07:25:26","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015628,"2016-02-26 07:28:10","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015629,"2016-02-26 07:29:29","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015630,"2016-02-26 07:33:24","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015631,"2016-02-26 07:35:01","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015632,"2016-02-26 07:37:44","42,40 $","6,35 $","48,75 $","0,00 $","48,75 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015633,"2016-02-26 08:53:58","9,45 $","1,41 $","10,86 $","0,00 $","20,00 $",,"9,14 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015634,"2016-02-26 10:13:41","92,18 $","13,80 $","105,98 $","0,00 $","105,98 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+100011431,"2016-02-26 11:14:40","245,28 $","36,73 $","282,01 $","0,00 $","0,00 $","282,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011432,"2016-02-26 13:10:49","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011433,"2016-02-27 02:10:59","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015635,"2016-02-27 03:36:20","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015636,"2016-02-27 03:37:39","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015637,"2016-02-27 05:26:42","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015638,"2016-02-27 06:24:39","22,95 $","3,44 $","26,39 $","0,00 $","26,39 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015639,"2016-02-27 07:14:21","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015640,"2016-02-27 07:15:15","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015641,"2016-02-27 07:23:48","11,60 $","1,74 $","13,34 $","0,00 $","13,34 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011434,"2016-02-27 08:37:51","560,40 $","83,92 $","644,32 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015642,"2016-02-27 08:50:39","92,18 $","13,80 $","105,98 $","0,00 $","105,98 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+100011435,"2016-02-27 09:18:26","122,64 $","18,36 $","141,00 $","0,00 $","0,00 $","141,00 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015643,"2016-02-27 12:16:21","63,60 $","9,52 $","73,12 $","0,00 $","80,00 $",,"6,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011436,"2016-02-27 14:11:23","92,20 $","13,81 $","106,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015644,"2016-02-28 03:53:48","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015645,"2016-02-28 03:55:29","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015646,"2016-02-28 03:56:08","4,56 $","0,68 $","5,24 $","0,00 $","7,00 $",,"1,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011437,"2016-02-28 03:56:36","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015647,"2016-02-28 04:48:52","75,68 $","11,33 $","87,01 $","0,00 $","100,00 $","87,01 $","12,99 $",,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015648,"2016-02-28 04:54:01","122,64 $","18,36 $","141,00 $","0,00 $","141,00 $",,,,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015649,"2016-02-28 05:41:48","28,90 $","4,33 $","33,23 $","0,00 $","33,23 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011438,"2016-02-28 07:04:27","20,00 $","3,00 $","23,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015650,"2016-02-28 07:17:46","101,00 $","15,12 $","116,12 $","0,00 $","120,00 $",,"3,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015651,"2016-02-28 07:20:27","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011439,"2016-02-28 07:31:28","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015652,"2016-02-28 08:12:06","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015653,"2016-02-28 08:52:27","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015654,"2016-02-28 12:13:22","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015655,"2016-02-28 12:23:56","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015656,"2016-02-28 12:25:47","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015657,"2016-02-29 02:43:11","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015658,"2016-02-29 03:48:01","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015659,"2016-02-29 03:52:40","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015660,"2016-02-29 06:28:51","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015661,"2016-02-29 07:19:52","23,35 $","3,50 $","26,85 $","0,00 $","27,00 $",,"0,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015662,"2016-02-29 07:24:22","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015663,"2016-02-29 07:25:36","37,40 $","5,60 $","43,00 $","0,00 $","50,00 $",,"7,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015664,"2016-02-29 07:41:06","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011440,"2016-02-29 08:47:56","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011441,"2016-02-29 09:00:31","94,30 $","14,13 $","108,43 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015665,"2016-02-29 09:21:44","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015666,"2016-02-29 12:14:51","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015667,"2016-02-29 12:24:01","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015668,"2016-02-29 12:25:46","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015669,"2016-03-01 02:18:55","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011442,"2016-03-01 03:43:48","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015670,"2016-03-01 03:46:11","12,18 $","1,82 $","14,00 $","0,00 $","14,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015671,"2016-03-01 03:51:37","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015672,"2016-03-01 03:52:30","4,56 $","0,68 $","5,24 $","0,00 $","10,00 $",,"4,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015673,"2016-03-01 03:53:11","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015674,"2016-03-01 03:53:41","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015675,"2016-03-01 03:56:16","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015676,"2016-03-01 03:59:37","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015677,"2016-03-01 04:00:08","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015678,"2016-03-01 04:00:50","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015679,"2016-03-01 04:01:28","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015680,"2016-03-01 04:02:04","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011443,"2016-03-01 04:04:43","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011444,"2016-03-01 05:02:31","21,74 $","3,26 $","25,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015681,"2016-03-01 05:25:17","169,00 $","25,31 $","194,31 $","0,00 $","194,31 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015682,"2016-03-01 05:29:58","13,65 $","2,04 $","15,69 $","0,00 $","15,69 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015683,"2016-03-01 06:16:39","16,25 $","2,43 $","18,68 $","0,00 $","18,68 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011445,"2016-03-01 07:06:02","21,74 $","3,26 $","25,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015684,"2016-03-01 07:06:42","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015685,"2016-03-01 07:32:39","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015686,"2016-03-01 08:17:07","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015687,"2016-03-01 09:21:04","101,00 $","15,12 $","116,12 $","0,00 $","116,12 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015688,"2016-03-01 09:27:26","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015689,"2016-03-01 09:28:07","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015690,"2016-03-01 09:28:48","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015691,"2016-03-01 09:29:38","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015692,"2016-03-01 09:30:41","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015693,"2016-03-01 09:31:36","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015694,"2016-03-01 09:32:30","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015695,"2016-03-01 09:34:22","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+100011446,"2016-03-01 09:44:36","659,10 $","98,71 $","757,81 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015696,"2016-03-01 09:51:04","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015697,"2016-03-01 09:52:54","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015698,"2016-03-01 09:55:49","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015699,"2016-03-01 09:58:03","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015700,"2016-03-01 09:59:02","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015701,"2016-03-01 09:59:54","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015702,"2016-03-01 10:02:22","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015703,"2016-03-01 10:03:55","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015704,"2016-03-01 10:04:59","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015705,"2016-03-01 10:10:52","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015706,"2016-03-01 10:11:47","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015707,"2016-03-01 10:12:23","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015708,"2016-03-01 10:13:13","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015709,"2016-03-01 10:14:15","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015710,"2016-03-01 10:14:52","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015711,"2016-03-01 10:17:15","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+100011447,"2016-03-01 10:18:56","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $","94,01 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015712,"2016-03-01 10:21:32","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015713,"2016-03-01 10:22:27","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015714,"2016-03-01 10:25:52","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $","5,24 $",,,"Gare BSP","Free Shipping","Facturation / Entente de Crédit","NO Warehouse",xpos
+300015715,"2016-03-01 12:58:57","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015716,"2016-03-01 13:13:06","122,64 $","18,36 $","141,00 $","0,00 $","141,00 $","141,00 $",,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+300015717,"2016-03-01 13:14:51","122,64 $","18,36 $","141,00 $","0,00 $","141,00 $","141,00 $",,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+100011448,"2016-03-01 13:15:36","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015718,"2016-03-01 14:05:07","19,50 $","2,93 $","22,43 $","0,00 $","22,43 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015719,"2016-03-02 02:19:16","6,25 $","0,93 $","7,18 $","0,00 $","7,18 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015720,"2016-03-02 02:20:13","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015721,"2016-03-02 07:07:18","26,10 $","3,91 $","30,01 $","0,00 $","30,01 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015722,"2016-03-02 11:31:28","30,45 $","4,56 $","35,01 $","0,00 $","35,01 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015723,"2016-03-02 11:32:11","30,45 $","4,56 $","35,01 $","0,00 $","35,01 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015724,"2016-03-02 12:12:12","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011449,"2016-03-02 12:35:05","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $","177,41 $",,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011450,"2016-03-02 12:57:23","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+100011451,"2016-03-02 13:20:30","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011452,"2016-03-02 15:10:37","65,22 $","9,77 $","74,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015725,"2016-03-03 02:30:38","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015726,"2016-03-03 02:32:01","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015727,"2016-03-03 02:33:27","31,80 $","4,76 $","36,56 $","0,00 $","40,00 $",,"3,44 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015728,"2016-03-03 02:36:56","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015729,"2016-03-03 02:40:05","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015730,"2016-03-03 03:30:29","10,65 $","1,59 $","12,24 $","0,00 $","12,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015731,"2016-03-03 03:31:31","6,09 $","0,91 $","7,00 $","0,00 $","10,00 $",,"3,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015732,"2016-03-03 03:41:37","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015733,"2016-03-03 03:47:15","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015734,"2016-03-03 03:49:13","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015735,"2016-03-03 03:50:13","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015736,"2016-03-03 03:51:51","6,09 $","0,91 $","7,00 $","0,00 $","10,00 $",,"3,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015737,"2016-03-03 03:55:12","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015738,"2016-03-03 03:55:48","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015739,"2016-03-03 05:04:26","92,18 $","13,80 $","105,98 $","0,00 $","105,98 $",,,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+100011453,"2016-03-03 05:23:40","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011454,"2016-03-03 07:16:21","86,96 $","13,02 $","99,98 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015740,"2016-03-03 08:26:55","13,65 $","2,04 $","15,69 $","0,00 $","15,69 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015741,"2016-03-03 10:27:58","18,50 $","2,78 $","21,28 $","0,00 $","21,28 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015742,"2016-03-03 12:16:44","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015743,"2016-03-03 12:23:09","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015744,"2016-03-03 12:30:03","21,05 $","3,15 $","24,20 $","0,00 $","25,00 $",,"0,80 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015745,"2016-03-04 03:41:50","10,65 $","1,59 $","12,24 $","0,00 $","20,00 $",,"7,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015746,"2016-03-04 03:48:15","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015747,"2016-03-04 03:50:38","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015748,"2016-03-04 03:58:40","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015749,"2016-03-04 03:59:34","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015750,"2016-03-04 04:00:25","6,09 $","0,91 $","7,00 $","0,00 $","10,00 $",,"3,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015751,"2016-03-04 04:01:28","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011455,"2016-03-04 05:07:02","138,30 $","20,72 $","159,02 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015752,"2016-03-04 07:02:47","54,90 $","8,23 $","63,13 $","0,00 $","63,13 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011456,"2016-03-04 07:09:40","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015753,"2016-03-04 07:28:48","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015754,"2016-03-04 10:35:33","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015755,"2016-03-04 12:09:56","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015756,"2016-03-04 12:19:03","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015757,"2016-03-04 12:28:44","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011457,"2016-03-04 13:49:07","21,74 $","3,26 $","25,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015758,"2016-03-04 14:09:53","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011458,"2016-03-05 03:27:40","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015759,"2016-03-05 03:43:31","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015760,"2016-03-05 03:44:43","6,09 $","0,91 $","7,00 $","0,00 $","10,00 $",,"3,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015761,"2016-03-05 03:57:53","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015762,"2016-03-05 04:00:22","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015763,"2016-03-05 04:01:44","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011459,"2016-03-05 05:01:17","43,48 $","6,51 $","49,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015764,"2016-03-05 07:18:49","43,48 $","6,51 $","49,99 $","0,00 $","49,99 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+300015765,"2016-03-05 07:25:51","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015766,"2016-03-05 07:26:47","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015767,"2016-03-05 09:45:58","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+300015768,"2016-03-05 09:47:26","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015769,"2016-03-05 09:48:46","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+100011460,"2016-03-05 11:05:13","188,60 $","28,24 $","216,84 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015770,"2016-03-05 11:14:13","86,96 $","13,02 $","99,98 $","0,00 $","99,98 $",,,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+300015771,"2016-03-05 12:02:05","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015772,"2016-03-05 13:38:06","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015773,"2016-03-05 13:52:12","43,48 $","6,51 $","49,99 $","0,00 $","49,99 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015774,"2016-03-05 13:54:55","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015775,"2016-03-05 14:04:29","65,22 $","9,77 $","74,99 $","0,00 $","74,99 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015776,"2016-03-05 14:06:18","21,74 $","3,26 $","25,00 $","0,00 $","25,00 $",,,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+300015777,"2016-03-06 03:42:44","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015778,"2016-03-06 03:52:14","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015779,"2016-03-06 03:53:36","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011461,"2016-03-06 05:27:25","465,90 $","69,77 $","535,67 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015780,"2016-03-06 05:28:39","6,25 $","0,93 $","7,18 $","0,00 $","7,18 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015781,"2016-03-06 05:30:19","10,35 $","1,55 $","11,90 $","0,00 $","11,90 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015782,"2016-03-06 06:57:02","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015783,"2016-03-06 06:58:09","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015784,"2016-03-06 07:19:17","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015785,"2016-03-06 07:20:26","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015786,"2016-03-06 07:25:48","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015787,"2016-03-06 12:31:47","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015788,"2016-03-06 12:37:23","46,70 $","7,00 $","53,70 $","0,00 $","53,70 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015789,"2016-03-06 12:38:31","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015790,"2016-03-06 12:39:36","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011462,"2016-03-06 17:12:16","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015791,"2016-03-07 02:40:25","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015792,"2016-03-07 02:57:26","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011463,"2016-03-07 05:40:44","245,28 $","36,73 $","282,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015793,"2016-03-07 05:53:27","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015794,"2016-03-07 07:05:11","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015795,"2016-03-07 07:34:13","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011464,"2016-03-07 08:25:26","3 715,00 $","556,32 $","4 271,32 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011465,"2016-03-07 09:22:45","1 631,00 $","244,24 $","1 875,24 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011466,"2016-03-07 09:29:48","1 743,00 $","261,01 $","2 004,01 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011467,"2016-03-07 16:12:20","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015796,"2016-03-08 01:59:29","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015797,"2016-03-08 02:00:11","19,25 $","2,88 $","22,13 $","0,00 $","22,13 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015798,"2016-03-08 02:27:48","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015799,"2016-03-08 02:30:17","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015800,"2016-03-08 02:36:19","19,80 $","2,97 $","22,77 $","0,00 $","22,77 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015801,"2016-03-08 05:31:17","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011468,"2016-03-08 06:16:08","20,00 $","3,00 $","23,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015802,"2016-03-08 06:52:53","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015803,"2016-03-08 07:26:37","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015804,"2016-03-08 07:41:26","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011469,"2016-03-08 09:15:45","2 356,10 $","352,83 $","2 708,93 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015805,"2016-03-08 12:17:08","11,55 $","1,73 $","13,28 $","0,00 $","13,28 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015806,"2016-03-08 12:30:35","8,65 $","1,29 $","9,94 $","0,00 $","9,94 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015807,"2016-03-08 14:04:21","19,50 $","2,93 $","22,43 $","0,00 $","22,43 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015808,"2016-03-09 02:20:57","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015809,"2016-03-09 02:22:24","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015810,"2016-03-09 02:31:41","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015811,"2016-03-09 02:32:43","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011470,"2016-03-09 05:26:17","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+100011471,"2016-03-09 05:37:07","1 237,60 $","185,33 $","1 422,93 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015812,"2016-03-09 06:17:22","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015813,"2016-03-09 07:20:04","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015814,"2016-03-09 07:21:50","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015815,"2016-03-09 08:57:46","63,90 $","9,57 $","73,47 $","0,00 $","73,47 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015816,"2016-03-09 10:27:14","11,25 $","1,68 $","12,93 $","0,00 $","12,93 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015817,"2016-03-09 12:12:49","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015818,"2016-03-10 04:34:24","19,85 $","2,97 $","22,82 $","0,00 $","23,00 $",,"0,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011472,"2016-03-10 05:32:45","247,60 $","37,08 $","284,68 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015819,"2016-03-10 07:29:57","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011473,"2016-03-10 09:34:33","139,90 $","20,96 $","160,86 $","0,00 $","0,00 $","160,86 $",,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+100011474,"2016-03-10 09:44:57","311,60 $","46,66 $","358,26 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011475,"2016-03-10 09:46:32","139,90 $","20,96 $","160,86 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+100011476,"2016-03-10 10:12:22","747,00 $","111,86 $","858,86 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015820,"2016-03-10 12:02:18","9,45 $","1,41 $","10,86 $","0,00 $","20,00 $",,"9,14 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015821,"2016-03-10 14:26:50","14,00 $","2,10 $","16,10 $","0,00 $","16,10 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015822,"2016-03-11 02:40:28","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015823,"2016-03-11 04:30:31","25,20 $","3,77 $","28,97 $","0,00 $","30,00 $",,"1,03 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011477,"2016-03-11 04:36:53","203,95 $","30,54 $","234,49 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015824,"2016-03-11 05:11:59","18,50 $","2,78 $","21,28 $","0,00 $","22,00 $",,"0,72 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015825,"2016-03-11 06:55:41","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015826,"2016-03-11 07:09:53","13,45 $","2,01 $","15,46 $","0,00 $","15,46 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015827,"2016-03-11 07:13:24","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015828,"2016-03-11 07:37:27","13,15 $","1,97 $","15,12 $","0,00 $","20,15 $",,"5,03 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015829,"2016-03-11 07:39:44","6,25 $","0,93 $","7,18 $","0,00 $","7,25 $",,"0,07 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015830,"2016-03-11 07:43:08","37,95 $","5,69 $","43,64 $","0,00 $","43,64 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015831,"2016-03-11 10:04:40","83,80 $","12,55 $","96,35 $","0,00 $","100,00 $",,"3,65 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011478,"2016-03-11 10:25:31","154,30 $","23,11 $","177,41 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011479,"2016-03-11 10:41:28","242,60 $","36,33 $","278,93 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015832,"2016-03-11 12:20:17","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015833,"2016-03-11 12:25:07","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015834,"2016-03-11 12:26:40","13,15 $","1,97 $","15,12 $","0,00 $","20,00 $",,"4,88 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015835,"2016-03-11 13:14:20","17,20 $","2,58 $","19,78 $","0,00 $","19,78 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011480,"2016-03-11 13:48:42","91,30 $","13,68 $","104,98 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015836,"2016-03-12 03:16:23","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015837,"2016-03-12 03:17:19","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015838,"2016-03-12 03:18:11","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015839,"2016-03-12 03:57:37","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015840,"2016-03-12 04:00:19","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015841,"2016-03-12 06:54:45","23,35 $","3,50 $","26,85 $","0,00 $","40,00 $",,"13,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011481,"2016-03-12 06:59:32","138,27 $","20,70 $","158,97 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015842,"2016-03-12 07:16:55","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015843,"2016-03-12 07:19:31","81,76 $","12,25 $","94,01 $","0,00 $","94,01 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+300015844,"2016-03-12 09:15:49","74,25 $","11,12 $","85,37 $","0,00 $","85,37 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015845,"2016-03-13 04:46:44","6,09 $","0,91 $","7,00 $","0,00 $","7,00 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015846,"2016-03-13 04:48:12","4,56 $","0,68 $","5,24 $","0,00 $","20,00 $",,"14,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015847,"2016-03-13 04:49:23","4,56 $","0,68 $","5,24 $","0,00 $","5,24 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015848,"2016-03-13 04:50:24","4,56 $","0,68 $","5,24 $","0,00 $","10,00 $",,"4,76 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015849,"2016-03-13 04:51:00","6,09 $","0,91 $","7,00 $","0,00 $","20,00 $",,"13,00 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015850,"2016-03-13 08:24:36","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015851,"2016-03-13 08:39:43","8,60 $","1,29 $","9,89 $","0,00 $","9,89 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011482,"2016-03-13 11:21:19","262,95 $","39,38 $","302,33 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011483,"2016-03-13 14:52:54","308,60 $","46,21 $","354,81 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015852,"2016-03-14 03:28:05","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015853,"2016-03-14 03:46:52","37,40 $","5,60 $","43,00 $","0,00 $","43,00 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011484,"2016-03-14 05:25:54","2 045,00 $","306,24 $","2 351,24 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011485,"2016-03-14 05:28:11","1 245,00 $","186,44 $","1 431,44 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+300015854,"2016-03-14 08:14:53","63,10 $","9,45 $","72,55 $","0,00 $","72,55 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015855,"2016-03-14 09:04:00","19,70 $","2,96 $","22,66 $","0,00 $","22,66 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011486,"2016-03-14 09:04:56","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011487,"2016-03-14 09:30:27","163,52 $","24,49 $","188,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015856,"2016-03-14 11:10:56","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011488,"2016-03-14 18:00:24","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015857,"2016-03-15 03:25:53","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015858,"2016-03-15 03:48:55","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011489,"2016-03-15 06:40:03","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015859,"2016-03-15 07:07:49","31,80 $","4,76 $","36,56 $","0,00 $","36,56 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015860,"2016-03-15 09:12:14","118,95 $","17,82 $","136,77 $","0,00 $","136,77 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+100011490,"2016-03-15 10:04:21","2 045,00 $","306,24 $","2 351,24 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011491,"2016-03-15 10:08:24","1 245,00 $","186,44 $","1 431,44 $","0,00 $","0,00 $",,,,,,"Mise en Tentatif","NO Warehouse",Francais
+100011492,"2016-03-15 10:16:01","204,40 $","30,61 $","235,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015861,"2016-03-15 11:13:52","40,88 $","6,12 $","47,00 $","0,00 $","47,00 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos
+300015862,"2016-03-15 11:15:03","40,88 $","6,12 $","47,00 $","0,00 $","47,00 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+100011493,"2016-03-15 11:30:27","518,45 $","77,64 $","596,09 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015863,"2016-03-15 11:57:01","12,45 $","1,86 $","14,31 $","0,00 $","14,31 $",,,,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015864,"2016-03-15 12:32:48","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011494,"2016-03-15 14:10:12","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015865,"2016-03-16 03:33:40","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+300015866,"2016-03-16 03:51:36","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015867,"2016-03-16 06:25:34","13,65 $","2,04 $","15,69 $","0,00 $","15,69 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015868,"2016-03-16 08:18:50","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015869,"2016-03-16 13:07:24","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015870,"2016-03-16 13:31:26","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Visa Payment","NO Warehouse",xpos
+100011495,"2016-03-16 15:48:20","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011496,"2016-03-16 15:50:46","40,88 $","6,12 $","47,00 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011497,"2016-03-16 17:15:10","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011498,"2016-03-16 18:21:49","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015871,"2016-03-17 03:20:02","23,35 $","3,50 $","26,85 $","0,00 $","26,85 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015872,"2016-03-17 03:37:11","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015873,"2016-03-17 03:40:08","23,35 $","3,50 $","26,85 $","0,00 $","30,00 $",,"3,15 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015874,"2016-03-17 05:51:51","12,10 $","1,82 $","13,92 $","0,00 $","13,92 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011499,"2016-03-17 06:25:10","188,60 $","28,24 $","216,84 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015875,"2016-03-17 07:18:18","29,25 $","4,38 $","33,63 $","0,00 $","33,63 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+100011500,"2016-03-17 08:11:40","40,00 $","5,99 $","45,99 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015876,"2016-03-17 08:13:20","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015877,"2016-03-17 08:28:11","127,20 $","19,05 $","146,25 $","0,00 $","146,25 $",,,,"Gare BSP","Free Shipping","X-POS Master Card","NO Warehouse",xpos
+300015878,"2016-03-17 08:32:42","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015879,"2016-03-17 09:02:02","327,04 $","48,97 $","376,01 $","0,00 $","376,01 $",,,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+100011501,"2016-03-17 09:14:22","163,52 $","24,49 $","188,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011502,"2016-03-17 09:38:45","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+100011503,"2016-03-17 10:19:44","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Facturation / Entente de Crédit","NO Warehouse",Francais
+300015880,"2016-03-17 11:01:42","81,76 $","12,25 $","94,01 $","0,00 $","94,01 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+300015881,"2016-03-17 12:58:33","19,85 $","2,97 $","22,82 $","0,00 $","25,00 $",,"2,18 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+100011504,"2016-03-17 13:08:55","81,76 $","12,25 $","94,01 $","0,00 $","0,00 $",,,,,,"Optimal Payments (Hosted)","NO Warehouse",Francais
+300015882,"2016-03-17 13:16:10","81,76 $","12,25 $","94,01 $","0,00 $","94,01 $",,,,"Gare BSP",,"X-POS Master Card","NO Warehouse",xpos
+300015883,"2016-03-17 13:18:09","19,85 $","2,97 $","22,82 $","0,00 $","22,82 $",,,,"Gare BSP","Free Shipping","X-POS Interact","NO Warehouse",xpos
+300015884,"2016-03-17 13:31:12","15,45 $","2,31 $","17,76 $","0,00 $","20,00 $",,"2,24 $",,"Gare BSP","Free Shipping","X-POS Cash","NO Warehouse",xpos
+300015885,"2016-03-17 14:09:56","40,88 $","6,12 $","47,00 $","0,00 $","50,00 $",,"3,00 $",,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015886,"2016-03-17 14:29:37","81,76 $","12,25 $","94,01 $","0,00 $","95,00 $",,"0,99 $",,"Gare BSP",,"X-POS Cash","NO Warehouse",xpos
+300015887,"2016-03-17 15:38:47","40,88 $","6,12 $","47,00 $","0,00 $","47,00 $",,,,"Gare BSP",,"X-POS Interact","NO Warehouse",xpos
+300015888,"2016-03-17 15:48:27","40,88 $","6,12 $","47,00 $","0,00 $","47,00 $",,,,"Gare BSP",,"X-POS Visa Payment","NO Warehouse",xpos

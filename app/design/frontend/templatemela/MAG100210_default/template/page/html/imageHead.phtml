@@ -1,0 +1,30 @@
+
+<?php
+	$imgSrc = "infoVoyage";
+	$pageID = "";
+	$pageMd = Mage::app()->getFrontController()->getRequest()->getModuleName();
+	if($pageMd == "cms"){
+		$pageID = Mage::getBlockSingleton('cms/page')->getPage()->getIdentifier();
+		switch ($pageID) {
+			case "accueil" : $imgSrc = "accueilPano"; break;
+			
+		}
+		
+	}
+	if($pageMd == "catalog"){
+		$pageID = Mage::getSingleton('catalog/layer')->getCurrentCategory()->getId();
+		switch ($pageID) {
+			case 137 : $imgSrc = "infoVoyage"; break;
+			case 174 : $imgSrc = "quoi-faire"; break;
+			case 157 : $imgSrc = "exp-train"; break;
+			case 136 : $imgSrc = "facilite-a-bord"; break;
+			case 161 : $imgSrc = "histoires-de-train"; break;
+		}
+	}
+	if($pageMd == "customer"){
+		$imgSrc = "infoVoyage"; 
+	}
+	echo  "<!-- Page Info: Id:" . $pageID . " / Module:" . $pageMd . "-->";
+?>
+
+<img src="http://74.115.206.247/temp/magento/skin/frontend/templatemela/MAG100210_default/images/rc/<?php echo $imgSrc;?>.jpg" width="100%">

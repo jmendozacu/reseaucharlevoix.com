@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<layout>
+    <adminhtml_toolbox_index>
+        <referense name="head">
+            <action method="setTitle" translate="title"><title>Toolbox List</title></action>
+        </referense>
+        <reference name="menu">
+            <action method="setActive"><menupath>benova/toolbox</menupath></action>
+        </reference>
+        <reference name="content">
+            <block type="toolbox/adminhtml_toolbox" name="products_list">
+                <block type="adminhtml/store_switcher" name="store_switcher" as="store_switcher">
+                    <action method="setUseConfirm">
+                        <params>0</params>
+                    </action>
+                </block>
+            </block>
+        </reference>
+    </adminhtml_toolbox_index>
+
+    <adminhtml_toolbox_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="toolbox/adminhtml_toolbox_grid" name="toolbox.product.grid"/>
+        </block>
+    </adminhtml_toolbox_grid>
+</layout>

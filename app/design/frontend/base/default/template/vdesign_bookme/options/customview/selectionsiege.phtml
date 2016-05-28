@@ -1,0 +1,13 @@
+<?php Mage::log('frontend option customview selectionsiege template');
+//Eric: New Template ?>
+
+<?php 
+	$data = $this->getInfo();
+	$values = explode(",", $data['value']);
+	foreach ($values as $key=>$value){
+		$siegeId = ltrim($value, 's');
+		$siege = Mage::getModel('reseauchx_reservationreseau/siege')->load($siegeId);
+		echo $siege->getData('code') . ' ';
+	}
+?>
+

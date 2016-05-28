@@ -1,0 +1,13 @@
+a:4:{i:0;s:25:"cache_dir is not writable";i:1;s:1273:"#0 /var/www/temp/magento/lib/Zend/Cache/Backend/File.php(157): Zend_Cache::throwException('cache_dir is no...')
+#1 /var/www/temp/magento/lib/Zend/Cache/Backend/File.php(121): Zend_Cache_Backend_File->setCacheDir('/var/www/temp/m...')
+#2 /var/www/temp/magento/lib/Zend/Cache.php(153): Zend_Cache_Backend_File->__construct(Array)
+#3 /var/www/temp/magento/lib/Zend/Cache.php(94): Zend_Cache::_makeBackend('File', Array, true, true)
+#4 /var/www/temp/magento/app/code/core/Mage/Core/Model/Cache.php(124): Zend_Cache::factory('Varien_Cache_Co...', 'File', Array, Array, true, true, true)
+#5 /var/www/temp/magento/app/code/core/Mage/Core/Model/Config.php(1348): Mage_Core_Model_Cache->__construct(Array)
+#6 /var/www/temp/magento/app/Mage.php(462): Mage_Core_Model_Config->getModelInstance('core/cache', Array)
+#7 /var/www/temp/magento/app/code/core/Mage/Core/Model/App.php(401): Mage::getModel('core/cache', Array)
+#8 /var/www/temp/magento/app/code/core/Mage/Core/Model/App.php(295): Mage_Core_Model_App->_initCache(Array)
+#9 /var/www/temp/magento/app/code/core/Mage/Core/Model/App.php(337): Mage_Core_Model_App->baseInit(Array)
+#10 /var/www/temp/magento/app/Mage.php(683): Mage_Core_Model_App->run(Array)
+#11 /var/www/temp/magento/index.php(87): Mage::run('', 'store')
+#12 {main}";s:3:"url";s:30:"/temp/magento/index.php/admin/";s:11:"script_name";s:23:"/temp/magento/index.php";}

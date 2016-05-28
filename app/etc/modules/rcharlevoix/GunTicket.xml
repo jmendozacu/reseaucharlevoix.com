@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <modules>
+        <Rcharlevoix_GunTicket>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Rcharlevoix_GunTicket>
+    </modules>
+</config>

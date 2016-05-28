@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <modules>
+        <Rcharlevoix_GunTicket>
+            <version>0.1.0</version>
+        </Rcharlevoix_GunTicket>
+    </modules>
+        <global>
+                <models>
+                        <test>
+                                <class>Rcharlevoix_GunTicket_Model</class>
+                        </test>
+                </models>
+        </global>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Drieworks_Tickets>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Drieworks_Tickets>
+    </modules>
+</config> 

@@ -1,0 +1,88 @@
+.package .item-box {
+padding-bottom: 2em;
+}
+.package .item-code {
+    padding: 0 0 10px;
+    border-bottom: 1px solid #CDDDDD;
+}
+.custom-items .item-box {
+border: 1px solid #CDDDDD;
+padding: 1em;
+background: #E7EFEF;
+margin: 1.5em 0;
+overflow: auto;
+}
+.package .item-code label {
+font-weight: bold;
+line-height: 21px;
+padding-right: 1em;
+float: left;
+}
+.package .item-code .checkbox {
+margin: 4px 10px 0 10px;
+vertical-align: top;
+}
+.package .item-code .checkbox + label {
+display: inline-block;
+vertical-align: top;
+margin: 2px 0 0 -7px;
+float: none;
+padding: 0px;
+line-height: 18px;
+font-weight: normal;
+}
+.package .item-code .input-text {
+float: left;
+width: 150px;
+vertical-align: middle;
+}
+.package .item-code button {
+float: right;
+}
+.package .item-header {
+clear: both;
+margin-top: 5px;
+}
+.custom-items .item-header {
+border: 0;
+/*width: 100%;*/
+background: #E7EFEF;
+border-bottom: 1em solid #E7EFEF;
+}
+.custom-items .box {
+padding: 0 1.5em;
+}
+.item-code::after{
+display: block;
+clear: both;
+content: ".";
+font-size: 0;
+line-height: 0;
+height: 0;
+overflow: hidden;
+}
+.item-title{
+width: 100%;    
+}
+.item-price{
+width: 60px;    
+}
+.item-order{
+width: 60px;    
+}
+.item-qty{
+width: 20px;
+text-align:center; 
+}
+.item-description{
+width: 100%;    
+}
+.custom-items .item-header td {
+padding: 5px 20px 0px 0px;
+}
+.package .border .last {
+width: 33px;
+}
+.custom-items .type-price {
+width: 80px;
+}

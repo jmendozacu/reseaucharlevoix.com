@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<layout>
+	<catalog_product_view>
+		<reference name="content">
+			<block type="itoris_groupedproductconfiguration/product_edit" name="grouped_product_edit" template="itoris/groupedproductconfiguration/product/edit.phtml"/>
+		</reference>
+	</catalog_product_view>
+	<review_product_list>
+		<reference name="content">
+			<block type="itoris_groupedproductconfiguration/product_edit" name="grouped_product_edit" template="itoris/groupedproductconfiguration/product/edit.phtml"/>
+		</reference>
+	</review_product_list>
+	<PRODUCT_TYPE_grouped translate="label" module="catalog">
+                <reference name="right">
+                <remove name="cart_sidebar"/>                   <!--Cart Sidebar-->
+                <remove name="catalog.product.related"/>        <!--Related products sidebar-->
+                <remove name="wishlist_sidebar"/>               <!--Wishlist Sidebar-->
+                <remove name="catalog.compare.sidebar"/>        <!--Compare Items Sidebar-->
+                <remove name="right.permanent.callout"/>        <!--Right Callout Sample Data-->
+                <remove name="left.permanent.callout"/>         <!--Left Callout Sample Data-->
+                <remove name="right.reports.product.viewed"/>   <!--Viewed Products-->
+                <remove name="right.reports.product.compared"/> <!--Compared Products-->
+                    <remove name="catalog.leftnav"/>                <!--Layered Navigation-->
+                <remove name="left.newsletter"/>                <!--Sidebar Newsletter-->
+                <remove name="right.poll"/>                     <!--Poll-->
+                <remove name="tags_popular"/>                   <!--Popular Tags-->
+                <remove name="paypal.partner.right.logo"/>      <!--Paypal logo Sample Data-->
+                <remove name="catalogsearch.leftnav"/>          <!--Layered navigation on search result page-->
+                <remove name="sale.reorder.sidebar"/>           <!--Reorder Sidebar When User Logged, in Dashboard-->
+                <remove name="customer_account_navigation"/>    <!--Customer Navigation-->
+                <remove name="tags_all" />
+               </reference>
+        </PRODUCT_TYPE_grouped>
+</layout>
+

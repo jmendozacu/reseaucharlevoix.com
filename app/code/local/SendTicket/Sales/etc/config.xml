@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <SendTicket_Sales>
+            <version>0.1.0</version>
+        </SendTicket_Sales>
+    </modules>
+    <global>
+        <models>
+            <sales>
+                <rewrite>
+                    <observer>SendTicket_Sales_Model_Observer</observer>
+                </rewrite>
+            </sales>
+        </models>
+        <events>
+            <checkout_onepage_controller_success_action>
+                <observers>
+                    <sales_notification_observer>
+                        <type>singleton</type>
+                        <class>sales/observer</class>
+                        <method>sendInvoiceEmail</method>
+                    </sales_notification_observer>
+                </observers>
+            </checkout_onepage_controller_success_action>
+        </events>
+    </global>
+</config>

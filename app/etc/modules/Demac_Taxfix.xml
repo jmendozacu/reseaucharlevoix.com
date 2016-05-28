@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Demac_Taxfix>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Demac_Taxfix>
+    </modules>
+</config>

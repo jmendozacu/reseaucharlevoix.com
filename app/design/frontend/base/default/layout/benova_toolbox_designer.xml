@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<layout>
+    <toolbox_index_index>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/bower_components/angular/angular.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/bower_components/angular-animate/angular-animate.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/bower_components/angular/angular-sanitize.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/bower_components/angular-restmod/dist/angular-restmod-bundle.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/bower_components/lodash/dist/lodash.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/app/src/app.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>benova/toolbox-designer/app/src/style.css</name>
+            </action>
+             <!-- <action method="addItem">
+                <type>skin_css</type>
+                <name>benova/toolbox-designer/bower_components/font-awesome/css/font-awesome.css</name>
+            </action> -->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/app/src/models/product.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>benova/toolbox-designer/app/src/directives/product-directive.js</name>
+            </action>
+            <action method="addJs">
+                <value>customwidget/picker.js</value>
+            </action>
+             <action method="addJs">
+                <value>customwidget/picker.date.js</value>
+            </action>
+             <action method="addJs">
+                <value>customwidget/legacy.js</value>
+            </action>
+             <action method="addItem">
+                <type>skin_css</type>
+                <name>customwidget/default.css</name>
+            </action>
+             <action method="addItem">
+                <type>skin_css</type>
+                <name>customwidget/default.date.css</name>
+            </action>s
+             <action method="addItem">
+                <type>skin_css</type>
+                <name>customwidget/pure-min.css</name>
+            </action>
+        </reference>
+        <reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+            <!-- Mark root page block that template is applied -->
+            <action method="setIsHandle"><applied>1</applied></action>
+            <reference name="content">
+                <block name="toolbox.content" type="toolbox/toolbox_index"
+                       template="benova/toolbox-designer/index.phtml"/>
+            </reference>
+        </reference>
+    </toolbox_index_index>
+</layout>

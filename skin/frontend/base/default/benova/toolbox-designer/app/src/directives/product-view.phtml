@@ -1,0 +1,103 @@
+<div class="col-10 success" ng-show="successedAddToCart">
+    <h1>{{curentProduct.name}} was added to your shopping cart.</h1>
+</div>
+<div class="col-6 left">
+    <table class="col-10 block-shadow margin-oa-10 padding-10">
+        <tbody>
+        <tr>
+            <td colspan="2">
+                <h2>{{curentProduct.name}}</h2>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 30%">
+                <img height="160" width="160" src="{{curentProduct.image}}">
+            </td>
+            <td style="width: 70%">
+                <div class="col-7 right">
+                    <p class="text-right">Number of drawers: {{curentProduct.number_of_drawers}}</p>
+                    <p class="text-right">Starting at: <strong>{{curentProduct.minimal_price | currency: "kr "}}</strong></p>
+
+                    <div  class="text-right right"> Size:
+                             <div class="circle right" ng-repeat="i in curentProduct.$eachSize(curentProduct.size_per_drawer)">
+                             </div>   
+                        </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="col-10 padding-10 block-shadow margin-oa-10">
+        <h4>SELECT ACCESSORIES {{curentProduct.name}}</h4>
+        <p>You choose the accessories by clicking on it. Do you want to opt out, simply click on it again. When you are finished assembling, click the blue "Finished choice" button on the right side.</p>
+    </div>
+    <div class="col-10">
+
+        <div ng-click="addSelection(product)"
+             ng-class="isSelectedMe(product)?'item-active col-3 left padding-5 bundle-item margin-5 ':'col-3 left padding-5 bundle-item margin-5'"
+             ng-repeat="product in curentProduct.bundleItems">
+            <table class="col-10">
+                <tbody>
+                <tr>
+                    <td style="width: 30%">
+                        <img height="80" width="80" class="img" src="{{product.image}}"/>
+                    </td>
+                    <td style="width: 70%">
+                        <div class="col-9 right padding-5">
+                            <p>Price:<strong>{{product.final_price | currency: "kr "}}</strong></p>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="height:80px">
+                        <p class="row-7 text-center">{{product.name}}</p>
+                        <div  class="row-3 text-right right"> Size:
+                             <div class="circle right" ng-repeat="i in curentProduct.$eachSize(getSize(product))">
+                             </div>   
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div  class="col-4 right">
+    
+    <div class="actions col-10 color padding-5 table margin-5" >
+                    <span class="col-3 left">
+                        <p>Drawers used: </p>
+                        <p>{{getSpendDrawer()}} {{getSpendSizeInfo()}}/{{curentProduct.size_per_drawer}} </p>
+                    </span>
+                    <span class="col-3 left">
+                        <p>Drawers back: </p>
+                         <p>{{getAvailableDrawer()}} {{curZentProduct.size_per_drawer - getSpendSizeInfo()}}/{{curentProduct.size_per_drawer}} </p>
+                    </span>
+                    <div class="col-4 left">
+                        <button class="button col-5 left margin-0" ng-click="goState(1)">Back</button>
+                        <button class="button col-5 right margin-0"  ng-click="clear()">Clear</button>
+                    </div>
+    </div>
+    <div class="col-10 color margin-5 table">
+        <div class="col-10 left padding-10 " ng-repeat="item in selections">
+            <div class="col-2 left" >
+                <img height="60" width="60" class="img" src="{{item.image}}"/>
+            </div>
+            <div class="col-7 right border-bottom-dash" style="height:70px">
+                <h5 class="row-6 text-center">{{item.name}}</h5>
+                <h5  class="row-4 text-right">{{item.price | currency: "kr "}}</h5>
+            </div>
+        </div>
+        <div class="col-10 color margin-slide-5 padding-10">
+            <p class="big-text text-center">NORMAL IN THE SHOPS:</p>
+            <p class="text-right big-text">{{getSum() | currency: "kr "}}</p>
+        </div>
+        <div class="col-10 color margin-slide-5 padding-10 table">
+            <div class="col-3 left">Qty: <input style="" type="text" ng-model="qty"></div>
+            <div class="col-7 left">
+                <button class="button button-ck col-10 left"  ng-click="order()">{{orderLabel}}</button>
+            </div>
+        </div>
+    </div>
+    
+</div>

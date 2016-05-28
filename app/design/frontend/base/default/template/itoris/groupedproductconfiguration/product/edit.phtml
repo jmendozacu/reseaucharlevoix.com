@@ -1,0 +1,65 @@
+<?php 
+/**
+ * ITORIS
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the ITORIS's Magento Extensions License Agreement
+ * which is available through the world-wide-web at this URL:
+ * http://www.itoris.com/magento-extensions-license.html
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to sales@itoris.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade the extensions to newer
+ * versions in the future. If you wish to customize the extension for your
+ * needs please refer to the license agreement or contact sales@itoris.com for more information.
+ *
+ * @category   ITORIS
+ * @package    ITORIS_GROUPEDPRODUCTS
+ * @copyright  Copyright (c) 2013 ITORIS INC. (http://www.itoris.com)
+ * @license    http://www.itoris.com/magento-extensions-license.html  Commercial License
+ */
+
+ 
+?>
+<?php  /* @var $this Itoris_GroupedProductConfiguration_Block_Product_Edit*/ ?>
+
+<?php if ($this->getDataHelper()->isRegisteredFrontend()): ?>
+	<?php if ($this->getGroupedProduct()->getTypeId() == 'grouped'): ?>
+	<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>itoris/groupedproductconfiguration/groupedproduct.js"></script>
+	<script type="text/javascript">itorisGroupedOptions = []; opConfig = {reloadPrice : function(){}}; spConfig = {reloadPrice : function(){}}; bundle = {reloadPrice : function(){}};</script>
+	<link rel="stylesheet" type="text/css" href="<?php echo Mage::getDesign()->getSkinUrl('itoris/groupedproductconfiguration/css/groupedproduct.css', array()) ?>"/>
+		<div id="itoris_grouped_product_configuration">
+			<?php $subProducts = $this->getSubProducts();?>
+            <?php $img = array(); ?>
+            <?php $productUrl = array(); ?>
+            <?php echo $this->calendarHtml();?>
+			<?php foreach($subProducts as $subProduct): ?>
+					<?php if ($subProduct->getHasOptions()): ?>
+                		<script type="text/javascript">
+							var optionsPrice<?php echo $subProduct->getId();?> = new Product.OptionsPrice(<?php echo $this->getConfig($subProduct); ?>);
+						</script>
+						<div class="itoris_grouped_product_associated_product <?php if ($subProduct->getTypeId()=='bundle') {echo 'itoris_grouped_product_bundle';}?>" id="itoris_grouped_product_<?php echo $subProduct->getId();?>" style="display: none;">
+                            <?php echo $this->optionBlock($subProduct)->toHtml();?>
+						</div>
+					<?php endif; ?>
+                <?php
+                    if ($this->getDataHelper()->getSettings()->getShowImage()) {
+                        $img[$subProduct->getId()] = (string)Mage::helper('catalog/image')->init($subProduct, 'small_image')->resize(75);
+                    }
+                ?>
+                <?php
+                    if ($this->getDataHelper()->getSettings()->getMakeClickable() && $subProduct->getVisibility() != Mage_Catalog_Model_Product_Visibility::VISIBILITY_NOT_VISIBLE) {
+                        $productUrl[$subProduct->getId()] = $subProduct->getProductUrl();
+                    }
+                ?>
+			<?php endforeach; ?>
+		</div>
+	<script type="text/javascript">
+		var itorisGroupedProduct = new Itoris.GroupedProduct('<?php echo Mage::getUrl('groupedproductconfiguration/cart/add'); ?>', <?php echo Zend_Json::encode($img)?>, <?php echo Zend_Json::encode($productUrl)?>, '<?php echo Mage::helper('core/url')->getCurrentUrl() ?>', <?php echo $this->showQtyAsCheck(); ?>);
+	</script>
+	<?php endif?>
+<?php endif?>

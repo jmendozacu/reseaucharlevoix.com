@@ -1,0 +1,27 @@
+/*
+Font: 		SantElia Rough
+Style: 		Regular
+URL: 		https://www.youworkforthem.com/font/T5694/sant-elia-script
+Foundry: 	Yellow Design Studio
+Foundry: 	https://www.youworkforthem.com/designer/351/yellow-design-studio
+Copyright:	Copyright (c) 2015 by Yellow Design Studio. All rights reserved.
+Version: 	17
+Created:	May 15, 2015
+License: 	https://www.youworkforthem.com/font-license 
+License: 	The WebFont(s) listed in this document must follow the YouWorkForThem
+			WebFont license rules. All other parties are strictly restricted 
+			from using the WebFonts(s) listed without a purchased license. 
+			All details above must always remain unaltered and visible in your CSS.
+*/
+
+@font-face {
+	font-family: 'SantEliaRough-Regular';
+	src: url('santelia-rough-regular.eot');
+	src: url('santelia-rough-regular.eot?#iefix') format('embedded-opentype'),
+             url('santelia-rough-regular.woff2') format('woff2'),
+	     url('santelia-rough-regular.woff') format('woff'),
+	     url('santelia-rough-regular.ttf') format('truetype'),
+	     url('santelia-rough-regular.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}

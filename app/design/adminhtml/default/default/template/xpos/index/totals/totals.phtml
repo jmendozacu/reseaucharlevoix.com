@@ -1,0 +1,203 @@
+<?php
+//var_dump($this->getTotalData('subtotal'));
+//var_dump($this->getTotalData('tax'));
+//var_dump($this->getTotalData('shipping'));
+//var_dump($this->getTotalData('discount'));
+//var_dump($this->getTotalData('grand_total'));
+?>
+<div class="block-pay order-totals" id="order-totals">
+    <input type="hidden" name="order_subtotal" id="order_subtotal" value="<?php echo $this->getTotalData('subtotal'); ?>">
+    <input type="hidden" name="order_tax" id="order_tax" value="<?php echo $this->getTotalData('tax'); ?>">
+    <input type="hidden" name="order_shipping" id="order_shipping" value="<?php echo $this->getTotalData('shipping'); ?>">
+    <input type="hidden" name="order_discount" id="order_discount" value="<?php echo $this->getTotalData('discount'); ?>">
+    <input type="hidden" name="order_grandtotal" id="order_grandtotal" value="<?php echo $this->getTotalData('grand_total'); ?>">
+
+    <div class="cash">
+        <span onclick="showTransactionList()">Cash Drawer</span>
+    </div>
+    <div class="amount">
+        <label>Amount Tendered</label>
+        <input id="cash-in" name="cash-in" class="number" type="text" value="0.00" onkeypress="handle_amount_press(event)"/>
+    </div>
+    <div class="change">
+        <label>Change</label>
+        <div class="value-change">
+            <input id="balance" name="balance" type="text" value="0.00" readonly/>
+        </div>
+    </div>
+    <div class="button-pay">
+        <button type="button" id="btn_checkout"
+                onclick="xpos_checkout(<?php echo Mage::getStoreConfig('xpos/general/checkoutcomfirm'); ?>)">PAY
+        </button>
+    </div>
+
+    <?php if (Mage::getStoreConfig('xpos/general/checkoutcomfirm')) { ?>
+
+        <div id="checkout_popup" class="popup">
+            <div class="panel_block" id="till-chooser">
+                <h4>Order #<span id="new_order_id"></span> created successfully</h4>
+                <ul class="option-till" id="option-list">
+                    <?php if (Mage::getStoreConfig('xpos/general/create_invoice_display')){ ?>
+                        <li class="level-1 <?php if (Mage::getStoreConfig('xpos/general/create_invoice')) {
+                            echo "active";
+                        } ?>" id="invoice_toggle" name="invoice_toggle">
+                            <a href="javascript:" id="option1-button" class="option"
+                               onclick="setCheckBox('invoice_toggle');">Create invoice</a>
+                        </li>
+                    <?php } ?>
+                    <?php if (Mage::getStoreConfig('xpos/general/create_shipment_display')){ 
+
+echo "hello"; ?>
+                        <li class="level-1 <?php if (Mage::getStoreConfig('xpos/general/create_shipment')) {
+                            echo "active";
+                        } ?>" id="shipment_toggle" name="shipment_toggle">
+                            <a href="javascript:" id="option1-button" class="option"
+                               onclick="setCheckBox('shipment_toggle');">Create shipment</a>
+                        </li>
+                    <?php } ?>
+                    <li class="level-1 <?php if (Mage::getStoreConfig('xpos/receipt/print_receipt')) {
+                        echo "active";
+                    } ?>" id="receipt_toggle" name="receipt_toggle">
+                        <a href="javascript:" id="option1-button" class="option"
+                           onclick="setCheckBox('receipt_toggle');">Print receipt</a>
+                    </li>
+                    <?php if (Mage::getStoreConfig('xpos/receipt/enabled')) { ?>
+                        <li class="email-option level-1 <?php if (Mage::getStoreConfig('xpos/receipt/email_receipt')) {
+                            echo "active";
+                        } ?>" id="mail_toggle" name="mail_toggle">
+                            <a href="javascript:" id="option3-button" class="option" onclick="setCheckBox('mail_toggle');">
+                                <label>Email:</label>
+                            </a>
+                            <input type="email" name="emailreceipt" id="emailreceipt" placeholder="Email receipt" value=""/>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <div class="action">
+                    <button onclick="checkoutConfirm()" id="" type="button">OK</button>
+                </div>
+            </div>
+        </div>
+
+    <?php } ?>
+
+</div>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function () {
+        updateTotals();
+        var target = document.getElementById("cash-in");
+        createSelection(0, 10, target);
+    });
+
+    $('cash-in').observe('blur', function (e) {
+        updateBalance();
+    });
+
+    function handle_amount_press(e) {
+        if (e.keyCode === 13) {
+            updateBalance();
+        }
+        return false;
+    }
+
+    function updateBalance() {
+        var grandtotal = parseFloat(jQuery("#order_grandtotal").val()).toFixed(2);
+        var cash_in = parseFloat(jQuery("#cash-in").val()).toFixed(2);
+        var balance = cash_in - grandtotal;
+        if (balance < 0) {
+            jQuery("#cash-in").val(grandtotal);
+            return false;
+        }
+        jQuery("#cash-in").val(cash_in);
+        jQuery("#balance").val(balance.toFixed(2));
+    }
+
+    function updateTotals() {
+        var subtotal = parseFloat(jQuery("#order_subtotal").val()).toFixed(2);
+        var tax = parseFloat(jQuery("#order_tax").val()).toFixed(2);
+        var shipping = parseFloat(jQuery("#order_shipping").val()).toFixed(2);
+        var discount = parseFloat(jQuery("#order_discount").val()).toFixed(2);
+        var grandtotal = parseFloat(jQuery("#order_grandtotal").val()).toFixed(2);
+        var payment_method = jQuery("#payment_method_hidden").val();
+        if(grandtotal == 0){
+            displayOrder(currentOrder, true);
+        }else{
+            jQuery("#grandtotal").html(addCommas(grandtotal));
+        }
+        jQuery("#discount_value").html(addCommas(discount));
+        jQuery("#tax_value").html(addCommas(tax));
+        jQuery("#subtotal_value").html(addCommas(subtotal));
+        if (payment_method == 'checkmo' || payment_method == 'cashpayment') {
+            jQuery("#cash-in").removeAttr('readonly');
+            jQuery('#cash-in').css('color','');
+            jQuery("#cash-in").val(grandtotal);
+        } else {
+            jQuery("#cash-in").val(grandtotal);
+            updateBalance();
+            jQuery('#cash-in').css('color','gray');
+            jQuery("#cash-in").attr('readonly', 'readonly')
+        }
+    }
+
+    function xpos_checkout(confirm_checkout) {
+        if (checkShippingInput()) {
+            order.complete('<?php echo $this->getUrl("*/*/complete"); ?>',confirm_checkout);
+        }
+    }
+
+    function createSelection(start, end, field) {
+
+        if (field.createTextRange) {
+
+            var newend = end - start;
+            var selRange = field.createTextRange();
+            selRange.collapse(true);
+            selRange.moveStart("character", start);
+            selRange.moveEnd("character", newend);
+            selRange.select();
+        }
+        else if (field.setSelectionRange) {
+
+            field.setSelectionRange(start, end);
+        }
+
+        field.focus();
+    }
+
+    function checkoutConfirm(){
+        if (jQuery('#doemailreceipt').val() == 1 && isOnline() == 1) {
+            if (!order.validEmail(jQuery('#emailreceipt').val())) {
+                if (jQuery('#emailreceipt').html() == '') {
+                    alert('Please enter right email format.');
+                    return false;
+                }
+            }
+        }
+
+
+        jQuery('#checkout_popup').bPopup().close();
+        order.submit();
+    }
+
+
+    jQuery('#cash-in, .item-price, .item-qty').click(
+        function () {
+            createSelection(0, 10, this);
+        }
+    );
+
+    jQuery('#cash-in').keypress(function(event) {
+        if(event.which < 46
+            || event.which > 59) {
+            event.preventDefault();
+        } // prevent if not number/dot
+
+
+        if(event.which == 46
+            && jQuery(this).val().indexOf('.') != -1) {
+            event.preventDefault();
+        } // prevent if already dot
+    });
+
+</script>

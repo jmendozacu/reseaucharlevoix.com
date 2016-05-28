@@ -1,0 +1,66 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php $_product = $this->getProduct(); ?>
+<?php $buttonTitle = $this->__('Add to Cart'); ?>
+<?php if($_product->isSaleable()): ?>
+
+    <div class="add-to-cart">
+        <?php if(!$_product->isGrouped() && $_product->getTypeId() != 'booking') : ?>
+        <label for="qty"><?php echo $this->__('Qty:') ?></label>
+        <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+        <?php endif; ?>
+        <?php if($_product->getTypeId() == 'booking'): ?>
+        <?php $helper = Mage::helper('bookmepro') ?>
+        <input 
+        <?php if($_product->getData('price_profile')) echo 'type="hidden"'; else echo 'type="text"' ?>  
+        name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty" />
+        <table style="float:left">
+        <?php foreach ($_product->getData('price_profile') as $profile): ?>
+        <?php $translation = $helper->getProfileTranslation($profile['profile_id'], Mage::app()->getStore()->getCode()); ?>
+        <?php $name = 'p#'.$profile['profile_id']; ?>
+        <tr><td style="width: 40px">
+        <strong style="margin-right: 4px"><?php echo $translation?></strong></td>
+        
+        <td style="margin-right: 4px"><button type="button" style="margin-right: 5px" class="button" onclick="document.getElementById('qty_<?php echo $name?>').value = (document.getElementById('qty_<?php echo $name?>').value == 0)? 0 : (document.getElementById('qty_<?php echo $name?>').value - 1); fireEvent(document.getElementById('qty_<?php echo $name?>'), 'change', { firedBy: document.getElementById('qty_<?php echo $name?>') });"><span><span>-</span></span></button></td>        
+        
+        <td style="width: 35px">
+        <input type="text" class="input-text qty" 
+        id="qty_<?php echo $name?>" 
+        name="qty_<?php echo $name?>"
+        onchange="$('qty_multidate_<?php echo $name?>').value = this.value" value="0"/></td>
+        <td style="margin-right: 4px"><button type="button" style="margin-right: 5px" class="button" onclick="document.getElementById('qty_<?php echo $name?>').value++; fireEvent(document.getElementById('qty_<?php echo $name?>'), 'change', { firedBy: document.getElementById('qty_<?php echo $name?>') });"><span><span>+</span></span></button></td>
+		<td><span class="regular-price" style="margin-right: 10px"><span class="price" id="mulidate_<?php echo $name?>_price"> x
+        
+        <?php echo Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, Mage::helper('bookmepro')->getProfilePrice($_product->getFinalPrice(), $profile)), true, false);?></span></span></td></tr>
+        
+        <?php endforeach;?>
+        </table>
+        <?php endif;?>
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <?php echo $this->getChildHtml('', true, true) ?>
+    </div>
+<?php endif; ?>

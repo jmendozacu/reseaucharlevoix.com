@@ -1,0 +1,123 @@
+#ajaxwrap{
+    display:none;
+}
+#ajax_process {
+    position: absolute;
+    left: 50%;
+    padding: 15px 0 10px;
+    width: 180px;
+    background: #000;
+    margin: -15px 0 0 -90px;
+    text-align:center;
+    box-shadow: 0 0 5px #000;
+    -moz-box-shadow: 0 0 5px #000;
+    -webkit-box-shadow: 0 0 5px #000;
+    -o-box-shadow: 0 0 5px #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); /* IE8 */
+}
+#ajax_process div{ margin-top: 8px; color: #FFF}
+#ajax_process img{margin: 0 auto}
+#ajax_overlay {
+    display: none; padding: 0px;
+    position: fixed; left: 0px; top: 0px;
+    width: 100%; height: 100%;
+    z-index: 97; visibility: visible;
+    background-color: #000;opacity: 0.7; filter:alpha(opacity=70);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70); /* IE8 */
+}
+#ajaxbox{
+    width: 430px;
+    margin: 0 0 0 -215px;
+    z-index: 98;
+    position: fixed;
+    left: 50%;
+    padding: 0px;
+    display: block;
+    visibility: visible;
+}
+#ajax_content {
+    border: 8px solid rgba(209, 209, 209, 0.35);
+    border: 8px solid #d1d1d1\9;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: left;
+}
+#ajaxwrap .close-popup{
+    background: url("../images/close-popup.png") no-repeat scroll 0 0 transparent;
+    height: 36px;
+    overflow: hidden;
+    position: absolute;
+    right: -10px;
+    text-indent: -999em;
+    top: -9px;
+    width: 36px;
+    z-index: 99;
+}
+#confirmbox{
+    background-color: #FFF;
+    padding: 10px 15px 20px;
+    position:relative;
+    z-index:98;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+    /*border-radius: 6px 6px;
+    -moz-border-radius: 6px 6px;
+    -webkit-border-radius: 6px 6px;
+    -o-border-radius: 6px 6px;*/
+}
+#confirmbox p span{
+    font-weight: bold;
+}
+
+#confirmbox .head-cfbox { text-align: center; margin-bottom:10px; padding-right: 20px; }
+#confirmbox .cf-producinfo{ float:left; text-align:left; padding-top: 10px; width: 100%;}
+#confirmbox .cf-producinfo .product-image{float: left; margin-right: 10px; border: 1px solid #CCC;}
+#confirmbox .cf-producinfo .product-name{margin-top: 0px; line-height: normal;}
+#confirmbox .cf-moreinfo { clear:both; padding-top:10px; }
+#confirmbox .cf-moreinfo .cf-label{vertical-align: middle;margin-right: 5px;}
+#confirmbox .cf-moreinfo .ratings{
+    display: inline-block;
+    vertical-align: middle;
+}
+#confirmbox .cf-moreinfo .ratings .amount{margin-left: 5px;}
+#confirmbox .cf-moreinfo .price-box{display: inline-block;}
+#confirmbox .more-text{text-align: center; padding-top: 10px;}
+#confirmbox #bottom-cfbox{
+    text-align:center;
+    margin-top:10px;
+}
+#confirmbox #bottom-cfbox ul {
+    list-style: none; margin: 0 0;
+}
+#confirmbox #bottom-cfbox ul li {
+    display: inline;
+}
+#confirmbox #bottom-cfbox ul li:first-child {
+    margin-right: 15px;
+}
+#confirmbox .product-name *{font-size: 150%; line-height: 20px; font-weight: normal; margin: 0 0 10px; padding: 0 15px 0 0}
+
+#confirmbox #bottom-cfbox .btn{
+    background: #3A3A3A;
+    border: medium none;
+    border-radius: 0 0 0 0;
+    text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none;
+    -o-text-shadow: none;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    -o-border-radius: 0 0 0 0;
+    color: #FFFFFF;
+    font-size: 100%;
+    padding: 7px 15px;
+}
+#confirmbox #bottom-cfbox .btn:hover{background: #000;}
+#confirmbox form{margin: 0 0;}
+#confirmbox form .add-to-cart{margin: 0 0; border: none; padding-bottom: 0px;}
+#confirmbox .data-table input.input-text{max-width: 40px; text-align: center;}

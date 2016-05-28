@@ -1,0 +1,264 @@
+<script type="text/javascript">
+//<![CDATA[
+
+var packageTemplateBox = '<div class="messages"><li style="list-style:none;" class="notice-msg">' +
+    'Preview Image - image inside folder "media/bundlecreatorplus/product_id" (e.g. media/bundlecreatorplus/350 for Extened Bundle product with id = 350)' +
+    '<br>Or you can specify image from this product\'s image gallery using this notation: "[g]image_label", where image_label is image\'s Label' +
+    '</li></div>' +
+    '<table class="border" cellpadding="0" cellspacing="0">' +
+    '    <thead>' +
+    '        <tr class="headings">' +
+    '            <th><?php echo Mage::helper('bundlecreatorplus')->__('Name') ?></th>' +
+    '            <th class="type-price price-type-box"><?php echo Mage::helper('bundlecreatorplus')->__('Price') ?></th>' +
+    '            <th class="type-price price-type-box" style="width:1px"><?php echo Mage::helper('bundlecreatorplus')->__('Special Price') ?></th>' +
+    '            <th class="type-price price-type-box" style="width:1px"><?php echo Mage::helper('bundlecreatorplus')->__('Override Price') ?></th>' +
+    '            <th class="type-price price-type-box" style="width:1px"><?php echo Mage::helper('bundlecreatorplus')->__('Preview Image') ?></th>' +
+    '            <th class="last">&nbsp;</th>' +
+    '        </tr>' +
+    '    </thead> ' +
+    '    <tbody>' +
+    '    </tbody>' +
+    '</table>';
+
+var packageTemplateRow ='<td>' +
+                '    <input type="hidden" id="<?php echo $this->getFieldId() ?>_id_{{index}}" name="<?php echo $this->getFieldName() ?>[{{parentIndex}}][{{index}}][selection_id]" value="{{selection_id}}">' +
+                '    <input type="hidden" name="<?php echo $this->getFieldName() ?>[{{parentIndex}}][{{index}}][option_id]" value="{{option_id}}">' +
+                '    <input type="hidden" class="product" name="<?php echo $this->getFieldName() ?>[{{parentIndex}}][{{index}}][product_id]" value="{{product_id}}">' +
+                '    {{name}}<br />' +
+                '   <div  class="nobr">' +
+                '        <strong><?php echo $this->helper('sales')->__('SKU') ?>:</strong> {{sku}}' +
+                '    </div>' +
+                '</td>' +
+                '<td class="price-type-box">{{price}}</td>' +
+                '<td class="price-type-box">{{special_price}}</td>' +
+                '<td class="price-type-box"><input type="text" class="input-text validate-zero-or-greater" name="<?php echo $this->getFieldName() ?>[{{parentIndex}}][{{index}}][override_price]" style="width:74px" value="{{override_price}}" /></td>' +
+                '<td class="price-type-box"><input type="text" class="input-text" name="<?php echo $this->getFieldName() ?>[{{parentIndex}}][{{index}}][preview_image]" style="width:auto" value="{{preview_image}}" /></td>' +
+                '<td class="last"><span title="Delete Row"><?php echo $this->getSelectionDeleteButtonHtml() ?></span></td>';
+
+Package.Selection = Class.create();
+Package.Selection.prototype = {
+    idLabel : '<?php echo $this->getFieldId() ?>',
+    templateSyntax : /(^|.|\r|\n)({{(\w+)}})/,
+    templateBox : '',
+    templateRow : '',
+    itemsCount : 0,
+    row : null,
+    gridSelection : new Hash(),
+
+    initialize : function() {
+        this.templateBox = '<div class="grid tier form-list" id="' + this.idLabel + '_box_{{parentIndex}}">' + packageTemplateBox + '</div>';
+
+        this.templateRow = '<tr class="selection" id="' + this.idLabel + '_row_{{index}}">' + packageTemplateRow + '</tr>';
+    },
+
+    showSearch : function(event) {
+        var element = Event.findElement(event, 'div');
+        var parts = element.id.split('_');
+
+        var products = new Array();
+
+        var inputs = $A($$('#' + element.id + ' tr.selection input.product'));
+        for (i=0; i<inputs.length; i++) {
+            products.push(inputs[i].value);
+        }
+        if(product_id)products.push(product_id);
+
+        this.gridSelection.set(parts[2], $H({}));
+
+        new Ajax.Updater(packageItem.idLabel + '_search_' + parts[2], '<?php echo $this->getSelectionSearchUrl() ?>', {
+            method: 'post',
+            parameters : {'index' : parts[2], 'products[]' : products, 'form_key': FORM_KEY},
+            evalScripts : true
+        });
+
+        if (Event.element(event).tagName.toLowerCase() != 'button') {
+            var button = Event.element(event).up('button');
+        } else {
+            var button = Event.element(event);
+        }
+        button.hide();
+    },
+
+    addRow : function (parentIndex, data) {
+        var box = null;
+        if (!(box = $(this.idLabel + '_box_' + parentIndex))) {
+            this.addBox(parentIndex);
+            box = $(this.idLabel + '_box_' + parentIndex);
+        } else {
+            box.show();
+        }
+
+        var option_type = $(packageItem.idLabel + '_' + parentIndex + '_type');
+
+        if(!data){
+            var data = {};
+        }
+
+        if (data.can_read_price != undefined && !data.can_read_price) {
+            data.selection_price_value = '';
+        } else {
+            data.selection_price_value = Number(data.selection_price_value).toFixed(2);
+        }
+
+        data.index = this.itemsCount++;
+        data.parentIndex = parentIndex;
+        
+        if(typeof(data.preview_image) == 'undefined')data.preview_image = 'preview_item_'+(parseInt(parentIndex)+1)+'.png';
+        
+        this.template = new Template(this.templateRow, this.templateSyntax);
+        var tbody = $$('#' + this.idLabel + '_box_' + parentIndex + ' tbody');
+
+        Element.insert(tbody[0], {'bottom':this.template.evaluate(data)});
+    },
+
+    bindScopeCheckbox : function(){
+        var checkboxes = $$('.bundle-option-price-scope-checkbox');
+        for (var i=0;i<checkboxes.length;i++) {
+            if (!$(checkboxes[i]).binded) {
+                $(checkboxes[i]).binded = true;
+                Event.observe(checkboxes[i], 'click', this.addScope.bind(this));
+            }
+        }
+    },
+
+    addScope : function(event, element){
+        if (element == undefined) {
+            element = $(Event.element(event));
+        }
+        var priceValue = $(element.id.sub('scope', 'value'));
+        var priceType = $(element.id.sub('scope', 'type'));
+
+        if (element.checked) {
+            priceValue.disable();
+            priceType.disable();
+        } else {
+            priceValue.enable();
+            priceType.enable();
+        }
+    },
+
+    addBox : function (parentIndex) {
+        var div = $(packageItem.idLabel + '_' + parentIndex)
+        this.template = new Template(this.templateBox, this.templateSyntax);
+        var data = {'parentIndex' : parentIndex};
+        Element.insert(div, {'bottom':this.template.evaluate(data)});
+    },
+
+    remove : function(event) {
+        var element = Event.findElement(event, 'tr');
+        var container = Event.findElement(event, 'div');
+
+        if (element) {
+            //Element.select(element, '.delete').each(function(elem){elem.value='1'});
+            //Element.select(element, ['input', 'select']).each(function(elem){elem.hide()});
+            //Element.removeClassName(element, 'selection');
+            Element.remove(element);
+
+            if (container) {
+                if ($$('#' + container.id + ' tr.selection')) {
+                    if (!$$('#' + container.id + ' tr.selection').length) {
+                        container.hide();
+                    }
+                }
+            }
+        }
+    },
+
+    checkGroup : function(event) {
+        alert(Group);
+        var element = Event.element(event);
+        if (element.type == 'radio') {
+            var box = element.up('div');
+
+            var inputs = $$('div#' + box.id + ' input.default');
+            if (inputs) {
+                for (i=0; i< inputs.length; i++) {
+                    if (inputs[i].name != element.name) {
+                        inputs[i].checked = false;
+                    }
+                }
+            }
+        }
+    },
+
+    productGridAddSelected : function(event) {
+        var element = Event.findElement(event, 'button');
+        var parts = element.id.split('_');
+
+        $(packageItem.idLabel + '_search_' + parts[2]).innerHTML = '';
+        $(packageItem.idLabel + '_' + parts[2] + '_add_button').show();
+
+        this.gridSelection.get(parts[2]).each(
+            function(pair) {
+                //var qty = pair.value.get('qty');
+                var data = {
+                    'name' : pair.value.get('name'),
+                    //'selection_qty' : (qty == '' ? 1 : qty),
+                    'sku' : pair.value.get('sku'),
+                    'price' : pair.value.get('price'),
+                    'special' : pair.value.get('special_price'),
+                    'preview_image' : 'preview_item_'+(parseInt(parts[2])+1)+'.png',
+                    'position' : 0,
+                    'product_id' : pair.key,
+                    'option_id' : $(packageItem.idLabel + '_id_' + parts[2]).value
+                };
+                packageSelection.addRow(parts[2], data);
+            }
+        );
+    },
+
+    productGridRowInit : function(grid, row){
+        var checkbox = $(row).getElementsByClassName('checkbox')[0];
+        var inputs = $(row).getElementsByClassName('input-text');
+        for (var i = 0; i < inputs.length; i++) {
+            inputs[i].checkbox = checkbox;
+            Event.observe(inputs[i], 'keyup', this.productGridRowInputChange.bind(this));
+            Event.observe(inputs[i], 'change', this.productGridRowInputChange.bind(this));
+        }
+    },
+
+    productGridCheckboxCheck : function(grid, element, checked) {
+        var id = element.up('table').id.split('_')[4];
+        if (element.value > 0) {
+            if (element.checked) {           
+                var tr = element.parentNode.parentNode;
+                if (!this.gridSelection.get(id)) {
+                    this.gridSelection.set(id, new Hash());
+                }
+                this.gridSelection.get(id).set(element.value, $H({}));
+                this.gridSelection.get(id).get(element.value).set('name', tr.select('td.name')[0].innerHTML);
+                //this.gridSelection.get(id).get(element.value).set('qty', tr.select('input.qty')[0].value);
+                this.gridSelection.get(id).get(element.value).set('sku', tr.select('td.sku')[0].innerHTML);
+                this.gridSelection.get(id).get(element.value).set('price', tr.select('td.price')[0].innerHTML);
+                this.gridSelection.get(id).get(element.value).set('special_price', tr.select('td.special_price')[0].innerHTML);
+            } else {
+                this.gridSelection.get(id).unset(element.value);
+            }
+        }
+    },
+
+    productGridRowClick : function(grid, event) {
+        var trElement = Event.findElement(event, 'tr');
+        var isInput = Event.element(event).tagName == 'INPUT';
+        if (trElement) {
+            var checkbox = Element.select(trElement, 'input');
+            if (checkbox[0]) {
+                var checked = isInput ? checkbox[0].checked : !checkbox[0].checked;
+                grid.setCheckboxChecked(checkbox[0], checked);
+            }
+        }
+    },
+
+    productGridRowInputChange : function(event) {
+        var element = Event.element(event);
+        if (!element.checkbox.checked) {
+            return;
+        }
+        var id = element.up('table').id.split('_')[4];
+        this.gridSelection.get(id).get(element.checkbox.value).set('qty', element.value);
+    }
+}
+
+packageSelection = new Package.Selection();
+//]]>
+</script>
